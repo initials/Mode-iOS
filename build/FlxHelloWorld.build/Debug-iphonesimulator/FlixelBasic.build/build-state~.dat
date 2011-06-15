@@ -1,0 +1,1453 @@
+TFlixelBasic
+v7
+r0
+t316602460.820062
+cCheck dependencies
+cProcessInfoPlistFile /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/Info.plist Info.plist
+cCpResource build/Debug-iphonesimulator/FlxHelloWorld.app/Flixel.ttf flixel-ios/fonts/Flixel.ttf
+cProcessPCH /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch.gch Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/main.o /Users/initials/developer/FlxHelloWorld/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/AppDelegate.o /Users/initials/developer/FlxHelloWorld/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorld.o /Users/initials/developer/FlxHelloWorld/src/FlxHelloWorld.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorldState.o /Users/initials/developer/FlxHelloWorld/src/FlxHelloWorldState.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashFunction.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashFunction.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashObject.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashPoint.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashPoint.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashRectangle.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashRectangle.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxAnim.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxAnim.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxButton.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxButton.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxEmitter.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxEmitter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxFade.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFade.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxFlash.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFlash.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxG.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxG.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGLView.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGLView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGame.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGame.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGroup.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGroup.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxList.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxList.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxManagedSprite.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxManagedSprite.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxObject.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxPoint.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxPoint.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxQuadTree.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuadTree.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxQuake.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuake.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxRect.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxRect.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSave.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSave.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSound.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSound.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSprite.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSprite.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxState.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxState.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxText.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxText.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxTouches.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTouches.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxU.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxU.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretFont.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretFont.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretText.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretText.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretTexture.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretTexture.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlixelFont.o /Users/initials/developer/FlxHelloWorld/flixel-ios/fonts/FlixelFont.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxTileblock.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTileblock.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlixelAPTBindings.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlixelAPTBindings.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/UIImage+RIFAddition.o /Users/initials/developer/FlxHelloWorld/Classes/UIImage+RIFAddition.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld normal i386
+cGenerateDSYMFile /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app.dSYM /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld
+cTouch /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c000000004CC1288A00000000000F34A0
+t1287727242
+s996512
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.h
+c000000004CC128840000000000000733
+t1287727236
+s1843
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004CC1224600000000001EA9C0
+t1287725638
+s2009536
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.h
+c000000004CC1222F0000000000000A23
+t1287725615
+s2595
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c000000004CC1220900000000000A8450
+t1287725577
+s689232
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h
+c000000004CC12203000000000001032E
+t1287725571
+s66350
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.h
+c000000004CC121DB00000000000004FE
+t1287725531
+s1278
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenAL.framework/Headers/al.h
+c000000004CC1226100000000000064FD
+t1287725665
+s25853
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenAL.framework/Headers/alc.h
+c000000004CC122610000000000001F45
+t1287725665
+s8005
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+c000000004CC1226400000000000246A0
+t1287725668
+s149152
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/EAGL.h
+c000000004CC12308000000000000094F
+t1287725832
+s2383
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES1/gl.h
+c000000004CC123080000000000009369
+t1287725832
+s37737
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES1/glext.h
+c000000004CC123080000000000003C4A
+t1287725832
+s15434
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c000000004CC1230E0000000000019D40
+t1287725838
+s105792
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004CC1233C00000000000000C4
+t1287725884
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004CC12431000000000015CDB0
+t1287726129
+s1428912
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/Availability.h
+c000000004CB3FA080000000000001ADD
+t1286863368
+s6877
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/sys/sysctl.h
+c000000004CBFACAC0000000000007974
+t1287629996
+s31092
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/sys/types.h
+c000000004CBFACAC0000000000002905
+t1287629996
+s10501
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/unistd.h
+c000000004CB3E486000000000000563E
+t1286857862
+s22078
+
+N/Users/initials/developer/FlxHelloWorld/Classes/AppDelegate.h
+c000000004D2EC0C40000000000000300
+t1294909636
+s768
+i<UIKit/UIKit.h>
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/Classes/AppDelegate.m
+c000000004D2EC0C40000000000000C64
+t1294909636
+s3172
+i"AppDelegate.h"
+i"FlxHelloWorld.h"
+i<SemiSecret/SemiSecretTexture.h>
+
+N/Users/initials/developer/FlxHelloWorld/Classes/UIImage+RIFAddition.h
+c000000004D2EC0C40000000000000369
+t1294909636
+s873
+i<UIKit/UIKit.h>
+
+N/Users/initials/developer/FlxHelloWorld/Classes/UIImage+RIFAddition.m
+c000000004D2EC0C40000000000000A6E
+t1294909636
+s2670
+i"UIImage+RIFAddition.h"
+
+N/Users/initials/developer/FlxHelloWorld/Prefix.pch
+c000000004D2EC0C400000000000003CB
+t1294909636
+s971
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i<Flixel/Flixel.h>
+i"UIImage+RIFAddition.h"
+
+N/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app
+t1294909660
+s204
+
+N/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app.dSYM
+t1294909660
+s102
+
+N/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/Flixel.ttf
+t1294909646
+s16272
+
+N/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld
+t1294909660
+s426420
+
+N/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/Info.plist
+t1294909646
+s859
+
+N/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/PkgInfo
+t1294909646
+s8
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/AppDelegate.o
+t1294909648
+s57380
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashFunction.o
+t1294909649
+s20856
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashObject.o
+t1294909649
+s6472
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashPoint.o
+t1294909649
+s20256
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashRectangle.o
+t1294909649
+s32356
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlixelAPTBindings.o
+t1294909659
+s26208
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlixelFont.o
+t1294909659
+s28760
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxAnim.o
+t1294909649
+s14880
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxButton.o
+t1294909650
+s57672
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxEmitter.o
+t1294909650
+s50948
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxFade.o
+t1294909650
+s17836
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxFlash.o
+t1294909650
+s18136
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxG.o
+t1294909652
+s152744
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGLView.o
+t1294909652
+s54276
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGame.o
+t1294909653
+s95664
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGroup.o
+t1294909653
+s40732
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorld.LinkFileList
+c000000004D2EC0CE00000000000014A7
+t1294909646
+s5287
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorld.o
+t1294909648
+s44124
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorldState.o
+t1294909648
+s46100
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxList.o
+t1294909653
+s11988
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxManagedSprite.o
+t1294909653
+s35128
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxObject.o
+t1294909654
+s63240
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxPoint.o
+t1294909654
+s13076
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxQuadTree.o
+t1294909655
+s53720
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxQuake.o
+t1294909655
+s15564
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxRect.o
+t1294909655
+s12388
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSave.o
+t1294909655
+s16944
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSound.o
+t1294909655
+s17656
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSprite.o
+t1294909656
+s121132
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxState.o
+t1294909656
+s16844
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxText.o
+t1294909657
+s69944
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxTileblock.o
+t1294909659
+s54116
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxTouches.o
+t1294909657
+s55732
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxU.o
+t1294909657
+s57168
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretFont.o
+t1294909658
+s16792
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretText.o
+t1294909658
+s77752
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretTexture.o
+t1294909659
+s80560
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/UIImage+RIFAddition.o
+t1294909659
+s14108
+
+N/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/main.o
+t1294909648
+s6836
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flash/Flash.h
+c000000004D2EC0C40000000000000331
+t1294909636
+s817
+i<Flash/FlashObject.h>
+i<Flash/FlashPoint.h>
+i<Flash/FlashRectangle.h>
+i<Flash/FlashFunction.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flash/FlashFunction.h
+c000000004D2EC0C4000000000000043C
+t1294909636
+s1084
+i<Flash/FlashObject.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flash/FlashObject.h
+c000000004D2EC0C400000000000003ED
+t1294909636
+s1005
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flash/FlashPoint.h
+c000000004D2EC0C4000000000000066B
+t1294909636
+s1643
+i<Flash/FlashObject.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flash/FlashRectangle.h
+c000000004D2EC0C4000000000000080D
+t1294909636
+s2061
+i<Flash/FlashObject.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/Flixel.h
+c000000004D2EC0C4000000000000055E
+t1294909636
+s1374
+i<Flash/Flash.h>
+i<SemiSecret/SemiSecret.h>
+i<Flixel/FlxAnim.h>
+i<Flixel/FlxButton.h>
+i<Flixel/FlxEmitter.h>
+i<Flixel/FlxFade.h>
+i<Flixel/FlxFlash.h>
+i<Flixel/FlxG.h>
+i<Flixel/FlxGLView.h>
+i<Flixel/FlxGame.h>
+i<Flixel/FlxGroup.h>
+i<Flixel/FlxList.h>
+i<Flixel/FlxManagedSprite.h>
+i<Flixel/FlxObject.h>
+i<Flixel/FlxPoint.h>
+i<Flixel/FlxQuadTree.h>
+i<Flixel/FlxQuake.h>
+i<Flixel/FlxRect.h>
+i<Flixel/FlxSave.h>
+i<Flixel/FlxSound.h>
+i<Flixel/FlxSprite.h>
+i<Flixel/FlxState.h>
+i<Flixel/FlxText.h>
+i<Flixel/FlxTileblock.h>
+i<Flixel/FlxTouches.h>
+i<Flixel/FlxU.h>
+i<Flixel/FlixelAPTBindings.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlixelAPTBindings.h
+c000000004D2EC0C40000000000000D2D
+t1294909636
+s3373
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxAnim.h
+c000000004D2EC0C400000000000005F6
+t1294909636
+s1526
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxButton.h
+c000000004D2EC0C4000000000000053C
+t1294909636
+s1340
+i<Flixel/FlxGroup.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxEmitter.h
+c000000004D2EC0C40000000000000CD9
+t1294909636
+s3289
+i<Flixel/FlxGroup.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxFade.h
+c000000004D2EC0C4000000000000046D
+t1294909636
+s1133
+i<Flixel/FlxSprite.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxFlash.h
+c000000004D2EC0C4000000000000045C
+t1294909636
+s1116
+i<Flixel/FlxSprite.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxG.h
+c000000004D2EC0C4000000000000118E
+t1294909636
+s4494
+i<AVFoundation/AVFoundation.h>
+i<OpenAL/alc.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxGLView.h
+c000000004D2EC0C400000000000004E8
+t1294909636
+s1256
+i<UIKit/UIKit.h>
+i<OpenGLES/ES1/gl.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxGame.h
+c000000004D2EC0C40000000000000B7B
+t1294909636
+s2939
+i<OpenGLES/ES1/gl.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxGroup.h
+c000000004D2EC0C40000000000000654
+t1294909636
+s1620
+i<Flixel/FlxObject.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxList.h
+c000000004D2EC0C40000000000000323
+t1294909636
+s803
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxManagedSprite.h
+c000000004D2EC0C4000000000000031C
+t1294909636
+s796
+i<Flixel/FlxSprite.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxObject.h
+c000000004D2EC0C400000000000011D2
+t1294909636
+s4562
+i<Flixel/FlxRect.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxPoint.h
+c000000004D2EC0C4000000000000045A
+t1294909636
+s1114
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxQuadTree.h
+c000000004D2EC0C40000000000000762
+t1294909636
+s1890
+i<Flixel/FlxRect.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxQuake.h
+c000000004D2EC0C40000000000000432
+t1294909636
+s1074
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxRect.h
+c000000004D2EC0C40000000000000497
+t1294909636
+s1175
+i<Flixel/FlxPoint.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxSave.h
+c000000004D2EC0C400000000000004E4
+t1294909636
+s1252
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxSound.h
+c000000004D2EC0C4000000000000078E
+t1294909636
+s1934
+i<Flixel/FlxObject.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxSprite.h
+c000000004D2EC0C400000000000018C7
+t1294909636
+s6343
+i<Flixel/FlxObject.h>
+i<OpenGLES/ES1/gl.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxState.h
+c000000004D2EC0C4000000000000050C
+t1294909636
+s1292
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxText.h
+c000000004D2EC0C40000000000000911
+t1294909636
+s2321
+i<Flixel/FlxSprite.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxTileblock.h
+c000000004D2EC0C400000000000004C8
+t1294909636
+s1224
+i<Flixel/FlxObject.h>
+i<OpenGLES/ES1/gl.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxTouches.h
+c000000004D2EC0C40000000000000611
+t1294909636
+s1553
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/Flixel/FlxU.h
+c000000004D2EC0C40000000000000BAA
+t1294909636
+s2986
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/SemiSecret/SemiSecret.h
+c000000004D2EC0C400000000000002CE
+t1294909636
+s718
+i<SemiSecret/SemiSecretFont.h>
+i<SemiSecret/SemiSecretText.h>
+i<SemiSecret/SemiSecretTexture.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/SemiSecret/SemiSecretFont.h
+c000000004D2EC0C400000000000004D4
+t1294909636
+s1236
+i<CoreGraphics/CoreGraphics.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/SemiSecret/SemiSecretText.h
+c000000004D2EC0C400000000000007C1
+t1294909636
+s1985
+i<UIKit/UIKit.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers/SemiSecret/SemiSecretTexture.h
+c000000004D2EC0C40000000000000B24
+t1294909636
+s2852
+i<Foundation/Foundation.h>
+i<OpenGLES/ES1/gl.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/fonts/Flixel.ttf
+c000000004D2EC0C40000000000003F90
+t1294909636
+s16272
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/fonts/FlixelFont.m
+c000000004D2EC0C400000000000047F9
+t1294909636
+s18425
+i<SemiSecret/SemiSecret.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashFunction.m
+c000000004D2EC0C4000000000000137A
+t1294909636
+s4986
+i<Flash/Flash.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashObject.m
+c000000004D2EC0C400000000000002CE
+t1294909636
+s718
+i<Flash/Flash.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashPoint.m
+c000000004D2EC0C40000000000000B34
+t1294909636
+s2868
+i<Flash/Flash.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashRectangle.m
+c000000004D2EC0C4000000000000119C
+t1294909636
+s4508
+i<Flash/Flash.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlixelAPTBindings.m
+c000000004D2EC0C40000000000001462
+t1294909636
+s5218
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxAnim.m
+c000000004D2EC0C400000000000007C9
+t1294909636
+s1993
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxButton.m
+c000000004D2EC0C4000000000000174F
+t1294909636
+s5967
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxEmitter.m
+c000000004D2EC0C40000000000002400
+t1294909636
+s9216
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFade.m
+c000000004D2EC0C40000000000000A82
+t1294909636
+s2690
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFlash.m
+c000000004D2EC0C40000000000000AD0
+t1294909636
+s2768
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxG.m
+c000000004D2EC0C4000000000000B502
+t1294909636
+s46338
+i<Flixel/Flixel.h>
+i<AudioToolbox/AudioToolbox.h>
+i<OpenAL/al.h>
+i<OpenAL/alc.h>
+i<CoreAudio/CoreAudioTypes.h>
+i<sys/types.h>
+i<sys/sysctl.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGLView.m
+c000000004D2EC0C400000000000014AE
+t1294909636
+s5294
+i<Flixel/Flixel.h>
+i<OpenGLES/EAGL.h>
+i<OpenGLES/ES1/glext.h>
+i<QuartzCore/QuartzCore.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGame.m
+c000000004D2EC0C400000000000067BA
+t1294909636
+s26554
+i<Flixel/Flixel.h>
+i<SemiSecret/SemiSecret.h>
+i<UIKit/UIKit.h>
+i<OpenGLES/EAGL.h>
+i<OpenGLES/ES1/glext.h>
+i<QuartzCore/QuartzCore.h>
+i<unistd.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGroup.m
+c000000004D2EC0C40000000000002305
+t1294909636
+s8965
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxList.m
+c000000004D2EC0C4000000000000042B
+t1294909636
+s1067
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxManagedSprite.m
+c000000004D2EC0C400000000000025A6
+t1294909636
+s9638
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxObject.m
+c000000004D2EC0C4000000000000211C
+t1294909636
+s8476
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxPoint.m
+c000000004D2EC0C40000000000000665
+t1294909636
+s1637
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuadTree.m
+c000000004D2EC0C400000000000039C0
+t1294909636
+s14784
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuake.m
+c000000004D2EC0C40000000000000712
+t1294909636
+s1810
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxRect.m
+c000000004D2EC0C4000000000000061A
+t1294909636
+s1562
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSave.m
+c000000004D2EC0C40000000000000DD0
+t1294909636
+s3536
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSound.m
+c000000004D2EC0C4000000000000306B
+t1294909636
+s12395
+i<Flixel/Flixel.h>
+i<AudioToolbox/AudioToolbox.h>
+i<OpenAL/al.h>
+i<OpenAL/alc.h>
+i<CoreAudio/CoreAudioTypes.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSprite.m
+c000000004D2EC0C4000000000000668B
+t1294909636
+s26251
+i<Flixel/Flixel.h>
+i<SemiSecret/SemiSecret.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxState.m
+c000000004D2EC0C40000000000000774
+t1294909636
+s1908
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxText.m
+c000000004D2EC0C40000000000002071
+t1294909636
+s8305
+i<Flixel/Flixel.h>
+i<SemiSecret/SemiSecret.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTileblock.m
+c000000004D2EC0C4000000000000151C
+t1294909636
+s5404
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTouches.m
+c000000004D2EC0C40000000000000DCC
+t1294909636
+s3532
+i<Flixel/Flixel.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxU.m
+c000000004D2EC0C40000000000005C49
+t1294909636
+s23625
+i<Flixel/Flixel.h>
+i<UIKit/UIKit.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretFont.m
+c000000004D2EC0C40000000000000D6E
+t1294909636
+s3438
+i<SemiSecret/SemiSecret.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretText.m
+c000000004D2EC0C40000000000003B35
+t1294909636
+s15157
+i<SemiSecret/SemiSecret.h>
+
+N/Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretTexture.m
+c000000004D2EC0C40000000000003DCB
+t1294909636
+s15819
+i<SemiSecret/SemiSecret.h>
+i<Flixel/FlxGLView.h>
+i<Flixel/FlxG.h>
+
+N/Users/initials/developer/FlxHelloWorld/main.m
+c000000004D2EC0C4000000000000032D
+t1294909636
+s813
+i<UIKit/UIKit.h>
+
+N/Users/initials/developer/FlxHelloWorld/src/FlxHelloWorld.h
+c000000004D2EC0C40000000000000286
+t1294909636
+s646
+
+N/Users/initials/developer/FlxHelloWorld/src/FlxHelloWorld.m
+c000000004D2EC0C400000000000003F0
+t1294909636
+s1008
+i"FlxHelloWorld.h"
+
+N/Users/initials/developer/FlxHelloWorld/src/FlxHelloWorldState.h
+c000000004D2EC0C4000000000000029D
+t1294909636
+s669
+
+N/Users/initials/developer/FlxHelloWorld/src/FlxHelloWorldState.m
+c000000004D2EC0C400000000000004A5
+t1294909636
+s1189
+i"FlxHelloWorldState.h"
+
+N/var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch.gch
+t1294909648
+s18799216
+
+NInfo.plist
+c000000004D2EC0C400000000000004D3
+t1294909636
+s1235
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies316602445#316602446#0(0"0(0#1#0"32651522506817640#0"0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/AppDelegate.o /Users/initials/developer/FlxHelloWorld/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602448.478774
+e316602448.636141
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/AppDelegate.o
+x/Users/initials/developer/FlxHelloWorld/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/initials/developer/FlxHelloWorld/Classes/AppDelegate.m316602448#316602448#0(0"0(0#0#61"/Users/initials/developer/FlxHelloWorld/Classes/AppDelegate.m8604034176#2094"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/Classes/AppDelegate.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/AppDelegate.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashFunction.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashFunction.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602448.844962
+e316602449.056352
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashFunction.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashFunction.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashFunction.m316602448#316602449#0(0"0(0#0#76"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashFunction.m8603057472#2111"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashFunction.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashFunction.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashObject.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602449.056463
+e316602449.123594
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashObject.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashObject.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@82"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashObject.m316602449#316602449#0(0"0(0#0#74"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashObject.m8603526656#2107"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashObject.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashObject.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashPoint.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashPoint.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602449.123713
+e316602449.338105
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashPoint.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashPoint.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashPoint.m316602449#316602449#0(0"0(0#0#73"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashPoint.m8600172608#2105"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashPoint.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashPoint.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashRectangle.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashRectangle.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602449.338223
+e316602449.668436
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashRectangle.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashRectangle.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@85"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashRectangle.m316602449#316602449#0(0"0(0#0#77"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashRectangle.m8600123936#2113"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flash/FlashRectangle.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlashRectangle.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlixelAPTBindings.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlixelAPTBindings.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602459.514006
+e316602459.661308
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlixelAPTBindings.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlixelAPTBindings.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@89"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlixelAPTBindings.m316602459#316602459#0(0"0(0#0#81"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlixelAPTBindings.m8604535648#2120"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlixelAPTBindings.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlixelAPTBindings.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlixelFont.o /Users/initials/developer/FlxHelloWorld/flixel-ios/fonts/FlixelFont.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602459.134176
+e316602459.258134
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlixelFont.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/fonts/FlixelFont.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@77"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/fonts/FlixelFont.m316602459#316602459#0(0"0(0#0#69"/Users/initials/developer/FlxHelloWorld/flixel-ios/fonts/FlixelFont.m8604413888#2101"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/fonts/FlixelFont.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlixelFont.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxAnim.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxAnim.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602449.668552
+e316602449.815983
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxAnim.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxAnim.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxAnim.m316602449#316602449#0(0"0(0#0#71"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxAnim.m8603530304#2100"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxAnim.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxAnim.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxButton.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxButton.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602449.816160
+e316602450.093446
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxButton.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxButton.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxButton.m316602449#316602450#0(0"0(0#0#73"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxButton.m8603248512#2104"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxButton.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxButton.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxEmitter.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxEmitter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602450.093557
+e316602450.499123
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxEmitter.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxEmitter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@82"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxEmitter.m316602450#316602450#0(0"0(0#0#74"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxEmitter.m8603619008#2106"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxEmitter.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxEmitter.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxFade.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFade.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602450.499440
+e316602450.621558
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxFade.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFade.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFade.m316602450#316602450#0(0"0(0#0#71"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFade.m8603858016#2100"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFade.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxFade.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxFlash.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFlash.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602450.621675
+e316602450.751492
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxFlash.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFlash.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFlash.m316602450#316602450#0(0"0(0#0#72"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFlash.m8601412352#2102"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxFlash.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxFlash.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxG.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxG.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602450.751599
+e316602452.019872
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxG.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxG.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxG.m316602450#316602452#0(0"0(0#0#68"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxG.m8598968256#2094"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxG.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxG.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGLView.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGLView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602452.020029
+e316602452.273330
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGLView.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGLView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGLView.m316602452#316602452#0(0"0(0#0#73"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGLView.m8603963520#2104"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGLView.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGLView.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGame.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGame.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602452.273441
+e316602453.110254
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGame.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGame.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGame.m316602452#316602453#0(0"0(0#0#71"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGame.m8600862592#2100"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGame.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGame.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGroup.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGroup.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602453.110367
+e316602453.594242
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGroup.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGroup.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGroup.m316602453#316602453#0(0"0(0#0#72"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGroup.m8601461312#2102"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxGroup.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxGroup.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorld.o /Users/initials/developer/FlxHelloWorld/src/FlxHelloWorld.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602448.636243
+e316602448.729728
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorld.o
+x/Users/initials/developer/FlxHelloWorld/src/FlxHelloWorld.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/initials/developer/FlxHelloWorld/src/FlxHelloWorld.m316602448#316602448#0(0"0(0#0#59"/Users/initials/developer/FlxHelloWorld/src/FlxHelloWorld.m8599631616#2094"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/src/FlxHelloWorld.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorld.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorldState.o /Users/initials/developer/FlxHelloWorld/src/FlxHelloWorldState.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602448.729847
+e316602448.844847
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorldState.o
+x/Users/initials/developer/FlxHelloWorld/src/FlxHelloWorldState.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/initials/developer/FlxHelloWorld/src/FlxHelloWorldState.m316602448#316602448#0(0"0(0#0#64"/Users/initials/developer/FlxHelloWorld/src/FlxHelloWorldState.m8602906336#2104"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/src/FlxHelloWorldState.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorldState.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxList.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxList.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602453.594430
+e316602453.691480
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxList.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxList.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxList.m316602453#316602453#0(0"0(0#0#71"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxList.m8605809280#2100"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxList.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxList.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxManagedSprite.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxManagedSprite.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602453.691598
+e316602453.959220
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxManagedSprite.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxManagedSprite.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@88"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxManagedSprite.m316602453#316602453#0(0"0(0#0#80"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxManagedSprite.m8601036320#2118"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxManagedSprite.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxManagedSprite.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxObject.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602453.959330
+e316602454.456969
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxObject.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxObject.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxObject.m316602453#316602454#0(0"0(0#0#73"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxObject.m8605728416#2104"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxObject.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxObject.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxPoint.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxPoint.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602454.457081
+e316602454.568742
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxPoint.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxPoint.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxPoint.m316602454#316602454#0(0"0(0#0#72"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxPoint.m8603982912#2102"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxPoint.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxPoint.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxQuadTree.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuadTree.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602454.568860
+e316602455.279122
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxQuadTree.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuadTree.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuadTree.m316602454#316602455#0(0"0(0#0#75"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuadTree.m8601234592#2108"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuadTree.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxQuadTree.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxQuake.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuake.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602455.279309
+e316602455.421619
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxQuake.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuake.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuake.m316602455#316602455#0(0"0(0#0#72"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuake.m8599555776#2102"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxQuake.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxQuake.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxRect.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxRect.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602455.421734
+e316602455.528962
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxRect.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxRect.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxRect.m316602455#316602455#0(0"0(0#0#71"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxRect.m8603940640#2100"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxRect.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxRect.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSave.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSave.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602455.529059
+e316602455.677112
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSave.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSave.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSave.m316602455#316602455#0(0"0(0#0#71"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSave.m8600989376#2100"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSave.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSave.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSound.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSound.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602455.677238
+e316602455.825899
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSound.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSound.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSound.m316602455#316602455#0(0"0(0#0#72"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSound.m8597055168#2102"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSound.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSound.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSprite.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSprite.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602455.826011
+e316602456.645790
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSprite.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSprite.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSprite.m316602455#316602456#0(0"0(0#0#73"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSprite.m8601347680#2104"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxSprite.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxSprite.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxState.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxState.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602456.645900
+e316602456.773636
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxState.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxState.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxState.m316602456#316602456#0(0"0(0#0#72"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxState.m8599124576#2102"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxState.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxState.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxText.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxText.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602456.773738
+e316602457.103017
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxText.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxText.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxText.m316602456#316602457#0(0"0(0#0#71"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxText.m8606077696#2100"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxText.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxText.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxTileblock.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTileblock.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602459.258254
+e316602459.513893
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxTileblock.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTileblock.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTileblock.m316602459#316602459#0(0"0(0#0#76"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTileblock.m8603211328#2110"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTileblock.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxTileblock.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxTouches.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTouches.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602457.103200
+e316602457.284090
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxTouches.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTouches.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@82"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTouches.m316602457#316602457#0(0"0(0#0#74"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTouches.m8600628352#2106"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxTouches.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxTouches.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxU.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxU.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602457.284205
+e316602457.884482
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxU.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxU.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxU.m316602457#316602457#0(0"0(0#0#68"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxU.m8600733056#2094"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/Flixel/FlxU.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxU.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretFont.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretFont.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602457.884596
+e316602458.023727
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretFont.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretFont.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretFont.m316602457#316602458#0(0"0(0#0#82"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretFont.m8603408288#2118"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretFont.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretFont.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretText.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretText.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602458.023844
+e316602458.533897
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretText.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretText.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretText.m316602458#316602458#0(0"0(0#0#82"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretText.m8601342048#2118"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretText.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretText.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretTexture.o /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretTexture.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602458.534013
+e316602459.133994
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretTexture.o
+x/Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretTexture.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@93"Compile /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretTexture.m316602458#316602459#0(0"0(0#0#85"/Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretTexture.m8603312704#2124"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/flixel-ios/src/SemiSecret/SemiSecretTexture.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/SemiSecretTexture.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/UIImage+RIFAddition.o /Users/initials/developer/FlxHelloWorld/Classes/UIImage+RIFAddition.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602459.661424
+e316602459.777602
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/UIImage+RIFAddition.o
+x/Users/initials/developer/FlxHelloWorld/Classes/UIImage+RIFAddition.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@77"Compile /Users/initials/developer/FlxHelloWorld/Classes/UIImage+RIFAddition.m316602459#316602459#0(0"0(0#0#69"/Users/initials/developer/FlxHelloWorld/Classes/UIImage+RIFAddition.m8603028128#2110"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/Classes/UIImage+RIFAddition.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/UIImage+RIFAddition.o0#
+
+CCompileC build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/main.o /Users/initials/developer/FlxHelloWorld/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602448.224275
+e316602448.478670
+r1
+xCompileC
+xbuild/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/main.o
+x/Users/initials/developer/FlxHelloWorld/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@54"Compile /Users/initials/developer/FlxHelloWorld/main.m316602448#316602448#0(0"0(0#0#46"/Users/initials/developer/FlxHelloWorld/main.m8599687776#2072"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -include /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch -c /Users/initials/developer/FlxHelloWorld/main.m -o /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/main.o0#
+
+CCpResource build/Debug-iphonesimulator/FlxHelloWorld.app/Flixel.ttf flixel-ios/fonts/Flixel.ttf
+s316602446.202963
+e316602446.232332
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/FlxHelloWorld.app/Flixel.ttf
+xflixel-ios/fonts/Flixel.ttf
+lSLF07#2@32"Copy flixel-ios/fonts/Flixel.ttf316602446#316602446#0(0"0(0#0#67"/Users/initials/developer/FlxHelloWorld/flixel-ios/fonts/Flixel.ttf8599257632#494"    cd /Users/initials/developer/FlxHelloWorld    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/initials/developer/FlxHelloWorld/flixel-ios/fonts/Flixel.ttf /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app0#
+
+CGenerateDSYMFile /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app.dSYM /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld
+s316602460.625920
+e316602460.816839
+r1
+xGenerateDSYMFile
+x/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app.dSYM
+x/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld
+lSLF07#2@127"GenerateDSYMFile build/Debug-iphonesimulator/FlxHelloWorld.app.dSYM build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld316602460#316602460#0(0"0(0#0#99"/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld8601414656#404"    cd /Users/initials/developer/FlxHelloWorld    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld -o /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app.dSYM0#
+
+CLd /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld normal i386
+s316602459.777703
+e316602460.625808
+r1
+xLd
+x/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld
+xnormal
+xi386
+lSLF07#2@104"Link /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld316602459#316602460#0(0"0(0#0#0"8599481664#1062"    cd /Users/initials/developer/FlxHelloWorld    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -filelist /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/Objects-normal/i386/FlxHelloWorld.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework OpenGLES -framework QuartzCore -framework AVFoundation -framework AudioToolbox -framework CoreAudio -framework OpenAL -framework CoreGraphics -o /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/FlxHelloWorld0#
+
+CProcessInfoPlistFile /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/Info.plist Info.plist
+s316602446.176911
+e316602446.202860
+r1
+xProcessInfoPlistFile
+x/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist316602446#316602446#0(0"0(0#0#50"/Users/initials/developer/FlxHelloWorld/Info.plist29273878621126700#486"    cd /Users/initials/developer/FlxHelloWorld    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Info.plist -genpkginfo /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app/Info.plist0#
+
+CProcessPCH /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch.gch Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s316602446.232491
+e316602448.224063
+r1
+xProcessPCH
+x/var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch.gch
+xPrefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@21"Precompile Prefix.pch316602446#316602448#0(0"0(0#0#50"/Users/initials/developer/FlxHelloWorld/Prefix.pch8599787136#1945"    cd /Users/initials/developer/FlxHelloWorld    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-generated-files.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-own-target-headers.hmap -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-all-target-headers.hmap -iquote /Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/FlxHelloWorld-project-headers.hmap -F/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator -I/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/include -I/Users/initials/developer/FlxHelloWorld/flixel-ios/Headers -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources/i386 -I/Users/initials/developer/FlxHelloWorld/build/FlxHelloWorld.build/Debug-iphonesimulator/FlixelBasic.build/DerivedSources -c /Users/initials/developer/FlxHelloWorld/Prefix.pch -o /var/folders/40/40613S-4H14l5vHfo3l50U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-ehfpqrkwvktyfvfdfquzatcrrtax/Prefix.pch.gch0#
+
+CTouch /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app
+s316602460.817005
+e316602460.820011
+r1
+xTouch
+x/Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app
+lSLF07#2@91"Touch /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app316602460#316602460#0(0"0(0#0#0"8602597824#286"    cd /Users/initials/developer/FlxHelloWorld    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/initials/developer/FlxHelloWorld/build/Debug-iphonesimulator/FlxHelloWorld.app0#
+
