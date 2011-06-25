@@ -69,7 +69,7 @@ static CFTimeInterval gameStart;
 @synthesize swipeLeftRecognizer;
 //@synthesize swipeRightRecognizer;
 @synthesize swipeUpRecognizer;
-@synthesize swipeDownRecognizer;
+@synthesize swipeDownRecognizer; 
 
 
 - (BOOL) paused
