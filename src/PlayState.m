@@ -29,6 +29,10 @@
 #define SCORE_TIMER 3
 #define KILL_TIMER 0.75
 
+#define BUTTON_START_ALPHA 0.1
+#define BUTTON_PRESSED_ALPHA 0.5
+
+
 
 static NSString * ImgTech = @"tech_tiles.png";
 static NSString * ImgDirtTop = @"dirt_top.png";
@@ -98,6 +102,11 @@ BOOL scoreChanged;
 
 - (void) create
 {
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSInteger currentZoom = [prefs integerForKey:@"ZOOM_FOR_CURRENT_GAME"];
+    
+    
 //	if([GameCenterManager isGameCenterAvailable])
 //	{
 //		self.gameCenterManager= [[[GameCenterManager alloc] init] autorelease];
@@ -267,53 +276,65 @@ BOOL scoreChanged;
     
     
     
-    
+    //add buttons for the virtual control pad
     
     buttonLeft  = [FlxSprite spriteWithX:80 y:80 graphic:ImgButtonArrow];
     buttonLeft.x = 0;
     buttonLeft.y = FlxG.height-80;
-    buttonLeft.alpha=0.3;
+    buttonLeft.alpha=BUTTON_START_ALPHA;
     //buttonLeft.fixed = YES;
     buttonLeft.scrollFactor = CGPointMake(0, 0);
 	[self add:buttonLeft];
+    
     buttonRight  = [FlxSprite spriteWithX:80 y:80 graphic:ImgButtonArrow];
     buttonRight.x = 80;
     buttonRight.y = FlxG.height-80;
-    buttonRight.alpha=0.3;
+    buttonRight.alpha=BUTTON_START_ALPHA;
     buttonRight.angle = 180;
     //buttonRight.fixed=YES;
     buttonRight.scrollFactor = CGPointMake(0, 0);
-    
 	[self add:buttonRight];
     
     
     buttonA  = [FlxSprite spriteWithX:40 y:40 graphic:ImgButton];
     buttonA.x = 420;
     buttonA.y = FlxG.height-60;
-    buttonA.alpha=0.3;
+    buttonA.alpha=BUTTON_START_ALPHA;
     //buttonA.fixed=YES;
     buttonA.scrollFactor = CGPointMake(0, 0);
 	[self add:buttonA];
+    
     buttonB  = [FlxSprite spriteWithX:40 y:40 graphic:ImgButton];
     buttonB.x = 340;
     buttonB.y = FlxG.height-60;
-    buttonB.alpha=0.3;
+    buttonB.alpha=BUTTON_START_ALPHA;
     //buttonB.fixed=YES;
     buttonB.scrollFactor = CGPointMake(0, 0);
 	[self add:buttonB]; 
-    //    
-    //    buttonC  = [FlxSprite spriteWithX:40 y:40 graphic:ImgButton];
-    //    buttonC.x = 396;
-    //    buttonC.y = 196;
-    //    buttonC.alpha=0.4;
-    //    buttonC.scrollFactor = CGPointMake(0, 0);
-    //	[self add:buttonC];
-    //    buttonD  = [FlxSprite spriteWithX:40 y:40 graphic:ImgButton];
-    //    buttonD.x = 356;
-    //    buttonD.y = 236;
-    //    buttonD.alpha=0.4;
-    //    buttonD.scrollFactor = CGPointMake(0, 0);
-    //	[self add:buttonD];
+    
+    if (currentZoom==2) {
+        buttonLeft.scale=CGPointMake(0.5, 0.5);
+        buttonRight.scale=CGPointMake(0.5, 0.5);
+        buttonA.scale=CGPointMake(0.5, 0.5);
+        buttonB.scale=CGPointMake(0.5, 0.5);
+        
+        buttonLeft.x=-20;
+        buttonLeft.y=100;
+        
+        buttonRight.x=20;
+        buttonRight.y=100;
+        
+        buttonA.x=200;
+        buttonA.y=120;
+        
+        buttonB.x=160;
+        buttonB.y=120;
+
+    }
+    
+                                     
+                                     
+    
     
     _fading = NO;
     [FlxG playMusicWithParam1:SndMode param2:0.5];
@@ -446,16 +467,23 @@ BOOL scoreChanged;
 
 - (void) virtualControlPad 
 {
+    buttonRight.alpha = BUTTON_START_ALPHA;
+    buttonLeft.alpha = BUTTON_START_ALPHA;
+    buttonA.alpha = BUTTON_START_ALPHA;
+    buttonB.alpha = BUTTON_START_ALPHA;
+    
     if (FlxG.touches.vcpLeftArrow) {
+        buttonLeft.alpha = BUTTON_PRESSED_ALPHA;
         player.velocity = CGPointMake(-200, player.velocity.y);
         player.scale = CGPointMake(-1, 1);
     } else if (FlxG.touches.vcpRightArrow) {
+        buttonRight.alpha = BUTTON_PRESSED_ALPHA;
         player.velocity = CGPointMake(200, player.velocity.y);
         player.scale = CGPointMake(1, 1);
     } 
-    //button B jump
+    //button A jump
     if (FlxG.touches.vcpButton2 && !player.velocity.y  && FlxG.touches.newTouch ) { //&& FlxG.touches.newTouch
-        
+        buttonA.alpha = BUTTON_PRESSED_ALPHA;
         [player doJump];
         //pressedJump = YES;
         player.justLanded = YES;
@@ -464,6 +492,7 @@ BOOL scoreChanged;
     }
     BOOL nt = FlxG.touches.newTouch;
     if (FlxG.touches.vcpButton1 && (nt || player.rapidFire) ) { 
+        buttonB.alpha = BUTTON_PRESSED_ALPHA;
         if (!player.flickering) {
             //button D regular shoot
             [FlxG play:SndShoot];
@@ -599,16 +628,16 @@ BOOL scoreChanged;
             _gunjam.visible = NO;
     }
     
-    if (FlxG.touches.touching && FlxG.touches.screenTouchPoint.x > 220 && FlxG.touches.screenTouchPoint.x < 260)
-    {
-        buttonRight.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height - 0.1;
-        buttonLeft.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
-        buttonA.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
-        buttonB.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
-        //        buttonC.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
-        //        buttonD.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;       
-        
-    }
+//    if (FlxG.touches.touching && FlxG.touches.screenTouchPoint.x > 220 && FlxG.touches.screenTouchPoint.x < 260)
+//    {
+//        buttonRight.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height - 0.1;
+//        buttonLeft.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
+//        buttonA.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
+//        buttonB.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
+//        //        buttonC.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
+//        //        buttonD.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;       
+//        
+//    }
     
 }
 
@@ -684,14 +713,14 @@ BOOL scoreChanged;
     //check overlap between player and hazards (enemies/enemy bullets/spawners)
     for (FlxObject * s in _hazards.members) {
         if (!s.dead) {
-            if ([ player overlaps:s] ) {
+            if ([ player overlapsWithOffset:s] ) {
                 [player hurt:0];
                 return;
                 
             }
             //check hazards agains the players bullets;
             for (FlxObject * bb in _bullets.members) {
-                if ([ s overlaps:bb] ) {
+                if ([ s overlapsWithOffset:bb] ) {
                     if (!bb.dead) {
                         //[bb kill];
                         //[s kill];

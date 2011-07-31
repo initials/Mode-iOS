@@ -13,6 +13,8 @@
 	CGFloat timer;
     FlxButton * playBtn;
     FlxButton * highScoreBtn;
+    
+    NSInteger zoom;
 
 }
 

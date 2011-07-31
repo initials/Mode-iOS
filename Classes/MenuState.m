@@ -58,6 +58,7 @@ static FlxEmitter * emitter = nil;
     
     // getting an NSInteger
     NSInteger numberOfPlays = [prefs integerForKey:@"NUMBER_OF_PLAYS"];
+    zoom = [prefs integerForKey:@"ZOOM_FOR_CURRENT_GAME"];
     numberOfPlays ++;
     [prefs setInteger:numberOfPlays forKey:@"NUMBER_OF_PLAYS"];
     
@@ -162,8 +163,34 @@ static FlxEmitter * emitter = nil;
         text.y = FlxG.height/3;        
         [self add:text];
         
-        FlxButton * flixelButton = [[[FlxButton alloc] initWithX:FlxG.width/2-40
-                                                               y:FlxG.height/3+54
+        CGFloat flixelButtonX;
+        CGFloat flixelButtonY;
+        CGFloat dannyX, dannyY, helpX, helpY, playX, playY;
+
+        
+        if (zoom==1) {
+            flixelButtonX=FlxG.width/2-40;
+            flixelButtonY=FlxG.height/3+54;
+            dannyX=flixelButtonX;
+            dannyY=flixelButtonY+22;
+            helpX=flixelButtonX;
+            helpY=flixelButtonY+44;
+            playX=flixelButtonX;
+            playY=flixelButtonY+100;
+        }
+        else if (zoom==2) {
+            flixelButtonX=FlxG.width-100;
+            flixelButtonY=FlxG.height/3+24;
+            dannyX=20;
+            dannyY=flixelButtonY;
+            helpX=FlxG.width/2-40;
+            helpY=flixelButtonY+22;
+            playX=FlxG.width/2-40;
+            playY=flixelButtonY+44;
+        }
+        
+        FlxButton * flixelButton = [[[FlxButton alloc] initWithX:flixelButtonX
+                                                               y:flixelButtonY
                                                         callback:[FlashFunction functionWithTarget:self
                                                                                             action:@selector(onFlixel)]] autorelease];
         [flixelButton loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
@@ -176,8 +203,8 @@ static FlxEmitter * emitter = nil;
                                                                                               size:8.0]  ];
         
         [self add:flixelButton];
-        FlxButton * dannyButton = [[[FlxButton alloc] initWithX:flixelButton.x
-                                                              y:flixelButton.y + 22
+        FlxButton * dannyButton = [[[FlxButton alloc] initWithX:dannyX
+                                                              y:dannyY
                                                        callback:[FlashFunction functionWithTarget:self
                                                                                            action:@selector(onDanny)]] autorelease];
         [dannyButton loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
@@ -190,8 +217,8 @@ static FlxEmitter * emitter = nil;
                                                                                               size:8.0]  ];
         [self add:dannyButton];       
         
-        helpBtn = [[[FlxButton alloc] initWithX:flixelButton.x
-                                                              y:flixelButton.y + 44
+        helpBtn = [[[FlxButton alloc] initWithX:helpX
+                                              y:helpY
                                                        callback:[FlashFunction functionWithTarget:self
                                                                                            action:@selector(onHelp)]] autorelease];
         [helpBtn loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
@@ -217,8 +244,8 @@ static FlxEmitter * emitter = nil;
         
         
         
-        playBtn = [[[FlxButton alloc] initWithX:flixelButton.x
-                                              y:flixelButton.y + 100
+        playBtn = [[[FlxButton alloc] initWithX:playX
+                                              y:playY
                                        callback:[FlashFunction functionWithTarget:self
                                                                            action:@selector(onPlay)]] autorelease];
         [playBtn loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed]];

@@ -5,6 +5,7 @@
 	
 	FlxButton * back;
     FlxText * aboutText;
+    FlxText * zoomText;
 
 }
 

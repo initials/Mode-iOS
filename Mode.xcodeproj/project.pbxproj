@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07205DA41288705800FCC229 /* UIImage+RIFAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 07205DA31288705800FCC229 /* UIImage+RIFAddition.m */; };
 		07542F6C1183639E004B03B0 /* FlixelFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 07542F6B1183639E004B03B0 /* FlixelFont.m */; };
 		075430BF11867D3D004B03B0 /* FlxTileblock.m in Sources */ = {isa = PBXBuildFile; fileRef = 075430BE11867D3D004B03B0 /* FlxTileblock.m */; };
 		075430E511873B5D004B03B0 /* FlixelAPTBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 075430E411873B5D004B03B0 /* FlixelAPTBindings.m */; };
@@ -105,8 +104,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07205DA21288705800FCC229 /* UIImage+RIFAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RIFAddition.h"; sourceTree = "<group>"; };
-		07205DA31288705800FCC229 /* UIImage+RIFAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RIFAddition.m"; sourceTree = "<group>"; };
 		07542F6B1183639E004B03B0 /* FlixelFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlixelFont.m; sourceTree = "<group>"; };
 		075430BE11867D3D004B03B0 /* FlxTileblock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlxTileblock.m; sourceTree = "<group>"; };
 		075430E411873B5D004B03B0 /* FlixelAPTBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlixelAPTBindings.m; sourceTree = "<group>"; };
@@ -318,8 +315,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				07205DA21288705800FCC229 /* UIImage+RIFAddition.h */,
-				07205DA31288705800FCC229 /* UIImage+RIFAddition.m */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
 				076E6DBE1180DFF60084ECBC /* flixel */,
@@ -600,7 +595,6 @@
 				07542F6C1183639E004B03B0 /* FlixelFont.m in Sources */,
 				075430BF11867D3D004B03B0 /* FlxTileblock.m in Sources */,
 				075430E511873B5D004B03B0 /* FlixelAPTBindings.m in Sources */,
-				07205DA41288705800FCC229 /* UIImage+RIFAddition.m in Sources */,
 				D200779C13B3371A0036F296 /* Mode.m in Sources */,
 				D200779D13B3371A0036F296 /* PlayState.m in Sources */,
 				D20077B813B337340036F296 /* Bullet.m in Sources */,
@@ -625,7 +619,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -635,7 +629,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -726,7 +720,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -736,7 +730,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -751,7 +745,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -763,7 +757,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -777,7 +771,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -789,7 +783,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

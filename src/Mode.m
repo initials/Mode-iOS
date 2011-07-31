@@ -19,12 +19,21 @@
 
 - (id) init
 {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSInteger zoom = [prefs integerForKey:@"ZOOM"];
+    if(zoom == 0) zoom=2;
+    [prefs setInteger:zoom forKey:@"ZOOM"];
+    [prefs setInteger:zoom forKey:@"ZOOM_FOR_CURRENT_GAME"];
+    [prefs synchronize];
+
+    NSLog(@"zoom = %d", zoom);
+    
   BOOL tbZoom = NO;
   if (FlxG.iPad || FlxG.retinaDisplay)
     tbZoom = YES;
   if ((self = [super initWithOrientation:FlxGameOrientationLandscape
 				   state:@"MenuState"
-				    zoom:1.0
+				    zoom:zoom
 		    useTextureBufferZoom:tbZoom
 			       modelZoom:1.0])) {
     if (FlxG.retinaDisplay)

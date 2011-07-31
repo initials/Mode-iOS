@@ -15,8 +15,6 @@
 
 #import "AppDelegate.h"
 #import "Mode.h"
-#import <GameKit/GameKit.h>
-
 #import <SemiSecret/SemiSecretTexture.h>
 
 void preloadTextureAtlases()

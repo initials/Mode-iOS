@@ -126,7 +126,16 @@ static NSString * SndHurt = @"hurt.caf";
     }
 }
 
-
+- (void) hitBottomWithParam1:(FlxObject *)Contact param2:(float)Velocity
+{
+    
+    [super hitBottomWithParam1:Contact param2:Velocity];
+    
+    //stops player from twitching.
+    self.y = roundf(self.y);
+    
+    
+}
 
 
 
