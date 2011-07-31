@@ -24,10 +24,13 @@
 //#import "AchievementState.h"
 
 static NSString * ImgButton = @"buttonupGreen.png";
+static NSString * ImgButtonPressed = @"buttonPressed.png";
 
 static NSString * ImgGibs = @"spawner_gibs.png";
 static NSString * SndHit = @"menu_hit.caf";
 static NSString * SndHit2 = @"menu_hit_2.caf";
+
+static NSString * SndButtonPress = @"button.caf";
 
 static FlxEmitter * emitter = nil;
 
@@ -163,33 +166,42 @@ static FlxEmitter * emitter = nil;
                                                                y:FlxG.height/3+54
                                                         callback:[FlashFunction functionWithTarget:self
                                                                                             action:@selector(onFlixel)]] autorelease];
-        [flixelButton loadGraphic:[FlxSprite spriteWithGraphic:ImgButton]];
-        [flixelButton loadText:[FlxText textWithWidth:flixelButton.width
+        [flixelButton loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
+        [flixelButton loadTextWithParam1:[FlxText textWithWidth:flixelButton.width
                                                  text:NSLocalizedString(@"flixel.org", @"flixel.org")
                                                  font:nil
-                                                 size:8.0]];
+                                                           size:8.0] param2:[FlxText textWithWidth:flixelButton.width
+                                                                                              text:NSLocalizedString(@"FLIXEL.ORG", @"FLIXEL.ORG")
+                                                                                              font:nil
+                                                                                              size:8.0]  ];
         
         [self add:flixelButton];
         FlxButton * dannyButton = [[[FlxButton alloc] initWithX:flixelButton.x
                                                               y:flixelButton.y + 22
                                                        callback:[FlashFunction functionWithTarget:self
                                                                                            action:@selector(onDanny)]] autorelease];
-        [dannyButton loadGraphic:[FlxSprite spriteWithGraphic:ImgButton]];
-        [dannyButton loadText:[FlxText textWithWidth:dannyButton.width
-                                                text:NSLocalizedString(@"music: dannyB", @"music: dannyB")
-                                                font:nil
-                                                size:8]];
+        [dannyButton loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
+        [dannyButton loadTextWithParam1:[FlxText textWithWidth:flixelButton.width
+                                                           text:NSLocalizedString(@"Music: DannyB", @"Music: DannyB")
+                                                           font:nil
+                                                           size:8.0] param2:[FlxText textWithWidth:flixelButton.width
+                                                                                              text:NSLocalizedString(@"MUSIC: DANNYB", @"MUSIC: DANNYB")
+                                                                                              font:nil
+                                                                                              size:8.0]  ];
         [self add:dannyButton];       
         
         helpBtn = [[[FlxButton alloc] initWithX:flixelButton.x
                                                               y:flixelButton.y + 44
                                                        callback:[FlashFunction functionWithTarget:self
                                                                                            action:@selector(onHelp)]] autorelease];
-        [helpBtn loadGraphic:[FlxSprite spriteWithGraphic:ImgButton]];
-        [helpBtn loadText:[FlxText textWithWidth:dannyButton.width
-                                                text:NSLocalizedString(@"help/about", @"help/about")
-                                                font:nil
-                                                size:8]];
+        [helpBtn loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
+        [helpBtn loadTextWithParam1:[FlxText textWithWidth:flixelButton.width
+                                                          text:NSLocalizedString(@"help/about", @"help/about")
+                                                          font:nil
+                                                          size:8.0] param2:[FlxText textWithWidth:flixelButton.width
+                                                                                             text:NSLocalizedString(@"HELP/ABOUT", @"HELP/ABOUT")
+                                                                                             font:nil
+                                                                                             size:8.0]  ];
         [self add:helpBtn];
         
 //        highScoreBtn = [[[FlxButton alloc] initWithX:flixelButton.x
@@ -209,12 +221,15 @@ static FlxEmitter * emitter = nil;
                                               y:flixelButton.y + 100
                                        callback:[FlashFunction functionWithTarget:self
                                                                            action:@selector(onPlay)]] autorelease];
-        [playBtn loadGraphic:[FlxSprite spriteWithGraphic:ImgButton]];
+        [playBtn loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed]];
         
-        [playBtn loadText:[FlxText textWithWidth:playBtn.width
+        [playBtn loadTextWithParam1:[FlxText textWithWidth:playBtn.width
                                             text:NSLocalizedString(@"Play", @"Play")
                                             font:nil
-                                            size:8]];
+                                                      size:8] param2:[FlxText textWithWidth:playBtn.width
+                                                                                       text:NSLocalizedString(@"PLAY", @"PLAY")
+                                                                                       font:nil
+                                                                                       size:8]];
         [self add:playBtn];
         
         
@@ -230,18 +245,21 @@ static FlxEmitter * emitter = nil;
 
 - (void) onDanny
 {
+    [FlxG play:SndButtonPress];
     [FlxU openURL:@"http://dbsoundworks.com"];
     
 }
 
 - (void) onFlixel
 {
+    [FlxG play:SndButtonPress];
     [FlxU openURL:@"http://flixel.org"];
     
 }
 
 - (void) onHelp
 {
+    [FlxG play:SndButtonPress];
     helpBtn.visible = NO;
 	FlxG.state = [[[HelpState alloc] init] autorelease];
     return;

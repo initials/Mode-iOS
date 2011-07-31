@@ -38,7 +38,7 @@ static NSString * ImgDirt = @"dirt.png";
 static NSString * SndMode = @"mode.mp3";
 static NSString * SndJam = @"jam.caf";
 static NSString * SndCount = @"countdown.caf";
-
+static NSString * SndShoot = @"shoot.caf";
 
 static NSString * ImgGibs = @"gibs.png";
 static NSString * ImgSpawnerGibs = @"spawner_gibs.png";
@@ -466,6 +466,7 @@ BOOL scoreChanged;
     if (FlxG.touches.vcpButton1 && (nt || player.rapidFire) ) { 
         if (!player.flickering) {
             //button D regular shoot
+            [FlxG play:SndShoot];
             Bullet * bull = [_bullets.members objectAtIndex:bulletIndex];
             bull.x = player.x;
             bull.y = player.y;
@@ -509,6 +510,8 @@ BOOL scoreChanged;
     if (FlxG.touches.swipedLeft && !player.flickering ) {
         //up
         //[self fireWeapon];
+        [FlxG play:SndShoot];
+
         Bullet * bull = [_bullets.members objectAtIndex:bulletIndex];
         bull.x = player.x;
         bull.y = player.y;
@@ -529,6 +532,8 @@ BOOL scoreChanged;
         //was -36 in Flash game. changed it due to swipes being slower to execute.
         
         //down
+        [FlxG play:SndShoot];
+
         Bullet * bull = [_bullets.members objectAtIndex:bulletIndex];
         bull.x = player.x;
         bull.y = player.y;
@@ -545,6 +550,8 @@ BOOL scoreChanged;
     }
     else if (FlxG.touches.swipedDown && !player.flickering) { 
         //button D regular shoot
+        [FlxG play:SndShoot];
+
         Bullet * bull = [_bullets.members objectAtIndex:bulletIndex];
         bull.x = player.x;
         bull.y = player.y;
@@ -561,6 +568,7 @@ BOOL scoreChanged;
     }
     else if (FlxG.touches.swipedUp && !player.flickering) { 
         //button D regular shoot
+        
         Bullet * bull = [_bullets.members objectAtIndex:bulletIndex];
         bull.x = player.x;
         bull.y = player.y;

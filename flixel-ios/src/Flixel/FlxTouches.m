@@ -101,19 +101,19 @@ int previousNumberOfTouches;
             //NSLog(@"%@", singleTouch);
             CGPoint p = [singleTouch locationInView:(singleTouch.view)];
             //NSLog(@"%@", NSStringFromCGPoint(p));
-            if (p.y > 400) {
+            if (p.y > 400 && p.x > 220) {
                 vcpLeftArrow = YES;
                 
-            } else if (p.y > 320 && p.y < 399) {
+            } else if (p.y > 320 && p.y < 399 && p.x > 220) {
                 vcpRightArrow = YES;
                 
-            } else if (p.y < 80 && p.y > 1  ) { //&& player.onFloor
+            } else if (p.y < 80 && p.y > 1   && p.x > 220) { //&& player.onFloor
                 vcpButton2 = YES;
                 
                 
                 
             }
-            if (p.y > 81 && p.y < 160  ) { 
+            if (p.y > 81 && p.y < 160  && p.x > 220 ) { 
                 vcpButton1=YES;
                 
             }

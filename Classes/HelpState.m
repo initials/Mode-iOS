@@ -26,6 +26,8 @@ FlxText * headingText;
 FlxText * headingTextShadow;
 
 static NSString * ImgButton = @"buttonupGreen.png";
+static NSString * SndButtonPress = @"button.caf";
+static NSString * ImgButtonPressed = @"buttonPressed.png";
 
 
 
@@ -85,11 +87,14 @@ static NSString * ImgButton = @"buttonupGreen.png";
                                        y:FlxG.height-20
                                 callback:[FlashFunction functionWithTarget:self
                                                                     action:@selector(onBack)]] autorelease];
-    [back loadGraphic:[FlxSprite spriteWithGraphic:ImgButton]];
-    [back loadText:[FlxText textWithWidth:back.width
-                                     text:NSLocalizedString(@"Back", @"Back")
-                                     font:nil
-                                     size:8.0]];
+    [back loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
+    [back loadTextWithParam1:[FlxText textWithWidth:back.width
+                                                      text:NSLocalizedString(@"back", @"back")
+                                                      font:nil
+                                                      size:8.0] param2:[FlxText textWithWidth:back.width
+                                                                                         text:NSLocalizedString(@"BACK", @"BACK")
+                                                                                         font:nil
+                                                                                         size:8.0]  ];
     
     [self add:back];
     
@@ -111,6 +116,7 @@ static NSString * ImgButton = @"buttonupGreen.png";
 
 - (void) onBack
 {
+    [FlxG play:SndButtonPress];
 	FlxG.state = [[[MenuState alloc] init] autorelease];
     return;
 }

@@ -100,6 +100,7 @@
 		D200780913B338270036F296 /* menu_hit_2.caf in Resources */ = {isa = PBXBuildFile; fileRef = D20077FB13B338270036F296 /* menu_hit_2.caf */; };
 		D200780A13B338270036F296 /* shoot.caf in Resources */ = {isa = PBXBuildFile; fileRef = D20077FC13B338270036F296 /* shoot.caf */; };
 		D200780B13B338270036F296 /* mode.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D20077FD13B338270036F296 /* mode.mp3 */; };
+		D27AF76E13E518A300C6DE74 /* buttonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D27AF76D13E518A300C6DE74 /* buttonPressed.png */; };
 		D362EAFA12DDB506004A4206 /* Flixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D362EAF912DDB506004A4206 /* Flixel.ttf */; };
 /* End PBXBuildFile section */
 
@@ -214,6 +215,7 @@
 		D20077FB13B338270036F296 /* menu_hit_2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = menu_hit_2.caf; sourceTree = "<group>"; };
 		D20077FC13B338270036F296 /* shoot.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = shoot.caf; sourceTree = "<group>"; };
 		D20077FD13B338270036F296 /* mode.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mode.mp3; path = data/mode.mp3; sourceTree = "<group>"; };
+		D27AF76D13E518A300C6DE74 /* buttonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonPressed.png; path = data/buttonPressed.png; sourceTree = "<group>"; };
 		D362EAF912DDB506004A4206 /* Flixel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Flixel.ttf; path = "flixel-ios/fonts/Flixel.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -360,6 +362,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D27AF76D13E518A300C6DE74 /* buttonPressed.png */,
 				D20077EF13B338270036F296 /* CAF */,
 				D20077FD13B338270036F296 /* mode.mp3 */,
 				D20077EB13B338170036F296 /* buttonArrow.png */,
@@ -551,6 +554,7 @@
 				D200780913B338270036F296 /* menu_hit_2.caf in Resources */,
 				D200780A13B338270036F296 /* shoot.caf in Resources */,
 				D200780B13B338270036F296 /* mode.mp3 in Resources */,
+				D27AF76E13E518A300C6DE74 /* buttonPressed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,8 +648,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
 				COPY_PHASE_STRIP = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -656,8 +660,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				PROVISIONING_PROFILE = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -670,8 +674,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -683,8 +687,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				PROVISIONING_PROFILE = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -696,8 +700,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
 				COPY_PHASE_STRIP = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -708,8 +712,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				PROVISIONING_PROFILE = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -799,8 +803,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
 				COPY_PHASE_STRIP = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -811,8 +815,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				PROVISIONING_PROFILE = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
