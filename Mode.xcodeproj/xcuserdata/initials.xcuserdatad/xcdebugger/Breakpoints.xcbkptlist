@@ -8,13 +8,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "src/FlxHelloWorldState.m"
-         timestampString = "329048163.13415"
+         filePath = "flixel-ios/src/Flixel/FlxTouches.m"
+         timestampString = "330512879.420342"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "55"
-         endingLineNumber = "55"
-         landmarkName = "-create"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
+         landmarkName = "-update"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -22,14 +22,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "Classes/Spawner.m"
-         timestampString = "329405702.660045"
+         filePath = "src/PlayState.h"
+         timestampString = "332562019.324983"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "113"
-         endingLineNumber = "113"
-         landmarkName = "-hurt:"
-         landmarkType = "5">
+         startingLineNumber = "105"
+         endingLineNumber = "105">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

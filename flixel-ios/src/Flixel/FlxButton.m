@@ -85,49 +85,65 @@
    [self refreshHulls];
    return self;
 }
-- (FlxButton *) loadText:(FlxText *)Text;
+
+
+- (FlxButton *) loadTextWithParam1:(FlxText *)Text param2:(FlxText *)TextHighlight withXOffset:(float)xOffset withYOffset:(float)yOffset;
 {
-   return [self loadTextWithParam1:Text param2:nil];
+    Text.x += xOffset;
+    Text.y += yOffset;
+    TextHighlight.x += xOffset;
+    TextHighlight.y += yOffset;
+    
+    if (Text)
+        Text.alignment = @"center";
+    if (TextHighlight)
+        TextHighlight.alignment = @"center";
+    if (Text != nil)
+    {
+        if (_offT == nil)
+        {
+            [_offT autorelease];
+            _offT = [Text retain];
+            [self add:_offT];
+        }
+        else {
+            [_offT autorelease];
+            _offT = [((FlxText *)([self replaceWithParam1:_offT param2:Text])) retain];
+        }
+    }
+    if (TextHighlight == nil) {
+        [_onT autorelease];
+        _onT = [_offT retain];
+    } else
+    {
+        if (_onT == nil)
+        {
+            [_onT autorelease];
+            _onT = [TextHighlight retain];
+            [self add:_onT];
+        }
+        else {
+            [_onT autorelease];
+            _onT = [((FlxText *)([self replaceWithParam1:_onT param2:TextHighlight])) retain];
+        }
+    }
+    _offT.scrollFactor = scrollFactor;
+    _onT.scrollFactor = scrollFactor;
+    return self;
 }
+
 - (FlxButton *) loadTextWithParam1:(FlxText *)Text param2:(FlxText *)TextHighlight;
 {
-  if (Text)
-    Text.alignment = @"center";
-  if (TextHighlight)
-    TextHighlight.alignment = @"center";
-  if (Text != nil)
-    {
-      if (_offT == nil)
-	{
-	  [_offT autorelease];
-	  _offT = [Text retain];
-	  [self add:_offT];
-	}
-      else {
-	[_offT autorelease];
-	_offT = [((FlxText *)([self replaceWithParam1:_offT param2:Text])) retain];
-      }
-    }
-  if (TextHighlight == nil) {
-    [_onT autorelease];
-    _onT = [_offT retain];
-  } else
-    {
-      if (_onT == nil)
-	{
-	  [_onT autorelease];
-	  _onT = [TextHighlight retain];
-	  [self add:_onT];
-	}
-      else {
-	[_onT autorelease];
-	_onT = [((FlxText *)([self replaceWithParam1:_onT param2:TextHighlight])) retain];
-      }
-    }
-  _offT.scrollFactor = scrollFactor;
-  _onT.scrollFactor = scrollFactor;
-  return self;
+    return [self loadTextWithParam1:Text param2:TextHighlight withXOffset:0 withYOffset:0];
+
 }
+
+- (FlxButton *) loadText:(FlxText *)Text;
+{
+    return [self loadTextWithParam1:Text param2:nil withXOffset:0 withYOffset:0];
+}
+
+
 - (void) update;
 {
   if (!_initialized)

@@ -819,6 +819,18 @@ const unsigned int DOWN = 3;
 {
    [self renderSprite];
 }
+
+- (BOOL) overlapsWithOffset:(FlxSprite *)Object;
+{
+    CGPoint _point = [self getScreenXY];
+    float tx = _point.x + self.offset.x;
+    float ty = _point.y + self.offset.y;
+    _point = [Object getScreenXY];
+    if ((_point.x + Object.offset.x <= tx - Object.width  ) || (_point.x + Object.offset.x >= tx + width) || (_point.y + Object.offset.y <= ty - Object.height) || (_point.y + Object.offset.y >= ty + height))
+        return NO;
+    return YES;
+}
+
 - (BOOL) overlapsPointWithParam1:(float)X param2:(float)Y;
 {
   return [self overlapsPointWithParam1:X param2:Y param3:NO];

@@ -24,6 +24,7 @@
     BOOL _open;
     
 }
++ (id) spawnerWithOrigin:(CGPoint)origin Gibs:(FlxEmitter *)gibs Bots:(FlxGroup *)bots BotBullets:(FlxGroup*)botBullets BotGibs:(FlxEmitter *)botGibs ThePlayer:(Player *)player Notches:(FlxGroup *)notches Index:(int)index;
 
 - (id) initWithOrigin:(CGPoint)origin;
 - (id) initWithOrigin:(CGPoint)Origin Gibs:(FlxEmitter *)gibs Bots:(FlxGroup *)bots BotBullets:(FlxGroup*)botBullets BotGibs:(FlxEmitter *)botGibs ThePlayer:(Player *)player Notches:(FlxGroup *)notches Index:(int)index;

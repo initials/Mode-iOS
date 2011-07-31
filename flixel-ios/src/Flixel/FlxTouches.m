@@ -27,6 +27,9 @@
 @synthesize touches, numberOfTouches, multiTouchPhase;
 //@synthesize swipeLeftRecognizer;
 @synthesize swipedDown, swipedUp, swipedLeft, swipedRight;
+@synthesize vcpButton1, vcpButton2, vcpLeftArrow, vcpRightArrow, newTouch;
+
+int previousNumberOfTouches;
 
 
 - (void)dealloc {
@@ -80,8 +83,49 @@
     swipedUp=NO;
     swipedRight=NO;
     
+    vcpLeftArrow = NO;
+    vcpRightArrow = NO;
+    vcpButton1 = NO;
+    vcpButton2 = NO;
+
+    if (numberOfTouches > previousNumberOfTouches) {
+        newTouch = YES;
+    }
+    else {
+        newTouch = NO;
+    }
+    
+    if (numberOfTouches == 1 || numberOfTouches == 2) {
+        for(UITouch *singleTouch in touches) {
+            
+            //NSLog(@"%@", singleTouch);
+            CGPoint p = [singleTouch locationInView:(singleTouch.view)];
+            //NSLog(@"%@", NSStringFromCGPoint(p));
+            if (p.y > 400) {
+                vcpLeftArrow = YES;
+                
+            } else if (p.y > 320 && p.y < 399) {
+                vcpRightArrow = YES;
+                
+            } else if (p.y < 80 && p.y > 1  ) { //&& player.onFloor
+                vcpButton2 = YES;
+                
+                
+                
+            }
+            if (p.y > 81 && p.y < 160  ) { 
+                vcpButton1=YES;
+                
+            }
+        }
+    }
+    
+    previousNumberOfTouches = numberOfTouches;
+    
     
   if (newData) {
+      
+
       
       FlxGame * game = [FlxG game];
       if (game.swipedRight) {
@@ -96,6 +140,10 @@
       if (game.swipedUp) {
           swipedUp=YES;
       }
+      
+
+      
+  
 
       
     touchesBegan = nextTouchesBegan;

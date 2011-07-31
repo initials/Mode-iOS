@@ -26,6 +26,8 @@
     
 }
 
++ (id) enemyWithOrigin:(CGPoint)Origin Bullets:(FlxGroup *)bullets Gibs:(FlxEmitter *)gibs ThePlayer:(Player *)player;
+
 - (id) initWithOrigin:(CGPoint)origin;
 - (id) initWithOrigin:(CGPoint)Origin Bullets:(FlxGroup *)bullets Gibs:(FlxEmitter *)gibs ThePlayer:(Player *)player;
 - (void) resetSwarm:(int)type xPos:(int)xpos yPos:(int)ypos Bullets:(FlxGroup *)bullets Gibs:(FlxEmitter *)gibs ThePlayer:(Player *)player; 

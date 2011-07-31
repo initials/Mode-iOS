@@ -17,6 +17,10 @@
 
 #import "PlayState.h"
 
+//#import "AppSpecificValues.h"
+//#import "GameCenterManager.h"
+
+
 static NSString * ImgGibs = @"spawner_gibs.png";
 static NSString * SndMenu = @"menu_hit_2.caf";
 
@@ -30,6 +34,8 @@ static FlxEmitter * emitter = nil;
 
 @implementation VictoryState
 
+//@synthesize gameCenterManager;
+
 - (id) init
 {
 	if ((self = [super init])) {
@@ -40,6 +46,8 @@ static FlxEmitter * emitter = nil;
 
 - (void) create
 {
+
+    
     _timer = 0;
     _fading = false;
     
@@ -74,6 +82,22 @@ static FlxEmitter * emitter = nil;
     text.y = FlxG.height/2-35;
     
     [self add:text];
+    
+//    if([GameCenterManager isGameCenterAvailable])
+//	{
+//		self.gameCenterManager= [[[GameCenterManager alloc] init] autorelease];
+//		[self.gameCenterManager setDelegate: self];
+//		//[self.gameCenterManager authenticateLocalUser];
+//		text.text = [[NSString stringWithFormat:@"VICTORY\nSCORE: %d\nSubmitted to leaderboard!", FlxG.score ] retain];
+//		//[self updateCurrentScore];
+//	}
+//	else
+//	{
+//		[self showAlertWithTitle: @"Game Center Support Required!"
+//						 message: @"The current device does not support Game Center."];
+//	}
+//    
+//    [self.gameCenterManager reportScore:FlxG.score forCategory:kModeLB];
     
     
 }

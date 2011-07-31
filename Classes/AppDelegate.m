@@ -15,6 +15,7 @@
 
 #import "AppDelegate.h"
 #import "Mode.h"
+#import <GameKit/GameKit.h>
 
 #import <SemiSecret/SemiSecretTexture.h>
 
@@ -64,8 +65,22 @@ void preloadTextureAtlases()
     //preload textures here, now that opengl stuff should be created
     //preloadTextureAtlases();
     
+//    [self authenticateLocalPlayer];
+    
     return YES;
 }
+
+//- (void) authenticateLocalPlayer
+//{
+//    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+//    [localPlayer authenticateWithCompletionHandler:^(NSError *error) {
+//        if (localPlayer.isAuthenticated)
+//        {
+//            // Perform additional tasks for the authenticated player.
+//        }
+//    }];
+//}
+
 
 - (void) applicationDidEnterBackground:(UIApplication *)application
 {

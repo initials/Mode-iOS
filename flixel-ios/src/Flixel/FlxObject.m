@@ -11,7 +11,7 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
-//
+// 
 #import <Flixel/Flixel.h>
 
 @interface FlxObject ()
@@ -247,6 +247,18 @@ static GLuint lastBound = 0;
 - (void) render;
 {
 }
+
+- (BOOL) overlapsWithOffset:(FlxObject *)Object;
+{
+    CGPoint _point = [self getScreenXY];
+    float tx = _point.x ;
+    float ty = _point.y ;
+    _point = [Object getScreenXY];
+    if ((_point.x <= tx - Object.width) || (_point.x >= tx + width) || (_point.y <= ty - Object.height) || (_point.y >= ty + height))
+        return NO;
+    return YES;
+}
+
 - (BOOL) overlaps:(FlxObject *)Object;
 {
   CGPoint _point = [self getScreenXY];

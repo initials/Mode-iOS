@@ -47,8 +47,16 @@
 + (FlxSound *) music;
 + (void) setQuake:(FlxQuake *)quake;
 + (FlxQuake *) quake;
+
+
 + (void) setLevel:(int)level;
 + (int) level;
+
++ (void) setLevelWidth:(int) levelWidth;
++ (int) levelWidth;
++ (void) setLevelHeight:(int) levelHeight;
++ (int) levelHeight;
+
 + (void) setState:(FlxState *)state;
 + (FlxState *) state;
 + (void) setElapsed:(float)elapsed;

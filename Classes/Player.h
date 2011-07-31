@@ -23,8 +23,9 @@
     FlxEmitter * _gibs;
     
 }
++ (id) playerWithOrigin:(CGPoint)Origin Bullets:(FlxGroup *)bullets Gibs:(FlxEmitter *)gibs;
 
-- (id) initWithOrigin:(CGPoint)origin;
+- (id) initWithOrigin:(CGPoint)Origin;
 - (id) initWithOrigin:(CGPoint)Origin Bullets:(FlxGroup *)bullets Gibs:(FlxEmitter *)gibs;
 
 - (void) doJump;

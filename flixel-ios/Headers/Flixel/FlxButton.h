@@ -36,8 +36,12 @@
 - (id) initWithX:(int)X y:(int)Y callback:(FlashFunction *)Callback;
 - (FlxButton *) loadGraphic:(FlxSprite *)Image;
 - (FlxButton *) loadGraphicWithParam1:(FlxSprite *)Image param2:(FlxSprite *)ImageHighlight;
+
 - (FlxButton *) loadText:(FlxText *)Text;
 - (FlxButton *) loadTextWithParam1:(FlxText *)Text param2:(FlxText *)TextHighlight;
+- (FlxButton *) loadTextWithParam1:(FlxText *)Text param2:(FlxText *)TextHighlight withXOffset:(float)xOffset withYOffset:(float)yOffset;
+
+
 - (void) update;
 - (void) destroy;
 @end

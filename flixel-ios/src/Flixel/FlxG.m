@@ -110,6 +110,9 @@ static int width;
 static int height;
 static NSMutableArray * levels;
 static int level;
+static int levelWidth;
+static int levelHeight;
+
 static NSMutableArray * scores;
 static int score;
 //static NSMutableArray * saves;
@@ -436,8 +439,15 @@ ALvoid alcMacOSXMixerOutputRateProc(const ALfloat value) {
 + (FlxSound *) music; { return music; }
 + (void) setQuake:(FlxQuake *)newQuake; { [quake autorelease]; quake = [newQuake retain]; }
 + (FlxQuake *) quake; { return quake; }
+
 + (void) setLevel:(int)newLevel; { level = newLevel; }
 + (int) level; { return level; }
+
++ (void) setLevelWidth:(int)newLevelWidth; { levelWidth = newLevelWidth; }
++ (int) levelWidth; { return levelWidth; }
++ (void) setLevelHeight:(int)newLevelHeight; { levelHeight = newLevelHeight; }
++ (int) levelHeight; { return levelHeight; }
+
 // + (void) setState:(FlxState *)newState; { [state autorelease]; state = [newState retain]; }
 // + (FlxState *) state; { return state; }
 + (void) setElapsed:(float)newElapsed; { elapsed = newElapsed; }

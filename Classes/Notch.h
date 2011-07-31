@@ -2,7 +2,7 @@
 {
 }
 
-+ (id) notch;
-- (id) initWithOrigin:(CGPoint)origin;
++ (id) notchWithOrigin:(CGPoint)Origin;
+- (id) initWithOrigin:(CGPoint)Origin;
 
 @end

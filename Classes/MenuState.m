@@ -17,6 +17,12 @@
 
 #import "PlayState.h"
 
+#import "HelpState.h"
+
+//#import "HighScoreState.h"
+
+//#import "AchievementState.h"
+
 static NSString * ImgButton = @"buttonupGreen.png";
 
 static NSString * ImgGibs = @"spawner_gibs.png";
@@ -115,10 +121,10 @@ static FlxEmitter * emitter = nil;
 - (void) update
 {
     
-    if (FlxG.touches.touchesBegan) {
-        [self onPlay];
-        return;
-    }
+//    if (FlxG.touches.touchesBegan) {
+//        [self onPlay];
+//        return;
+//    }
     
 	[super update];
     
@@ -175,19 +181,32 @@ static FlxEmitter * emitter = nil;
                                                 size:8]];
         [self add:dannyButton];       
         
-        //        text = [FlxText textWithWidth:80
-        //                                 text:@"X+C TO PLAY"
-        //                                 font:nil
-        //                                 size:32.0];
-        //        text.x = FlxG.width/2-40;
-        //        text.y = FlxG.height/3+139; 
-        //        text.color = 0x729954;
-        //        text.alignment = @"center";
-        //        [self add:text];
+        helpBtn = [[[FlxButton alloc] initWithX:flixelButton.x
+                                                              y:flixelButton.y + 44
+                                                       callback:[FlashFunction functionWithTarget:self
+                                                                                           action:@selector(onHelp)]] autorelease];
+        [helpBtn loadGraphic:[FlxSprite spriteWithGraphic:ImgButton]];
+        [helpBtn loadText:[FlxText textWithWidth:dannyButton.width
+                                                text:NSLocalizedString(@"help/about", @"help/about")
+                                                font:nil
+                                                size:8]];
+        [self add:helpBtn];
+        
+//        highScoreBtn = [[[FlxButton alloc] initWithX:flixelButton.x
+//                                              y:flixelButton.y + 66
+//                                       callback:[FlashFunction functionWithTarget:self
+//                                                                           action:@selector(onHighScore)]] autorelease];
+//        [highScoreBtn loadGraphic:[FlxSprite spriteWithGraphic:ImgButton]];
+//        [highScoreBtn loadText:[FlxText textWithWidth:dannyButton.width
+//                                            text:NSLocalizedString(@"Achievements", @"Achievements")
+//                                            font:nil
+//                                            size:8]];
+//        [self add:highScoreBtn];
+        
         
         
         playBtn = [[[FlxButton alloc] initWithX:flixelButton.x
-                                              y:flixelButton.y + 82
+                                              y:flixelButton.y + 100
                                        callback:[FlashFunction functionWithTarget:self
                                                                            action:@selector(onPlay)]] autorelease];
         [playBtn loadGraphic:[FlxSprite spriteWithGraphic:ImgButton]];
@@ -197,6 +216,8 @@ static FlxEmitter * emitter = nil;
                                             font:nil
                                             size:8]];
         [self add:playBtn];
+        
+        
         
         
     }
@@ -219,6 +240,21 @@ static FlxEmitter * emitter = nil;
     
 }
 
+- (void) onHelp
+{
+    helpBtn.visible = NO;
+	FlxG.state = [[[HelpState alloc] init] autorelease];
+    return;
+    
+}
+
+- (void) onHighScore
+{
+    highScoreBtn.visible = NO;
+	//FlxG.state = [[[AchievementState alloc] init] autorelease];
+    return;
+    
+}
 
 - (void) onPlay
 {

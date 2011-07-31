@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-               BuildableName = "Mode.app"
+               BuildableName = "mode.app"
                BlueprintName = "FlixelBasic"
-               ReferencedContainer = "container:Mode.xcodeproj">
+               ReferencedContainer = "container:mode.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -41,9 +41,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "Mode.app"
+            BuildableName = "mode.app"
             BlueprintName = "FlixelBasic"
-            ReferencedContainer = "container:Mode.xcodeproj">
+            ReferencedContainer = "container:mode.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -60,9 +60,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "Mode.app"
+            BuildableName = "mode.app"
             BlueprintName = "FlixelBasic"
-            ReferencedContainer = "container:Mode.xcodeproj">
+            ReferencedContainer = "container:mode.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

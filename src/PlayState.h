@@ -13,15 +13,23 @@
 // THE SOFTWARE.
 //
 
+//#import <GameKit/GameKit.h>
+//#import "GameCenterManager.h"
+
+
 @class Player;
 @class Spawner;
 @class Enemy;
 @class Bullet;
 @class EnemyBullet;
 @class Notch;
+//@class GameCenterManager;
 
+//@interface PlayState : FlxState <UIActionSheetDelegate, GKLeaderboardViewControllerDelegate, GKAchievementViewControllerDelegate, GameCenterManagerDelegate>
 @interface PlayState : FlxState
+
 {
+    //GameCenterManager * gameCenterManager;
     
     FlxText * helloText;
 	FlxGroup * _blocks;
@@ -65,6 +73,9 @@
     
     
 }
+
+//@property (nonatomic, retain) GameCenterManager *gameCenterManager;
+
 
 - (id) init;
 - (void) generateLevel:(int)size;

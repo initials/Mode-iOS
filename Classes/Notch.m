@@ -6,9 +6,9 @@ static NSString * ImgNotch = @"notch.png";
 
 
 
-+ (id) notch
++ (id) notchWithOrigin:(CGPoint)Origin
 {
-	return [[[self alloc] init] autorelease];
+	return [[[self alloc] initWithOrigin:Origin] autorelease];
 }
 
 - (id) initWithOrigin:(CGPoint)Origin

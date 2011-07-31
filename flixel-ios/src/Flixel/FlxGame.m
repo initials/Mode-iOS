@@ -188,26 +188,32 @@ static CFTimeInterval gameStart;
         //register for device orientation notifications
         [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
         UIDeviceOrientation o = [UIDevice currentDevice].orientation;
+        
         switch (gameOrientation) {
             case FlxGameOrientationLandscape:
             {
-                switch (o) {
-                    case UIDeviceOrientationLandscapeRight:
-                        currentOrientation = UIDeviceOrientationLandscapeRight;
-                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-                        autorotateAngle = 180;
-                        autorotateAngleGoal = 180;
-                        break;
-                    case UIDeviceOrientationLandscapeLeft:
-                    case UIDeviceOrientationPortraitUpsideDown:
-                    case UIDeviceOrientationPortrait:
-                    default:
-                        currentOrientation = UIDeviceOrientationLandscapeLeft;
-                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-                        autorotateAngle = 0;
-                        autorotateAngleGoal = 0;
-                        break;
-                }
+                currentOrientation = UIDeviceOrientationLandscapeRight;
+                [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+                autorotateAngle = 180;
+                autorotateAngleGoal = 180;
+                
+//                switch (o) {
+//                    case UIDeviceOrientationLandscapeRight:
+//                        currentOrientation = UIDeviceOrientationLandscapeRight;
+//                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+//                        autorotateAngle = 180;
+//                        autorotateAngleGoal = 180;
+//                        break;
+//                    case UIDeviceOrientationLandscapeLeft:
+//                    case UIDeviceOrientationPortraitUpsideDown:
+//                    case UIDeviceOrientationPortrait:
+//                    default:
+//                        currentOrientation = UIDeviceOrientationLandscapeLeft;
+//                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+//                        autorotateAngle = 0;
+//                        autorotateAngleGoal = 0;
+//                        break;
+//                }
                 break;
             }
             case FlxGameOrientationPortrait:
@@ -611,48 +617,48 @@ static CFTimeInterval gameStart;
 
 - (void) deviceOrientationDidChange:(NSNotification *)note
 {
-    orientation = [[UIDevice currentDevice] orientation];
-    if (autorotate) {
-        if (gameOrientation == FlxGameOrientationPortrait) {
-            if (currentOrientation != orientation) {
-                if (orientation == UIDeviceOrientationPortrait ||
-                    orientation == UIDeviceOrientationPortraitUpsideDown) {
-                    currentOrientation = orientation;
-                    //set up status bar
-                    [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-                    if (currentOrientation == UIDeviceOrientationPortrait)
-                        autorotateAngleGoal = 0;
-                    else
-                        autorotateAngleGoal = 180;
-                    if (gameStarted == NO)
-                        autorotateAngle = autorotateAngleGoal;
-                }
-            }
-        } else { //FlxGameOrientationLandscape
-            switch (orientation) {
-                case UIDeviceOrientationUnknown:
-                case UIDeviceOrientationPortrait:
-                case UIDeviceOrientationPortraitUpsideDown:
-                case UIDeviceOrientationFaceUp:
-                case UIDeviceOrientationFaceDown:
-                    if (currentOrientation == UIDeviceOrientationLandscapeRight)
-                        orientation = UIDeviceOrientationLandscapeRight;
-                    else
-                        orientation = UIDeviceOrientationLandscapeLeft;
-            }
-            if (currentOrientation != orientation) {
-                currentOrientation = orientation;
-                //set up status bar
-                [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-                if (currentOrientation == UIDeviceOrientationLandscapeRight)
-                    autorotateAngleGoal = 180;
-                else
-                    autorotateAngleGoal = 0;
-                if (gameStarted == NO)
-                    autorotateAngle = autorotateAngleGoal;
-            }
-        }
-    }
+//    orientation = [[UIDevice currentDevice] orientation];
+//    if (autorotate) {
+//        if (gameOrientation == FlxGameOrientationPortrait) {
+//            if (currentOrientation != orientation) {
+//                if (orientation == UIDeviceOrientationPortrait ||
+//                    orientation == UIDeviceOrientationPortraitUpsideDown) {
+//                    currentOrientation = orientation;
+//                    //set up status bar
+//                    [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+//                    if (currentOrientation == UIDeviceOrientationPortrait)
+//                        autorotateAngleGoal = 0;
+//                    else
+//                        autorotateAngleGoal = 180;
+//                    if (gameStarted == NO)
+//                        autorotateAngle = autorotateAngleGoal;
+//                }
+//            }
+//        } else { //FlxGameOrientationLandscape
+//            switch (orientation) {
+//                case UIDeviceOrientationUnknown:
+//                case UIDeviceOrientationPortrait:
+//                case UIDeviceOrientationPortraitUpsideDown:
+//                case UIDeviceOrientationFaceUp:
+//                case UIDeviceOrientationFaceDown:
+//                    if (currentOrientation == UIDeviceOrientationLandscapeRight)
+//                        orientation = UIDeviceOrientationLandscapeRight;
+//                    else
+//                        orientation = UIDeviceOrientationLandscapeLeft;
+//            }
+//            if (currentOrientation != orientation) {
+//                currentOrientation = orientation;
+//                //set up status bar
+//                [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+//                if (currentOrientation == UIDeviceOrientationLandscapeRight)
+//                    autorotateAngleGoal = 180;
+//                else
+//                    autorotateAngleGoal = 0;
+//                if (gameStarted == NO)
+//                    autorotateAngle = autorotateAngleGoal;
+//            }
+//        }
+//    }
 }
 
 - (void) showSoundTray;

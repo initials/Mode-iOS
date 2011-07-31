@@ -17,7 +17,9 @@
     
 }
 
-- (id) initWithOrigin:(CGPoint)origin;
++ (id) enemyBulletWithOrigin:(CGPoint)Origin;
+
+- (id) initWithOrigin:(CGPoint)Origin;
 - (void) shootAtLocation:(CGPoint)loc Aim:(uint)aim;
 - (void) hitWall;
 

@@ -23,6 +23,9 @@
 #import "EnemyBullet.h"
 #import "Notch.h"
 
+//#import "GameCenterManager.h"
+//#import "AppSpecificValues.h"
+
 #define SCORE_TIMER 3
 #define KILL_TIMER 0.75
 
@@ -69,6 +72,8 @@ BOOL scoreChanged;
 
 @implementation PlayState
 
+//@synthesize gameCenterManager;
+
 - (id) init
 {
     if ((self = [super init])) {
@@ -87,13 +92,27 @@ BOOL scoreChanged;
         _notches = [[FlxGroup alloc] init];
         
         
-        
     }
     return self;
 }
 
 - (void) create
 {
+//	if([GameCenterManager isGameCenterAvailable])
+//	{
+//		self.gameCenterManager= [[[GameCenterManager alloc] init] autorelease];
+//		[self.gameCenterManager setDelegate: self];
+//		//[self.gameCenterManager authenticateLocalUser];
+//		
+//		//[self updateCurrentScore];
+//	}
+//	else
+//	{
+//		[self showAlertWithTitle: @"Game Center Support Required!"
+//						 message: @"The current device does not support Game Center."];
+//	}
+    
+    //[self.gameCenterManager reportScore:100 forCategory:kModeLB];
     
     //gibs
     _littleGibs = [[FlxEmitter alloc] init];
@@ -108,7 +127,7 @@ BOOL scoreChanged;
     _littleGibs.particleDrag = CGPointMake(0, 0);
     _littleEmitter = [_littleGibs retain];
     [_littleGibs createSprites:ImgGibs quantity:20 bakedRotations:NO
-                      multiple:YES collide:0.0 modelScale:1.0];
+                      multiple:YES collide:0 modelScale:1.0];
     
     
     // big gibs
@@ -124,22 +143,24 @@ BOOL scoreChanged;
     _bigGibs.particleDrag = CGPointMake(0, 0);
     _bigEmitter = [_bigGibs retain];
     [_bigGibs createSprites:ImgSpawnerGibs quantity:20 bakedRotations:NO
-                   multiple:YES collide:0.0 modelScale:1.0];
+                   multiple:YES collide:0 modelScale:1.0];
     
     bulletIndex = 0;
     spawnerCount = 0;
     _killTimer = -1;
     
-    player = [[Player alloc] initWithOrigin:CGPointMake(316,300) Bullets:_bullets Gibs:_littleGibs] ;
+    player = [Player playerWithOrigin:CGPointMake(316,300) Bullets:_bullets Gibs:_littleGibs] ;
     player.dead = NO;
     [_objects add:player];
     
     
+    //camera
     [FlxG followWithParam1:player param2:15];
+    //set world size
     [FlxG followBoundsWithParam1:0 param2:0 param3:640 param4:640 param5:YES];
     
     for (int i=0; i<10; i++) {
-        eb = [[EnemyBullet alloc] initWithOrigin:CGPointMake(1200,1200)  ];
+        eb = [EnemyBullet enemyBulletWithOrigin:CGPointMake(1200,1200)  ];
         eb.dead = YES;
         [_enemyBullets add:eb];
         [_objects add:eb];
@@ -148,7 +169,7 @@ BOOL scoreChanged;
     
     [self generateLevel:0];
     for (int i=0; i<8; i++) {
-        enemy = [[Enemy alloc] initWithOrigin:CGPointMake(-1000,-1000) Bullets:_enemyBullets Gibs:_littleGibs ThePlayer:player  ];
+        enemy = [Enemy enemyWithOrigin:CGPointMake(-1000,-1000) Bullets:_enemyBullets Gibs:_littleGibs ThePlayer:player  ];
         enemy.dead = YES;
         //[self add:enemy];
         [_enemies add:enemy];
@@ -157,7 +178,7 @@ BOOL scoreChanged;
     }
     
     for (int i=0; i<10; i++) {
-        bullet = [[Bullet alloc] initWithOrigin:CGPointMake(800,800)  ];
+        bullet = [Bullet bulletWithOrigin:CGPointMake(800,800)  ];
         bullet.dead = YES;
         [_bullets add:bullet];
         [_objects add:bullet];
@@ -224,7 +245,7 @@ BOOL scoreChanged;
     [_gunjam add:temptext]; 
     
     for (int i=0; i<6; i++) {
-        notch = [[Notch alloc] initWithOrigin:CGPointMake(4+i*10,4)  ];
+        notch = [Notch notchWithOrigin:CGPointMake(4+i*10,4)  ];
         notch.scrollFactor = CGPointMake(0, 0);
         [_notches add:notch];
         [_hud add:notch];
@@ -296,8 +317,7 @@ BOOL scoreChanged;
     
     _fading = NO;
     [FlxG playMusicWithParam1:SndMode param2:0.5];
-    
-    
+        
 }
 //These next two functions look crazy, but all they're doing is generating
 //the level structure and placing the enemy spawners.
@@ -412,7 +432,7 @@ BOOL scoreChanged;
     if(spawners)
     {
         //Finally actually add the spawner
-        sp = [[Spawner alloc] initWithOrigin:CGPointMake(RX+sx*8,RY+sy*8) Gibs:_bigGibs Bots:_enemies BotBullets:nil BotGibs:_littleGibs ThePlayer:player Notches:_notches Index:spawnerCount] ;
+        sp = [Spawner spawnerWithOrigin:CGPointMake(RX+sx*8,RY+sy*8) Gibs:_bigGibs Bots:_enemies BotBullets:nil BotGibs:_littleGibs ThePlayer:player Notches:_notches Index:spawnerCount] ;
         
         //debug to check VictoryState
         //sp.dead = YES;
@@ -426,91 +446,66 @@ BOOL scoreChanged;
 
 - (void) virtualControlPad 
 {
-    
-    
-    if (FlxG.touches.numberOfTouches > previousNumberOfTouches) {
-        newTouch = YES;
+    if (FlxG.touches.vcpLeftArrow) {
+        player.velocity = CGPointMake(-200, player.velocity.y);
+        player.scale = CGPointMake(-1, 1);
+    } else if (FlxG.touches.vcpRightArrow) {
+        player.velocity = CGPointMake(200, player.velocity.y);
+        player.scale = CGPointMake(1, 1);
+    } 
+    //button B jump
+    if (FlxG.touches.vcpButton2 && !player.velocity.y  && FlxG.touches.newTouch ) { //&& FlxG.touches.newTouch
+        
+        [player doJump];
+        //pressedJump = YES;
+        player.justLanded = YES;
+        
         
     }
-    else {
-        newTouch = NO;
-    }
-    
-    if (FlxG.touches.numberOfTouches == 1 || FlxG.touches.numberOfTouches == 2 ) {
-        BOOL pressedJump = NO;
-        for(UITouch *singleTouch in FlxG.touches.touches) {
+    BOOL nt = FlxG.touches.newTouch;
+    if (FlxG.touches.vcpButton1 && (nt || player.rapidFire) ) { 
+        if (!player.flickering) {
+            //button D regular shoot
+            Bullet * bull = [_bullets.members objectAtIndex:bulletIndex];
+            bull.x = player.x;
+            bull.y = player.y;
+            bull.visible=YES;
+            bull.dead = NO;
+            bull.drag = CGPointMake(0, 0);
+            bull.scale = CGPointMake(1,1);
             
-            //NSLog(@"%@", singleTouch);
-            CGPoint p = [singleTouch locationInView:(singleTouch.view)];
-            
-            if (p.y > 400) {
-                player.velocity = CGPointMake(-200, player.velocity.y);
-                player.scale = CGPointMake(-1, 1);
-            } else if (p.y > 320 && p.y < 399) {
-                player.velocity = CGPointMake(200, player.velocity.y);
-                player.scale = CGPointMake(1, 1);
-            } 
-            //button A jump
-            else if (p.y < 80 && p.y > 1 && p.x < 320 && p.x > 240 && !player.velocity.y && newTouch  ) { 
-                
-                [player doJump];
-                pressedJump = YES;
-                player.justLanded = YES;
+            if (player.scale.x < 0) {
+                bull.velocity = CGPointMake(-300, 0);
+                [bull play:@"left"];
+            }
+            else {
+                bull.velocity = CGPointMake(300, 0);
+                [bull play:@"right"];
                 
                 
             }
-            if (p.y > 80 && p.y < 160 && p.x < 320 && p.x > 240 && (newTouch || player.rapidFire) ) { 
-                if (!player.flickering) {
-                    //button D regular shoot
-                    Bullet * bull = [_bullets.members objectAtIndex:bulletIndex];
-                    bull.x = player.x;
-                    bull.y = player.y;
-                    bull.visible=YES;
-                    bull.dead = NO;
-                    bull.drag = CGPointMake(0, 0);
-                    bull.scale = CGPointMake(1,1);
-                    
-                    if (player.scale.x < 0) {
-                        bull.velocity = CGPointMake(-300, 0);
-                        [bull play:@"left"];
-                    }
-                    else {
-                        bull.velocity = CGPointMake(300, 0);
-                        [bull play:@"right"];
-                        
-                        
-                    }
-                    bulletIndex++;
-                    if (bulletIndex>=_bullets.members.length) {
-                        bulletIndex = 0;	
-                    }
-                }  
-                else if (player.flickering){
-                    //NSLog(@"touch jam");
-                    [FlxG play:SndJam];
-                    _jamTimer = 1;
-                    _gunjam.visible = YES;
-                }
-            } 
-            
-            if(_jamTimer > 0)
-            {
-                if(!player.flickering)
-                    _jamTimer = 0;
-                _jamTimer -= FlxG.elapsed;
-                if(_jamTimer < 0)
-                    _gunjam.visible = NO;
+            bulletIndex++;
+            if (bulletIndex>=_bullets.members.length) {
+                bulletIndex = 0;	
             }
-            
-            
-        }//end of each touch
-        
-        if (!pressedJump && player.onFloor) {
-            //player.jump = 0;
+        }  
+        else if (player.flickering){
+            //NSLog(@"touch jam");
+            [FlxG play:SndJam];
+            _jamTimer = 1;
+            _gunjam.visible = YES;
         }
     } 
     
-    //else if (p.y > 40 && p.y < 80 && p.x < 240 && p.x > 196 && (newTouch || player.rapidFire) ) {
+    if(_jamTimer > 0)
+    {
+        if(!player.flickering)
+            _jamTimer = 0;
+        _jamTimer -= FlxG.elapsed;
+        if(_jamTimer < 0)
+            _gunjam.visible = NO;
+    }
+    
     if (FlxG.touches.swipedLeft && !player.flickering ) {
         //up
         //[self fireWeapon];
@@ -607,13 +602,6 @@ BOOL scoreChanged;
         
     }
     
-    
-    
-    
-    
-    
-    previousNumberOfTouches = FlxG.touches.numberOfTouches;
-    
 }
 
 
@@ -644,9 +632,9 @@ BOOL scoreChanged;
 
 - (void) onVictory 
 {
+    //FlxG.score = 104;
     NSLog(@"VICTORY");
-    //FlxG.music.stop();
-    //FlxG.switchState(new VictoryState());
+    //wait(5000);
     FlxG.state = [[[VictoryState alloc] init] autorelease];
     return;
     
@@ -655,8 +643,6 @@ BOOL scoreChanged;
 - (void) onDeath 
 {
     NSLog(@"Death");
-    //FlxG.music.stop();
-    //FlxG.switchState(new VictoryState());
     FlxG.state = [[[MenuState alloc] init] autorelease];
     return;
     
@@ -670,6 +656,13 @@ BOOL scoreChanged;
     
     if (!player.dead) [self virtualControlPad];
     [super update];
+    
+// too slow!    
+//    for (FlxObject * s in _bigGibs.members) {
+//        //[FlxU collideObject:s withGroup:_blocks];
+//        [FlxU alternateCollideWithParam1:s param2:_blocks];
+//
+//    }
     
     // check for collides between player/bullets/enemies and the level
     for (FlxObject * s in _objects.members) {
@@ -724,6 +717,7 @@ BOOL scoreChanged;
         _scoreTimer -= FlxG.elapsed;
         if(_scoreTimer < 0)
         {
+            // YOU ARE DEAD
             if(FlxG.score > 0)
             {
                 if(FlxG.score > 100)
@@ -732,10 +726,11 @@ BOOL scoreChanged;
                 {
                     _killTimer = 0;
                     [player hurt:100];
-                    FlxG.score = 0;
+                    
                     player.dead = YES;
                     player.visible = NO;
                     [FlxG fadeOutMusic:1];
+                    
                     
                     
                 }
@@ -750,6 +745,9 @@ BOOL scoreChanged;
             }
             if(_killTimer>=0) _killTimer += FlxG.elapsed;
             if (_killTimer > KILL_TIMER) {
+                
+                //[self.gameCenterManager reportScore:100 forCategory:kModeLB];
+                FlxG.score = 0;
                 FlxG.state = [[[MenuState alloc] init] autorelease];
                 //[self onDeath];
                 return;
@@ -781,6 +779,9 @@ BOOL scoreChanged;
     _oldScore = FlxG.score;
     
 }
+
+
+
 
 
 @end

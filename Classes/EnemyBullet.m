@@ -11,9 +11,9 @@ static NSString * SndShoot = @"shoot.caf";
 @synthesize speed;
 
 
-+ (id) enemyBullet
++ (id) enemyBulletWithOrigin:(CGPoint)Origin
 {
-	return [[[self alloc] init] autorelease];
+	return [[[self alloc] initWithOrigin:Origin] autorelease];
 }
 
 

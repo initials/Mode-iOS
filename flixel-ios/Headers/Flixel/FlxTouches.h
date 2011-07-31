@@ -38,6 +38,13 @@
   BOOL swipedLeft;
   BOOL swipedRight;
 
+  BOOL vcpLeftArrow;
+  BOOL vcpRightArrow;
+  BOOL vcpButton1;
+  BOOL vcpButton2;
+
+  BOOL newTouch;
+
     //UISwipeGestureRecognizer *swipeLeftRecognizer;
 
 }
@@ -64,6 +71,12 @@
 @property(nonatomic,readonly)   BOOL swipedLeft;
 @property(nonatomic,readonly)   BOOL swipedRight;
 
+@property(nonatomic,readonly)   BOOL vcpButton1;
+@property(nonatomic,readonly)   BOOL vcpButton2;
+@property(nonatomic,readonly)   BOOL vcpLeftArrow;
+@property(nonatomic,readonly)   BOOL vcpRightArrow;
+
+@property(nonatomic,readonly)   BOOL newTouch;
 
 
 - (void) update;

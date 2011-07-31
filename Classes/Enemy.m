@@ -24,9 +24,9 @@ CGFloat _timer;		//Helps us decide when to fly and when to stop flying.
 CGFloat _shotClock;	//Helps us decide when to shoot.
 
 
-+ (id) Enemy
++ (id) enemyWithOrigin:(CGPoint)Origin Bullets:(FlxGroup *)bullets Gibs:(FlxEmitter *)gibs ThePlayer:(Player *)player
 {
-	return [[[self alloc] init] autorelease];
+	return [[[self alloc] initWithOrigin:(CGPoint)Origin Bullets:(FlxGroup *)bullets Gibs:(FlxEmitter *)gibs ThePlayer:(Player *)player] autorelease];
 }
 
 - (id) initWithOrigin:(CGPoint)Origin Bullets:(FlxGroup *)bullets Gibs:(FlxEmitter *)gibs ThePlayer:(Player *)player {

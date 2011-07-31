@@ -182,29 +182,22 @@ static EAGLContext * staticContext = nil;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    FlxG.touches.multiTouchPhase = 0;
   [[FlxG touches] processTouches:[event allTouches]];
-    //NSLog(@"touches began");
-    
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
-     FlxG.touches.multiTouchPhase = 3;
   NSMutableSet * realTouches = [NSMutableSet setWithSet:[event allTouches]];
   [realTouches minusSet:touches];
   [[FlxG touches] processTouches:realTouches];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-     FlxG.touches.multiTouchPhase = 2;
   NSMutableSet * realTouches = [NSMutableSet setWithSet:[event allTouches]];
   [realTouches minusSet:touches];
   [[FlxG touches] processTouches:realTouches];
-    //NSLog(@"touches ended");
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-     FlxG.touches.multiTouchPhase = 1;
   [[FlxG touches] processTouches:[event allTouches]];
 }
 

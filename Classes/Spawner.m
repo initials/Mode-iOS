@@ -12,9 +12,8 @@ static NSString * SndHit = @"hit.caf";
 
 
 
-+ (id) spawner
-{
-	return [[[self alloc] init] autorelease];
++ (id) spawnerWithOrigin:(CGPoint)Origin Gibs:(FlxEmitter *)gibs Bots:(FlxGroup *)bots BotBullets:(FlxGroup*)botBullets BotGibs:(FlxEmitter *)botGibs ThePlayer:(Player *)player Notches:(FlxGroup *)notches Index:(int)index;{
+	return [[[self alloc] initWithOrigin:(CGPoint)Origin  Gibs:(FlxEmitter *)gibs Bots:(FlxGroup *)bots BotBullets:(FlxGroup*)botBullets BotGibs:(FlxEmitter *)botGibs ThePlayer:(Player *)player Notches:(FlxGroup *)notches Index:(int)index] autorelease];
 }
 
 - (id) initWithOrigin:(CGPoint)Origin Gibs:(FlxEmitter *)gibs Bots:(FlxGroup *)bots BotBullets:(FlxGroup*)botBullets BotGibs:(FlxEmitter *)botGibs ThePlayer:(Player *)player Notches:(FlxGroup *)notches Index:(int)index

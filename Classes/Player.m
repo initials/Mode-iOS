@@ -18,9 +18,10 @@ static NSString * SndHurt = @"hurt.caf";
 
 
 
-+ (id) player
++ (id) playerWithOrigin:(CGPoint)Origin Bullets:(FlxGroup *)bullets Gibs:(FlxEmitter *)gibs
 {
-	return [[[self alloc] init] autorelease];
+	return [[[self alloc] initWithOrigin:Origin Bullets:(FlxGroup *)bullets Gibs:(FlxEmitter *)gibs] autorelease];
+
 }
 
 - (id) initWithOrigin:(CGPoint)Origin Bullets:(FlxGroup *)bullets Gibs:(FlxEmitter *)gibs{
@@ -75,8 +76,8 @@ static NSString * SndHurt = @"hurt.caf";
 
 - (void) dealloc
 {
-	[_bullets release];
-    [_gibs release];
+	//[_bullets release];
+    //[_gibs release];
 	[super dealloc];
 }
 

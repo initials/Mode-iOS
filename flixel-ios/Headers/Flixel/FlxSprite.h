@@ -9,7 +9,7 @@
 //  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 //  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
 //  THE SOFTWARE.
 //
 
@@ -121,6 +121,7 @@ const unsigned int DOWN;
 - (void) fill:(unsigned int)Color;
 - (void) update;
 - (void) render;
+- (BOOL) overlapsWithOffset:(FlxObject *)Object;
 - (BOOL) overlapsPointWithParam1:(float)X param2:(float)Y;
 - (BOOL) overlapsPointWithParam1:(float)X param2:(float)Y param3:(BOOL)PerPixel;
 - (void) addAnimation:(NSString *)Name frames:(NSMutableArray *)Frames;
