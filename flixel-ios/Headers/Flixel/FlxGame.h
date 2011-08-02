@@ -85,7 +85,7 @@ typedef enum {
 
 }
 
-@property(nonatomic,readonly) float zoom;
+@property(nonatomic,readonly)  float zoom;
 @property(nonatomic,readonly) BOOL textureBufferZoom;
 @property(nonatomic,readonly) float modelZoom;
 @property(nonatomic,assign) BOOL autorotate;

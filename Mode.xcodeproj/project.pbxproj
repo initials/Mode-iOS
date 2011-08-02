@@ -51,8 +51,6 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
-		D200779C13B3371A0036F296 /* Mode.m in Sources */ = {isa = PBXBuildFile; fileRef = D200779813B3371A0036F296 /* Mode.m */; };
-		D200779D13B3371A0036F296 /* PlayState.m in Sources */ = {isa = PBXBuildFile; fileRef = D200779A13B3371A0036F296 /* PlayState.m */; };
 		D20077B813B337340036F296 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = D20077A213B337340036F296 /* Bullet.m */; };
 		D20077B913B337340036F296 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = D20077A413B337340036F296 /* Enemy.m */; };
 		D20077BA13B337340036F296 /* EnemyBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = D20077A613B337340036F296 /* EnemyBullet.m */; };
@@ -100,6 +98,8 @@
 		D200780A13B338270036F296 /* shoot.caf in Resources */ = {isa = PBXBuildFile; fileRef = D20077FC13B338270036F296 /* shoot.caf */; };
 		D200780B13B338270036F296 /* mode.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D20077FD13B338270036F296 /* mode.mp3 */; };
 		D27AF76E13E518A300C6DE74 /* buttonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D27AF76D13E518A300C6DE74 /* buttonPressed.png */; };
+		D286022313E7F4D800874DE8 /* PlayState.m in Sources */ = {isa = PBXBuildFile; fileRef = D286022213E7F4D800874DE8 /* PlayState.m */; };
+		D286022613E7F4E000874DE8 /* Mode.m in Sources */ = {isa = PBXBuildFile; fileRef = D286022513E7F4E000874DE8 /* Mode.m */; };
 		D362EAFA12DDB506004A4206 /* Flixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D362EAF912DDB506004A4206 /* Flixel.ttf */; };
 /* End PBXBuildFile section */
 
@@ -152,10 +152,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		D200779713B3371A0036F296 /* Mode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mode.h; path = src/Mode.h; sourceTree = "<group>"; };
-		D200779813B3371A0036F296 /* Mode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mode.m; path = src/Mode.m; sourceTree = "<group>"; };
-		D200779913B3371A0036F296 /* PlayState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayState.h; path = src/PlayState.h; sourceTree = "<group>"; };
-		D200779A13B3371A0036F296 /* PlayState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayState.m; path = src/PlayState.m; sourceTree = "<group>"; };
 		D20077A113B337340036F296 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bullet.h; path = Classes/Bullet.h; sourceTree = "<group>"; };
 		D20077A213B337340036F296 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bullet.m; path = Classes/Bullet.m; sourceTree = "<group>"; };
 		D20077A313B337340036F296 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy.h; path = Classes/Enemy.h; sourceTree = "<group>"; };
@@ -213,6 +209,10 @@
 		D20077FC13B338270036F296 /* shoot.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = shoot.caf; sourceTree = "<group>"; };
 		D20077FD13B338270036F296 /* mode.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mode.mp3; path = data/mode.mp3; sourceTree = "<group>"; };
 		D27AF76D13E518A300C6DE74 /* buttonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonPressed.png; path = data/buttonPressed.png; sourceTree = "<group>"; };
+		D286022113E7F4D800874DE8 /* PlayState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayState.h; path = Classes/PlayState.h; sourceTree = "<group>"; };
+		D286022213E7F4D800874DE8 /* PlayState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayState.m; path = Classes/PlayState.m; sourceTree = "<group>"; };
+		D286022413E7F4E000874DE8 /* Mode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mode.h; path = Classes/Mode.h; sourceTree = "<group>"; };
+		D286022513E7F4E000874DE8 /* Mode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mode.m; path = Classes/Mode.m; sourceTree = "<group>"; };
 		D362EAF912DDB506004A4206 /* Flixel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Flixel.ttf; path = "flixel-ios/fonts/Flixel.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -410,6 +410,8 @@
 				D23714F413BF3F28002D39E2 /* States */,
 				D20077A113B337340036F296 /* Bullet.h */,
 				D20077A213B337340036F296 /* Bullet.m */,
+				D286022413E7F4E000874DE8 /* Mode.h */,
+				D286022513E7F4E000874DE8 /* Mode.m */,
 				D20077A313B337340036F296 /* Enemy.h */,
 				D20077A413B337340036F296 /* Enemy.m */,
 				D20077A513B337340036F296 /* EnemyBullet.h */,
@@ -420,8 +422,6 @@
 				D20077AE13B337340036F296 /* Player.m */,
 				D20077B113B337340036F296 /* Spawner.h */,
 				D20077B213B337340036F296 /* Spawner.m */,
-				D200779713B3371A0036F296 /* Mode.h */,
-				D200779813B3371A0036F296 /* Mode.m */,
 			);
 			name = mode;
 			path = ..;
@@ -451,14 +451,14 @@
 		D23714F413BF3F28002D39E2 /* States */ = {
 			isa = PBXGroup;
 			children = (
+				D286022113E7F4D800874DE8 /* PlayState.h */,
+				D286022213E7F4D800874DE8 /* PlayState.m */,
 				D20077A713B337340036F296 /* HelpState.h */,
 				D20077A813B337340036F296 /* HelpState.m */,
 				D20077A913B337340036F296 /* MenuState.h */,
 				D20077AA13B337340036F296 /* MenuState.m */,
 				D20077B513B337340036F296 /* VictoryState.h */,
 				D20077B613B337340036F296 /* VictoryState.m */,
-				D200779913B3371A0036F296 /* PlayState.h */,
-				D200779A13B3371A0036F296 /* PlayState.m */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -595,8 +595,6 @@
 				07542F6C1183639E004B03B0 /* FlixelFont.m in Sources */,
 				075430BF11867D3D004B03B0 /* FlxTileblock.m in Sources */,
 				075430E511873B5D004B03B0 /* FlixelAPTBindings.m in Sources */,
-				D200779C13B3371A0036F296 /* Mode.m in Sources */,
-				D200779D13B3371A0036F296 /* PlayState.m in Sources */,
 				D20077B813B337340036F296 /* Bullet.m in Sources */,
 				D20077B913B337340036F296 /* Enemy.m in Sources */,
 				D20077BA13B337340036F296 /* EnemyBullet.m in Sources */,
@@ -607,6 +605,8 @@
 				D20077C013B337340036F296 /* Spawner.m in Sources */,
 				D20077C113B337340036F296 /* UIImage+RIFAddition.m in Sources */,
 				D20077C213B337340036F296 /* VictoryState.m in Sources */,
+				D286022313E7F4D800874DE8 /* PlayState.m in Sources */,
+				D286022613E7F4E000874DE8 /* Mode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -184,6 +184,10 @@ static NSString * ImgButtonPressed = @"buttonPressed.png";
 {
     [FlxG play:SndButtonPress];
     
+    //Can't zoom in game?
+//    FlxGame * game = [FlxG game];
+//    game.zoom
+    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSInteger zoom = [prefs integerForKey:@"ZOOM"];
 
