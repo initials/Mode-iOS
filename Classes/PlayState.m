@@ -166,7 +166,7 @@ BOOL scoreChanged;
     //camera
     [FlxG followWithParam1:player param2:15];
     //set world size
-    [FlxG followBoundsWithParam1:0 param2:0 param3:640 param4:640 param5:YES];
+    [FlxG followBoundsWithParam1:0 param2:0 param3:640 param4:660 param5:YES];
     
     for (int i=0; i<10; i++) {
         eb = [EnemyBullet enemyBulletWithOrigin:CGPointMake(1200,1200)  ];
