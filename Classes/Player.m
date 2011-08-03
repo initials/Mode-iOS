@@ -180,7 +180,7 @@ static NSString * SndHurt = @"hurt.caf";
     {
         if(_aim == UP) [self play:@"run_up"];
         else {
-            [self play:@"run"];
+            [self playWithParam1:@"run" param2:YES ];
             //NSLog(@"playing run");
         }
     }
