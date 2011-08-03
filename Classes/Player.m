@@ -44,7 +44,7 @@ static NSString * SndHurt = @"hurt.caf";
         
         //animations
         [self addAnimationWithParam1:@"idle" param2:[NSMutableArray intArrayWithSize:1 ints:0] param3:0 param4:NO];
-        [self addAnimationWithParam1:@"run" param2:[NSMutableArray intArrayWithSize:4 ints:1,2,3,0] param3:12 param4:NO];        
+        [self addAnimationWithParam1:@"run" param2:[NSMutableArray intArrayWithSize:4 ints:1,2,3,0] param3:12 param4:YES];        
         [self addAnimationWithParam1:@"jump" param2:[NSMutableArray intArrayWithSize:1 ints:4] param3:0 param4:NO];
         [self addAnimationWithParam1:@"idle_up" param2:[NSMutableArray intArrayWithSize:1 ints:5] param3:0 param4:NO];
         [self addAnimationWithParam1:@"run_up" param2:[NSMutableArray intArrayWithSize:4 ints:6,7,8,5] param3:12 param4:NO];
@@ -180,7 +180,7 @@ static NSString * SndHurt = @"hurt.caf";
     {
         if(_aim == UP) [self play:@"run_up"];
         else {
-            [self playWithParam1:@"run" param2:YES ];
+            [self play:@"run"];
             //NSLog(@"playing run");
         }
     }

@@ -474,11 +474,11 @@ BOOL scoreChanged;
     
     if (FlxG.touches.vcpLeftArrow) {
         buttonLeft.alpha = BUTTON_PRESSED_ALPHA;
-        player.velocity = CGPointMake(-200, player.velocity.y);
+        player.velocity = CGPointMake(-150, player.velocity.y);
         player.scale = CGPointMake(-1, 1);
     } else if (FlxG.touches.vcpRightArrow) {
         buttonRight.alpha = BUTTON_PRESSED_ALPHA;
-        player.velocity = CGPointMake(200, player.velocity.y);
+        player.velocity = CGPointMake(150, player.velocity.y);
         player.scale = CGPointMake(1, 1);
     } 
     //button A jump
@@ -536,6 +536,7 @@ BOOL scoreChanged;
             _gunjam.visible = NO;
     }
     
+    //shoot up
     if (FlxG.touches.swipedLeft && !player.flickering ) {
         //up
         //[self fireWeapon];
@@ -554,6 +555,7 @@ BOOL scoreChanged;
         if (bulletIndex>=_bullets.members.length) {
             bulletIndex = 0;	
         }
+        [player play:@"idle_up"];
     }
     //else if (p.y > 40 && p.y < 80 && p.x < 320 && p.x > 276 && (newTouch || player.rapidFire) ) {
     else if (FlxG.touches.swipedRight && !player.flickering) {                   
