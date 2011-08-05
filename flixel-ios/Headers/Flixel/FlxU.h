@@ -49,6 +49,8 @@
 + (float) mutateWithParam1:(float)Seed param2:(float)Mutator;
 + (CGPoint) rotatePointWithParam1:(float)X param2:(float)Y param3:(float)PivotX param4:(float)PivotY param5:(float)Angle;
 + (float) getAngleWithParam1:(float)X param2:(float)Y;
++ (float) getAngleBetweenPointsWithParam1:(CGPoint)PointA param2:(CGPoint)PointB;
+
 // + (NSString *) getClassName:(FlashObject *)Obj;
 // + (NSString *) getClassNameWithParam1:(FlashObject *)Obj param2:(BOOL)Simple;
 // + (Class) getClass:(NSString *)Name;

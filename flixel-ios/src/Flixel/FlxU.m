@@ -119,6 +119,31 @@ static float roundingError = 1e-07;
 {
   return atan2(Y,X) * 180 / M_PI;
 }
+
+
++ (float) getAngleBetweenPointsWithParam1:(CGPoint)PointA param2:(CGPoint)PointB;
+{
+    float xx = PointA.x - PointB.x;
+    float yy = PointA.y - PointB.y;
+    if((xx == 0) && (yy == 0))
+        return 0;
+    float c1 = 3.14159265 * 0.25;
+    float c2 = 3 * c1;
+    float ay = (yy < 0)?-yy:yy;
+    float angle1 = 0;
+    if (xx >= 0)
+        angle1 = c1 - c1 * ((xx - ay) / (xx + ay));
+    else
+        angle1 = c2 - c1 * ((xx + ay) / (ay - xx));
+    angle1 = ((yy < 0)?-angle1:angle1)*57.2957796;
+    if(angle1 > 90)
+        angle1 = angle1 - 270;
+    else
+        angle1 += 90;
+    return angle1;
+}
+
+
 // + (NSString *) getClassName:(FlashObject *)Obj;
 // {
 //   return [self getClassNameWithParam1:Obj param2:NO];

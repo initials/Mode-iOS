@@ -23,10 +23,6 @@ static NSString * SndShoot = @"shoot.caf";
 	if ((self = [super initWithX:Origin.x y:Origin.y graphic:nil])) {
         [self loadGraphicWithParam1:ImgBullet param2:YES param3:NO param4:4 param5:4];
         
-        self.width = 6;
-        self.height = 6;
-        self.offset = CGPointMake(1, 1);
-        
         [self addAnimationWithParam1:@"idle" param2:[NSMutableArray intArrayWithSize:2 ints:0,1] param3:25 param4:NO];
         [self addAnimationWithParam1:@"explode" param2:[NSMutableArray intArrayWithSize:4 ints:2,3,4,5] param3:25 param4:NO];        
         speed = 120;

@@ -19,10 +19,10 @@
     FlxGroup * _bullets;	//A group of enemy bullet objects (Enemies shoot these out)
     FlxEmitter * _gibs;		//A group of bits and pieces that explode when the Enemy dies.
     //A special effect - little jets shoot out the back of the ship
-    //FlxEmitter * _jets;
+    //FlxEmitter * _jetsEmitter;
+
     BOOL jetsOn;
     EnemyBullet * eb;
-    
     
 }
 

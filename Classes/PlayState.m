@@ -23,14 +23,13 @@
 #import "EnemyBullet.h"
 #import "Notch.h"
 
-//#import "GameCenterManager.h"
-//#import "AppSpecificValues.h"
-
 #define SCORE_TIMER 3
-#define KILL_TIMER 0.75
+#define KILL_TIMER 1.75
 
 #define BUTTON_START_ALPHA 0.1
 #define BUTTON_PRESSED_ALPHA 0.5
+
+#define NUMBER_OF_ENEMIES 8
 
 
 
@@ -46,6 +45,8 @@ static NSString * SndShoot = @"shoot.caf";
 
 static NSString * ImgGibs = @"gibs.png";
 static NSString * ImgSpawnerGibs = @"spawner_gibs.png";
+//static NSString * ImgJet = @"jet.png";
+
 
 static NSString * ImgButtonArrow = @"buttonArrow.png";
 static NSString * ImgButton = @"buttonButton.png";
@@ -165,7 +166,9 @@ BOOL scoreChanged;
     
     //camera
     [FlxG followWithParam1:player param2:15];
+    
     //set world size
+    //param4 (y) is 660 to allow for extra room when on the bottom of the level.
     [FlxG followBoundsWithParam1:0 param2:0 param3:640 param4:660 param5:YES];
     
     for (int i=0; i<10; i++) {
@@ -177,7 +180,7 @@ BOOL scoreChanged;
     }
     
     [self generateLevel:0];
-    for (int i=0; i<8; i++) {
+    for (int i=0; i<NUMBER_OF_ENEMIES; i++) {
         enemy = [Enemy enemyWithOrigin:CGPointMake(-1000,-1000) Bullets:_enemyBullets Gibs:_littleGibs ThePlayer:player  ];
         enemy.dead = YES;
         //[self add:enemy];
@@ -332,13 +335,9 @@ BOOL scoreChanged;
 
     }
     
-                                     
-                                     
-    
-    
     _fading = NO;
-    [FlxG playMusicWithParam1:SndMode param2:0.5];
-        
+    [FlxG playMusicWithParam1:SndMode param2:0.35];
+    
 }
 //These next two functions look crazy, but all they're doing is generating
 //the level structure and placing the enemy spawners.
@@ -555,8 +554,11 @@ BOOL scoreChanged;
         if (bulletIndex>=_bullets.members.length) {
             bulletIndex = 0;	
         }
-        [player play:@"idle_up"];
+        //[player play:@"idle_up"];
     }
+    
+    //swiped down
+    
     //else if (p.y > 40 && p.y < 80 && p.x < 320 && p.x > 276 && (newTouch || player.rapidFire) ) {
     else if (FlxG.touches.swipedRight && !player.flickering) {                   
         player.velocity = CGPointMake(player.velocity.x, player.velocity.y - 80);
@@ -597,9 +599,11 @@ BOOL scoreChanged;
             bulletIndex = 0;	
         }
     }
-    else if (FlxG.touches.swipedUp && !player.flickering) { 
-        //button D regular shoot
-        
+    
+    //swiped to the right
+    //swipe direction swipedUp refers to when the iPhone is held the portrait way.
+    
+    else if (FlxG.touches.swipedUp && !player.flickering) {   
         Bullet * bull = [_bullets.members objectAtIndex:bulletIndex];
         bull.x = player.x;
         bull.y = player.y;
@@ -615,8 +619,8 @@ BOOL scoreChanged;
         }
     }
     
+    //if trying to shoot and gun is jammed
     else if (  FlxG.touches.swipedRight || FlxG.touches.swipedLeft || FlxG.touches.swipedUp || FlxG.touches.swipedDown && player.flickering) {
-        //NSLog(@"jammed swipeds");
         [FlxG play:SndJam];
         _jamTimer = 1;
         _gunjam.visible = YES;
@@ -629,17 +633,6 @@ BOOL scoreChanged;
         if(_jamTimer < 0)
             _gunjam.visible = NO;
     }
-    
-//    if (FlxG.touches.touching && FlxG.touches.screenTouchPoint.x > 220 && FlxG.touches.screenTouchPoint.x < 260)
-//    {
-//        buttonRight.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height - 0.1;
-//        buttonLeft.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
-//        buttonA.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
-//        buttonB.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
-//        //        buttonC.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;
-//        //        buttonD.alpha = FlxG.touches.screenTouchPoint.y / FlxG.height- 0.1;       
-//        
-//    }
     
 }
 
@@ -671,9 +664,7 @@ BOOL scoreChanged;
 
 - (void) onVictory 
 {
-    //FlxG.score = 104;
     NSLog(@"VICTORY");
-    //wait(5000);
     FlxG.state = [[[VictoryState alloc] init] autorelease];
     return;
     
@@ -691,9 +682,8 @@ BOOL scoreChanged;
 - (void) update
 {    
     
-    //NSLog(@"from update ::  %d %d %d %d", FlxG.touches.swipedDown, FlxG.touches.swipedLeft,FlxG.touches.swipedRight,FlxG.touches.swipedUp );
-    
     if (!player.dead) [self virtualControlPad];
+    
     [super update];
     
 // too slow!    
@@ -707,7 +697,9 @@ BOOL scoreChanged;
     for (FlxObject * s in _objects.members) {
         //adding this check speeds up the game,
         //without it, the fps was horrible, around 10-15 fps
-        if (!s.dead && [s onScreen]) {
+        
+        if (!s.dead ) {
+        //if (!s.dead && [s onScreen]) {
             [FlxU collideObject:s withGroup:_blocks];
         }
     }
@@ -756,13 +748,18 @@ BOOL scoreChanged;
         _scoreTimer -= FlxG.elapsed;
         if(_scoreTimer < 0)
         {
-            // YOU ARE DEAD
+            
             if(FlxG.score > 0)
             {
-                if(FlxG.score > 100)
+                if(FlxG.score > 100) {
                     FlxG.score -= 100;
+                }
+                
+                // YOU ARE DEAD
+                
                 else
                 {
+                    //NSLog(@"you are dead: kill timer %f", _killTimer);
                     _killTimer = 0;
                     [player hurt:100];
                     
@@ -777,20 +774,21 @@ BOOL scoreChanged;
                 scoreChanged = YES;
                 
                 //Play loud beeps if your score is low
-                CGFloat volume = 0.35;
+                CGFloat volume = 0.75;
                 if(FlxG.score < 600)
                     volume = 1.0;
                 [FlxG playWithParam1:SndCount param2:volume];
             }
-            if(_killTimer>=0) _killTimer += FlxG.elapsed;
-            if (_killTimer > KILL_TIMER) {
-                
-                //[self.gameCenterManager reportScore:100 forCategory:kModeLB];
-                FlxG.score = 0;
-                FlxG.state = [[[MenuState alloc] init] autorelease];
-                //[self onDeath];
-                return;
-            }        
+//            if(_killTimer>=0) _killTimer += FlxG.elapsed;
+//            if (_killTimer > KILL_TIMER) {
+//                
+//                NSLog(@"kill timer: %d", _killTimer);
+//                
+//                FlxG.score = 0;
+//                FlxG.state = [[[MenuState alloc] init] autorelease];
+//                //[self onDeath];
+//                return;
+//            }        
         }
         
         
@@ -806,6 +804,22 @@ BOOL scoreChanged;
             return;
         }
     }
+    
+    if (player.dead) {
+        if(_killTimer>=0) _killTimer += FlxG.elapsed;
+        //NSLog(@"kill timer: %f", _killTimer);
+        
+        if (_killTimer > KILL_TIMER) {
+            
+            //NSLog(@"OUT OF kill timer: %f", _killTimer);
+            
+            FlxG.score = 0;
+            FlxG.state = [[[MenuState alloc] init] autorelease];
+            //[self onDeath];
+            return;
+        } 
+    }
+    
     
     //actually update score text if it changed
     if(scoreChanged)

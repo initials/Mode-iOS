@@ -49,6 +49,10 @@ CGFloat _shotClock;	//Helps us decide when to shoot.
         self.width = 12;
         self.height = 12;
         self.offset = CGPointMake(2, 2);
+        
+        // Here is the flash code for having a particle system inside a FlxSprite.
+        // I can't get it to work on iOS. It's probably the last thing that doesn't work on iOS
+        // Can anyone help?
         //        
         //        //Here we are setting up the jet particles
         //        // that shoot out the back of the ship.
@@ -60,9 +64,8 @@ CGFloat _shotClock;	//Helps us decide when to shoot.
         //speed and direction during the update() loop.
         maxAngular = 120;
         angularDrag = 400;
-        //drag.x = 35;
+        self.drag = CGPointMake(3.5, 0);
         _thrust = 0;
-        //_playerMidpoint = new FlxPoint();
         
 	}
 	
@@ -109,7 +112,9 @@ CGFloat _shotClock;	//Helps us decide when to shoot.
 
 - (CGFloat) angleTowardPlayer
 {
-    return [FlxU getAngleWithParam1:self.x-_player.x param2:self.y-_player.y];
+    CGPoint pointA = CGPointMake(self.x, self.y);
+    CGPoint pointB = CGPointMake(_player.x, _player.y);
+    return [FlxU getAngleBetweenPointsWithParam1:pointA param2:pointB];
     
     
 }
@@ -140,35 +145,37 @@ CGFloat _shotClock;	//Helps us decide when to shoot.
         
     }
 }
-
-
-
-
 - (void) update
-{       
+{
+    //NSLog(@" DEAD? %d", self.dead);
     if (!self.dead) {
         //Then, rotate toward that angle.
         //We could rotate instantly toward the player by simply calling:
         //angle = angleTowardPlayer();
         //However, we want some less predictable, more wobbly behavior.
-        CGFloat da = 90 + [self angleTowardPlayer];    //90 +
-        if(da < angle)
+        
+        float da = [self angleTowardPlayer];
+        if(da < angle) {
             angularAcceleration = -angularDrag;
-        else if(da > angle)
+            //NSLog(@"less than angle, da %f", da);
+        }
+        else if(da > angle) {
             angularAcceleration = angularDrag;
-        else
+            //NSLog(@"more than angle da, %f", da);
+        }
+        else {
             angularAcceleration = 0;
+            //NSLog(@"other");
+        }
         
         //Figure out if we want the jets on or not.
         _timer += FlxG.elapsed;
         if(_timer > 8)
             _timer = 0;
-        jetsOn = _timer < 6;
+        jetsOn = _timer < 6;    
         
-        
-        //Set the bot's movement speed and direction
-        //based on angle and whether the jets are on.
         _thrust = [FlxU computeVelocityWithParam1:_thrust param2:(jetsOn?90:0) param3:self.drag.x param4:60];
+        
         self.velocity = [FlxU rotatePointWithParam1:0 param2:_thrust param3:0 param4:0 param5:angle];
         
     }
@@ -204,20 +211,17 @@ CGFloat _shotClock;	//Helps us decide when to shoot.
             
             
             //Then, shoot it from our midpoint out along our angle.
-            angle = 90 + [self angleTowardPlayer];
+            float angleTowardPlayer = [self angleTowardPlayer];
             
             CGPoint here = CGPointMake(self.x+self.width/2, self.y+self.height/2);
-            [eb1 shootAtLocation:here Aim:angle];
+            [eb1 shootAtLocation:here Aim:angleTowardPlayer];
             
         }
     }
     
+    [super update];
     
- 	[super update];
-	
 }
-
-
 
 
 
