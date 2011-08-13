@@ -36,6 +36,21 @@
 
 @implementation Mode
 
+/*
+- (id) init
+{
+	float gameZoom = 1.0 * ([FlxG iPad] ? 2 : 1) * ([FlxG retinaDisplay] ? 2 : 1);
+	if ((self = [super initWithOrientation:FlxGameOrientationPortrait
+									 state:@"SprayState"
+									  zoom:gameZoom]))
+	{
+		if (FlxG.retinaDisplay)
+			self.frameInterval = 1;
+	}
+	return self;
+}
+*/
+
 - (id) init
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -52,7 +67,7 @@
     tbZoom = YES;
   if ((self = [super initWithOrientation:FlxGameOrientationLandscape
 				   state:@"MenuState"
-				    zoom:zoom
+				    zoom:1
 		    useTextureBufferZoom:tbZoom
 			       modelZoom:1.0])) {
     if (FlxG.retinaDisplay)
@@ -60,5 +75,6 @@
   }
   return self;
 }
+
 
 @end
