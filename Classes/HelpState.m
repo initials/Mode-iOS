@@ -94,9 +94,11 @@ static NSString * ImgButtonPressed = @"buttonPressed.png";
     
     
     aboutText = [FlxText textWithWidth:FlxG.width
-								  text:@"Mode is an open source platformer created by Adam Atomic to showcase the power of the Flixel engine.\n\nPorted by Initials using the Flixel-iOS framework.\nSource code can be found at https://github.com/initials/Mode-iOS\nOriginal Flash game can be found at http://www.flixel.org/mode/\n\nHow To Play\nUse the arrows to move, the buttons to jump and shoot.\nSwipe to shoot up or down. Use downward bullets to help you jump higher.\nDestroy all six spawners to win.\n\nGame needs to be restarted for zoom setting to take effect."
+								  text:@"Mode is an open source platformer created by Adam Atomic to showcase the power of the Flixel engine.\n\nPorted by Initials using the Flixel-iOS framework.\nSource code can be found at https://github.com/initials/Mode-iOS\nOriginal Flash game can be found at http://www.flixel.org/mode/\n\nHow To Play\nUse the arrows to move, the buttons to jump and shoot.\nSwipe to shoot up or down. Use downward bullets to help you jump higher.\nDestroy all six spawners to win.\n\n"
 								  font:nil
 								  size:8];
+    //Game needs to be restarted for zoom setting to take effect.
+    
 	aboutText.color = 0xffffffff;
 	aboutText.alignment = @"center";
 	aboutText.x = 0;
@@ -105,33 +107,33 @@ static NSString * ImgButtonPressed = @"buttonPressed.png";
 	[self add:aboutText];
     
     
-    zoomText = [FlxText textWithWidth:FlxG.width
-								  text:@"Zoom=1"
-								  font:nil
-								  size:8];
-	zoomText.color = 0xffffffff;
-	zoomText.alignment = @"right";
-	zoomText.x = 0;
-	zoomText.y = FlxG.height-20;
-	[self add:zoomText];   
+//    zoomText = [FlxText textWithWidth:FlxG.width
+//								  text:@"Zoom=1"
+//								  font:nil
+//								  size:8];
+//	zoomText.color = 0xffffffff;
+//	zoomText.alignment = @"right";
+//	zoomText.x = 0;
+//	zoomText.y = FlxG.height-20;
+//	[self add:zoomText];   
+//    
+//    if (zoomSize==1) {
+//        zoomText.text = @"Zoom=1";
+//    }
+//    else if (zoomSize==2) {
+//        zoomText.text = @"Zoom=2";
+//
+//    }    
     
-    if (zoomSize==1) {
-        zoomText.text = @"Zoom=1";
-    }
-    else if (zoomSize==2) {
-        zoomText.text = @"Zoom=2";
-
-    }    
     
-    
-    if (currentZoom==1) {
-        zoomText.y = FlxG.height-20;
-    }
-    else if (currentZoom==2) {
-        zoomText.y = FlxG.height/2+35;
-        aboutText.velocity=CGPointMake(0, -15);
-
-    }
+//    if (currentZoom==1) {
+//        zoomText.y = FlxG.height-20;
+//    }
+//    else if (currentZoom==2) {
+//        zoomText.y = FlxG.height/2+35;
+//        aboutText.velocity=CGPointMake(0, -15);
+//
+//    }
     
     
     back = [[[FlxButton alloc] initWithX:20
@@ -149,20 +151,20 @@ static NSString * ImgButtonPressed = @"buttonPressed.png";
     
     [self add:back];
     
-    FlxButton * zoom = [[[FlxButton alloc] initWithX:FlxG.width/1.5
-                                       y:FlxG.height-20
-                                callback:[FlashFunction functionWithTarget:self
-                                                                    action:@selector(onZoom)]] autorelease];
-    [zoom loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
-    [zoom loadTextWithParam1:[FlxText textWithWidth:back.width
-                                               text:NSLocalizedString(@"zoom", @"zoom")
-                                               font:nil
-                                               size:8.0] param2:[FlxText textWithWidth:back.width
-                                                                                  text:NSLocalizedString(@"zoom", @"zoom")
-                                                                                  font:nil
-                                                                                  size:8.0]  ];
-    
-    [self add:zoom];
+//    FlxButton * zoom = [[[FlxButton alloc] initWithX:FlxG.width/1.5
+//                                       y:FlxG.height-20
+//                                callback:[FlashFunction functionWithTarget:self
+//                                                                    action:@selector(onZoom)]] autorelease];
+//    [zoom loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
+//    [zoom loadTextWithParam1:[FlxText textWithWidth:back.width
+//                                               text:NSLocalizedString(@"zoom", @"zoom")
+//                                               font:nil
+//                                               size:8.0] param2:[FlxText textWithWidth:back.width
+//                                                                                  text:NSLocalizedString(@"zoom", @"zoom")
+//                                                                                  font:nil
+//                                                                                  size:8.0]  ];
+//    
+//    [self add:zoom];
     
 	
 }

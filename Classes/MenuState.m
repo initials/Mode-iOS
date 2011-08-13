@@ -187,7 +187,7 @@ static FlxEmitter * emitter = nil;
         CGFloat dannyX, dannyY, helpX, helpY, playX, playY;
 
         
-        if (zoom==1) {
+//        if (zoom==1) {
             flixelButtonX=FlxG.width/2-40;
             flixelButtonY=FlxG.height/3+54;
             dannyX=flixelButtonX;
@@ -196,17 +196,17 @@ static FlxEmitter * emitter = nil;
             helpY=flixelButtonY+44;
             playX=flixelButtonX;
             playY=flixelButtonY+100;
-        }
-        else if (zoom==2) {
-            flixelButtonX=FlxG.width-100;
-            flixelButtonY=FlxG.height/3+24;
-            dannyX=20;
-            dannyY=flixelButtonY;
-            helpX=FlxG.width/2-40;
-            helpY=flixelButtonY+22;
-            playX=FlxG.width/2-40;
-            playY=flixelButtonY+44;
-        }
+//        }
+//        else if (zoom==2) {
+//            flixelButtonX=FlxG.width-100;
+//            flixelButtonY=FlxG.height/3+24;
+//            dannyX=20;
+//            dannyY=flixelButtonY;
+//            helpX=FlxG.width/2-40;
+//            helpY=flixelButtonY+22;
+//            playX=FlxG.width/2-40;
+//            playY=flixelButtonY+44;
+//        }
         
         FlxButton * flixelButton = [[[FlxButton alloc] initWithX:flixelButtonX
                                                                y:flixelButtonY

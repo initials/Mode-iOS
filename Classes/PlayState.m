@@ -123,8 +123,8 @@ BOOL scoreChanged;
 - (void) create
 {
     
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSInteger currentZoom = [prefs integerForKey:@"ZOOM_FOR_CURRENT_GAME"];
+//    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+//    NSInteger currentZoom = [prefs integerForKey:@"ZOOM_FOR_CURRENT_GAME"];
     
     
 //	if([GameCenterManager isGameCenterAvailable])
@@ -188,7 +188,7 @@ BOOL scoreChanged;
     
     //set world size
     //param4 (y) is 660 to allow for extra room when on the bottom of the level.
-    [FlxG followBoundsWithParam1:0 param2:0 param3:640 param4:660 param5:YES];
+    [FlxG followBoundsWithParam1:0 param2:0 param3:640 param4:700 param5:YES];
     
     for (int i=0; i<10; i++) {
         eb = [EnemyBullet enemyBulletWithOrigin:CGPointMake(1200,1200)  ];
@@ -334,25 +334,25 @@ BOOL scoreChanged;
     buttonB.scrollFactor = CGPointMake(0, 0);
 	[self add:buttonB]; 
     
-    if (currentZoom==2) {
-        buttonLeft.scale=CGPointMake(0.5, 0.5);
-        buttonRight.scale=CGPointMake(0.5, 0.5);
-        buttonA.scale=CGPointMake(0.5, 0.5);
-        buttonB.scale=CGPointMake(0.5, 0.5);
-        
-        buttonLeft.x=-20;
-        buttonLeft.y=100;
-        
-        buttonRight.x=20;
-        buttonRight.y=100;
-        
-        buttonA.x=200;
-        buttonA.y=120;
-        
-        buttonB.x=160;
-        buttonB.y=120;
-
-    }
+//    if (currentZoom==2) {
+//        buttonLeft.scale=CGPointMake(0.5, 0.5);
+//        buttonRight.scale=CGPointMake(0.5, 0.5);
+//        buttonA.scale=CGPointMake(0.5, 0.5);
+//        buttonB.scale=CGPointMake(0.5, 0.5);
+//        
+//        buttonLeft.x=-20;
+//        buttonLeft.y=100;
+//        
+//        buttonRight.x=20;
+//        buttonRight.y=100;
+//        
+//        buttonA.x=200;
+//        buttonA.y=120;
+//        
+//        buttonB.x=160;
+//        buttonB.y=120;
+//
+//    }
     
     _fading = NO;
     [FlxG playMusicWithParam1:SndMode param2:0.35];
