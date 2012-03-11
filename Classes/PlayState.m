@@ -721,6 +721,12 @@ BOOL scoreChanged;
     
     [super update];
     
+    if (FlxG.touches.iCadeStartBegan || FlxG.touches.iCadeSelectBegan) {
+        [FlxG pauseMusic];
+        FlxG.state = [[[MenuState alloc] init] autorelease];
+        return;
+    }
+    
 // too slow!    
 //    for (FlxObject * s in _bigGibs.members) {
 //        //[FlxU collideObject:s withGroup:_blocks];

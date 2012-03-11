@@ -40,7 +40,7 @@
         _on.solid = NO;
         [self addWithParam1:_on param2:YES];
         
-        _selectedImg = [[[FlxSprite alloc] init] createGraphicWithParam1:width param2:height param3:0xffff0000];
+        _selectedImg = [[[FlxSprite alloc] init] createGraphicWithParam1:width param2:height param3:0xffffffff];
         _selectedImg.solid = NO;
         [self addWithParam1:_selectedImg param2:YES];        
         
