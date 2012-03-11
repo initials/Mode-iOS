@@ -102,6 +102,8 @@
 		D27AF76E13E518A300C6DE74 /* buttonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D27AF76D13E518A300C6DE74 /* buttonPressed.png */; };
 		D286022313E7F4D800874DE8 /* PlayState.m in Sources */ = {isa = PBXBuildFile; fileRef = D286022213E7F4D800874DE8 /* PlayState.m */; };
 		D286022613E7F4E000874DE8 /* Mode.m in Sources */ = {isa = PBXBuildFile; fileRef = D286022513E7F4E000874DE8 /* Mode.m */; };
+		D2A6DCB5150C305D00F7296F /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = D2A6DCB4150C305D00F7296F /* Headers */; };
+		D2A6DCB9150C307C00F7296F /* iCadeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A6DCB7150C307C00F7296F /* iCadeReaderView.m */; };
 		D362EAFA12DDB506004A4206 /* Flixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D362EAF912DDB506004A4206 /* Flixel.ttf */; };
 /* End PBXBuildFile section */
 
@@ -217,6 +219,10 @@
 		D286022213E7F4D800874DE8 /* PlayState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayState.m; path = Classes/PlayState.m; sourceTree = "<group>"; };
 		D286022413E7F4E000874DE8 /* Mode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mode.h; path = Classes/Mode.h; sourceTree = "<group>"; };
 		D286022513E7F4E000874DE8 /* Mode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mode.m; path = Classes/Mode.m; sourceTree = "<group>"; };
+		D2A6DCB4150C305D00F7296F /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = "flixel-ios/Headers"; sourceTree = SOURCE_ROOT; };
+		D2A6DCB6150C307C00F7296F /* iCadeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCadeReaderView.h; sourceTree = "<group>"; };
+		D2A6DCB7150C307C00F7296F /* iCadeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCadeReaderView.m; sourceTree = "<group>"; };
+		D2A6DCB8150C307C00F7296F /* iCadeState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCadeState.h; sourceTree = "<group>"; };
 		D362EAF912DDB506004A4206 /* Flixel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Flixel.ttf; path = "flixel-ios/fonts/Flixel.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +258,10 @@
 		076E6DBE1180DFF60084ECBC /* flixel */ = {
 			isa = PBXGroup;
 			children = (
+				D2A6DCB6150C307C00F7296F /* iCadeReaderView.h */,
+				D2A6DCB7150C307C00F7296F /* iCadeReaderView.m */,
+				D2A6DCB8150C307C00F7296F /* iCadeState.h */,
+				D2A6DCB4150C305D00F7296F /* Headers */,
 				07542F4411836252004B03B0 /* fonts */,
 				076E6DBF1180E00D0084ECBC /* Flash */,
 				076E6DC41180E00D0084ECBC /* Flixel */,
@@ -569,6 +579,7 @@
 				D2041C2A13F632AC00E90EC7 /* Default.png in Resources */,
 				D2041C2E13F6330A00E90EC7 /* icon retina.png in Resources */,
 				D2041C3113F6332F00E90EC7 /* Default@2x.png in Resources */,
+				D2A6DCB5150C305D00F7296F /* Headers in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +637,7 @@
 				D20077C213B337340036F296 /* VictoryState.m in Sources */,
 				D286022313E7F4D800874DE8 /* PlayState.m in Sources */,
 				D286022613E7F4E000874DE8 /* Mode.m in Sources */,
+				D2A6DCB9150C307C00F7296F /* iCadeReaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,8 +673,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
 				COPY_PHASE_STRIP = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -673,8 +685,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
+				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -687,8 +699,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -700,8 +712,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
+				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -713,8 +725,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
 				COPY_PHASE_STRIP = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -725,8 +737,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
+				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -816,8 +828,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
 				COPY_PHASE_STRIP = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -828,8 +840,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "063E1376-74A3-43BE-88A6-BBBC1D29E2D8";
+				PROVISIONING_PROFILE = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C28000C-8B17-42A8-966D-B4ED3DD83C61";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
