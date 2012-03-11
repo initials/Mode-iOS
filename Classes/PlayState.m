@@ -70,6 +70,10 @@ static NSString * ImgSpawnerGibs = @"spawner_gibs.png";
 static NSString * ImgButtonArrow = @"buttonArrow.png";
 static NSString * ImgButton = @"buttonButton.png";
 
+static float buttonAlphaStart = 0.1;
+
+static float buttonAlphaPressed= 0.5;
+
 
 static int bulletIndex;
 
@@ -142,6 +146,18 @@ BOOL scoreChanged;
 //	}
     
     //[self.gameCenterManager reportScore:100 forCategory:kModeLB];
+    
+    
+    FlxG.touches.humanControlled = YES;
+    
+    buttonAlphaStart = BUTTON_START_ALPHA;
+    buttonAlphaPressed = BUTTON_PRESSED_ALPHA;
+    
+    if (FlxG.gamePad != 0) {
+        buttonAlphaPressed=0;
+        buttonAlphaStart=0;
+    }
+    
     
     //gibs
     _littleGibs = [[FlxEmitter alloc] init];
@@ -485,23 +501,23 @@ BOOL scoreChanged;
 
 - (void) virtualControlPad 
 {
-    buttonRight.alpha = BUTTON_START_ALPHA;
-    buttonLeft.alpha = BUTTON_START_ALPHA;
-    buttonA.alpha = BUTTON_START_ALPHA;
-    buttonB.alpha = BUTTON_START_ALPHA;
+    buttonRight.alpha = buttonAlphaStart;
+    buttonLeft.alpha = buttonAlphaStart;
+    buttonA.alpha = buttonAlphaStart;
+    buttonB.alpha = buttonAlphaStart;
     
-    if (FlxG.touches.vcpLeftArrow) {
-        buttonLeft.alpha = BUTTON_PRESSED_ALPHA;
+    if (FlxG.touches.vcpLeftArrow || FlxG.touches.iCadeLeft) {
+        buttonLeft.alpha = buttonAlphaPressed;
         player.velocity = CGPointMake(-150, player.velocity.y);
         player.scale = CGPointMake(-1, 1);
-    } else if (FlxG.touches.vcpRightArrow) {
-        buttonRight.alpha = BUTTON_PRESSED_ALPHA;
+    } else if (FlxG.touches.vcpRightArrow || FlxG.touches.iCadeRight) {
+        buttonRight.alpha = buttonAlphaPressed;
         player.velocity = CGPointMake(150, player.velocity.y);
         player.scale = CGPointMake(1, 1);
     } 
     //button A jump
-    if (FlxG.touches.vcpButton2 && !player.velocity.y  && FlxG.touches.newTouch ) { //&& FlxG.touches.newTouch
-        buttonA.alpha = BUTTON_PRESSED_ALPHA;
+    if ((FlxG.touches.vcpButton2 && !player.velocity.y && FlxG.touches.newTouch ) || (FlxG.touches.iCadeBBegan && !player.velocity.y ) ) { //&& FlxG.touches.newTouch
+        buttonA.alpha = buttonAlphaPressed;
         [player doJump];
         //pressedJump = YES;
         player.justLanded = YES;
@@ -509,8 +525,8 @@ BOOL scoreChanged;
         
     }
     BOOL nt = FlxG.touches.newTouch;
-    if (FlxG.touches.vcpButton1 && (nt || player.rapidFire) ) { 
-        buttonB.alpha = BUTTON_PRESSED_ALPHA;
+    if ((FlxG.touches.vcpButton1 && (nt || player.rapidFire) ) || (FlxG.touches.iCadeABegan && !FlxG.touches.iCadeDown && !FlxG.touches.iCadeUp)) { 
+        buttonB.alpha = buttonAlphaPressed;
         if (!player.flickering) {
             //button D regular shoot
             [FlxG play:SndShoot];
@@ -555,7 +571,7 @@ BOOL scoreChanged;
     }
     
     //shoot up
-    if (FlxG.touches.swipedLeft && !player.flickering ) {
+    if ((FlxG.touches.swipedLeft && !player.flickering ) || (FlxG.touches.iCadeUp && FlxG.touches.iCadeABegan  && !player.flickering)) {
         //up
         //[self fireWeapon];
         [FlxG play:SndShoot];
@@ -579,7 +595,7 @@ BOOL scoreChanged;
     //swiped down
     
     //else if (p.y > 40 && p.y < 80 && p.x < 320 && p.x > 276 && (newTouch || player.rapidFire) ) {
-    else if (FlxG.touches.swipedRight && !player.flickering) {                   
+    else if ((FlxG.touches.swipedRight && !player.flickering)  || (FlxG.touches.iCadeDown && FlxG.touches.iCadeABegan  && !player.flickering) ){                   
         player.velocity = CGPointMake(player.velocity.x, player.velocity.y - 80);
         //was -36 in Flash game. changed it due to swipes being slower to execute.
         
@@ -639,7 +655,7 @@ BOOL scoreChanged;
     }
     
     //if trying to shoot and gun is jammed
-    else if (  FlxG.touches.swipedRight || FlxG.touches.swipedLeft || FlxG.touches.swipedUp || FlxG.touches.swipedDown && player.flickering) {
+    else if ( ( FlxG.touches.swipedRight || FlxG.touches.swipedLeft || FlxG.touches.swipedUp || FlxG.touches.swipedDown || FlxG.touches.iCadeABegan) && player.flickering) {
         [FlxG play:SndJam];
         _jamTimer = 1;
         _gunjam.visible = YES;
@@ -683,7 +699,7 @@ BOOL scoreChanged;
 
 - (void) onVictory 
 {
-    NSLog(@"VICTORY");
+    //NSLog(@"VICTORY");
     FlxG.state = [[[VictoryState alloc] init] autorelease];
     return;
     
@@ -691,7 +707,7 @@ BOOL scoreChanged;
 
 - (void) onDeath 
 {
-    NSLog(@"Death");
+    //NSLog(@"Death");
     FlxG.state = [[[MenuState alloc] init] autorelease];
     return;
     

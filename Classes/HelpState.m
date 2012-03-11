@@ -166,6 +166,18 @@ static NSString * ImgButtonPressed = @"buttonPressed.png";
 //    
 //    [self add:zoom];
     
+    gamePadText = [FlxText textWithWidth:FlxG.width-40
+                                    text:@"No gamepad detected."
+                                    font:nil
+                                    size:8.0];
+    
+	gamePadText.color = 0xffffffff; //0xff312f2f
+	gamePadText.alignment = @"center";
+	gamePadText.x = 20;
+	gamePadText.y = FlxG.height - 60;
+	[self add:gamePadText];
+    
+    
 	
 }
 
@@ -178,7 +190,74 @@ static NSString * ImgButtonPressed = @"buttonPressed.png";
 - (void) update
 {
     
+    if (FlxG.touches.iCadeLeftBegan  || FlxG.touches.swipedDown ) {
+        
+        if (FlxG.gamePad==0) {
+            FlxG.gamePad=1;
+        }
+        else if (FlxG.gamePad==1) {
+            FlxG.gamePad=2;
+        }
+        else if (FlxG.gamePad==2) {
+            FlxG.gamePad=3;
+        }
+        else if (FlxG.gamePad==3) {
+            FlxG.gamePad=0;
+        }
+        
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setInteger:FlxG.gamePad forKey:@"GAME_PAD"];
+        [prefs synchronize];
+        
+    }
+    
+    if (FlxG.touches.iCadeRightBegan || FlxG.touches.swipedUp) {
+        
+        if (FlxG.gamePad==0) {
+            FlxG.gamePad=3;
+        }
+        else if (FlxG.gamePad==1) {
+            FlxG.gamePad=0;
+        }
+        else if (FlxG.gamePad==2) {
+            FlxG.gamePad=1;
+        }
+        else if (FlxG.gamePad==3) {
+            FlxG.gamePad=2;
+        }
+        
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setInteger:FlxG.gamePad forKey:@"GAME_PAD"];
+        [prefs synchronize];
+        
+    }    
+    
+    
+    
+    if (FlxG.gamePad==0) {
+        gamePadText.text=@"Touch screen [No external gamepad]";
+        
+    }
+    else if (FlxG.gamePad==1) {
+        gamePadText.text=@"Gamepad button layout: iCade";
+        
+    }
+    else if (FlxG.gamePad==2) {
+        gamePadText.text=@"Gamepad button layout: iControlPad v2.0";
+    }    
+    else if (FlxG.gamePad==3) {
+        gamePadText.text=@"Gamepad button layout: iControlPad v2.1a";
+    }      
+    
+    
+    
+    
 	[super update];
+    
+    if (FlxG.touches.iCadeABegan) {
+        [self onBack];
+        return;
+    }
 	
 }
 

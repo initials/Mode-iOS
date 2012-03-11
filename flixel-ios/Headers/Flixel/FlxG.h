@@ -85,6 +85,9 @@
 //+ (void) setGame:(FlxGame *)game;
 + (FlxGame *) game;
 
++ (void) setGamePad:(int) gamePad;
++ (int) gamePad;
+
 + (void) setPauseFollow:(BOOL)pauseFollow;
 + (BOOL) pauseFollow;
 

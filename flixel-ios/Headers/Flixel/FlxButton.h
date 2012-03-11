@@ -25,17 +25,28 @@
    BOOL _onToggle;
    FlxSprite * _off;
    FlxSprite * _on;
+    
+    FlxSprite * _selectedImg;
+    BOOL _selected;
+    
    FlxText * _offT;
    FlxText * _onT;
+    FlxText * _selectedT;
+    
+   
    FlashFunction * _callback;
    BOOL _pressed;
    BOOL _initialized;
    FlxPoint * _sf;
 }
 @property(nonatomic,assign) BOOL on;
+@property BOOL _selected;
+
+
 - (id) initWithX:(int)X y:(int)Y callback:(FlashFunction *)Callback;
 - (FlxButton *) loadGraphic:(FlxSprite *)Image;
 - (FlxButton *) loadGraphicWithParam1:(FlxSprite *)Image param2:(FlxSprite *)ImageHighlight;
+- (FlxButton *) loadGraphicWithParam1:(FlxSprite *)Image param2:(FlxSprite *)ImageHighlight param3:(FlxSprite *)ImageSelected;
 
 - (FlxButton *) loadText:(FlxText *)Text;
 - (FlxButton *) loadTextWithParam1:(FlxText *)Text param2:(FlxText *)TextHighlight;

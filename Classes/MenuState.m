@@ -44,6 +44,8 @@
 
 static NSString * ImgButton = @"buttonupGreen.png";
 static NSString * ImgButtonPressed = @"buttonPressed.png";
+static NSString * ImgButtonSelected = @"buttonupGreenSelected.png";
+
 
 static NSString * ImgGibs = @"spawner_gibs.png";
 static NSString * SndHit = @"menu_hit.caf";
@@ -71,10 +73,23 @@ static FlxEmitter * emitter = nil;
 
 - (void) create
 {
-    //Tracks number of times the game has been played.
+    //store the game pad preference
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+//    NSInteger gp = [prefs integerForKey:@"GAME_PAD"];
+//    
+//    //NSLog(@"GamePad stored as %d", gp);
+//    
+//    if (gp==0) {
+//        FlxG.gamePad=1;
+//    }
+//    else {
+//        FlxG.gamePad=gp;
+//    }
     
+    
+    //Tracks number of times the game has been played.
+        
     // getting an NSInteger
     NSInteger numberOfPlays = [prefs integerForKey:@"NUMBER_OF_PLAYS"];
     zoom = [prefs integerForKey:@"ZOOM_FOR_CURRENT_GAME"];
@@ -144,10 +159,77 @@ static FlxEmitter * emitter = nil;
 - (void) update
 {
     
+    FlxG.touches.humanControlled=YES;
+    
 //    if (FlxG.touches.touchesBegan) {
 //        [self onPlay];
 //        return;
 //    }
+    
+    if (FlxG.touches.iCadeDownBegan) {
+        
+        [FlxG play:SndButtonPress];
+        
+        if (playBtn._selected) {
+            flixelButton._selected=YES;
+            playBtn._selected=NO;
+        }
+        else if (flixelButton._selected) {
+            dannyButton._selected=YES;
+            flixelButton._selected=NO;
+        }
+        else if (dannyButton._selected) {
+            helpBtn._selected=YES;
+            dannyButton._selected=NO;
+        }  
+        else if (helpBtn._selected) {
+            playBtn._selected=YES;
+            helpBtn._selected=NO;
+        }
+        
+    } else     if (FlxG.touches.iCadeUpBegan) {
+        
+        [FlxG play:SndButtonPress];
+        
+        if (playBtn._selected) {
+            helpBtn._selected=YES;
+            playBtn._selected=NO;
+        }
+        else if (helpBtn._selected) {
+            dannyButton._selected=YES;
+            helpBtn._selected=NO;
+        }
+        else if (flixelButton._selected) {
+            playBtn._selected=YES;
+            flixelButton._selected=NO;
+        }
+        else if (dannyButton._selected) {
+            flixelButton._selected=YES;
+            dannyButton._selected=NO;
+        }  
+
+        
+    }
+    
+    
+    if (FlxG.touches.iCadeBBegan) {
+        if (playBtn._selected) {
+            [self onPlay];
+            return;
+        }
+        else if (flixelButton._selected) {
+            [self onFlixel];
+            return;
+        }
+        else if (dannyButton._selected) {
+            [self onDanny];
+            return;
+        }  
+        else if (helpBtn._selected) {
+            [self onHelp];
+            return;
+        }
+    }
     
 	[super update];
     
@@ -208,11 +290,11 @@ static FlxEmitter * emitter = nil;
 //            playY=flixelButtonY+44;
 //        }
         
-        FlxButton * flixelButton = [[[FlxButton alloc] initWithX:flixelButtonX
+        flixelButton = [[[FlxButton alloc] initWithX:flixelButtonX
                                                                y:flixelButtonY
                                                         callback:[FlashFunction functionWithTarget:self
                                                                                             action:@selector(onFlixel)]] autorelease];
-        [flixelButton loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
+        [flixelButton loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] param3:[FlxSprite spriteWithGraphic:ImgButtonSelected] ];
         [flixelButton loadTextWithParam1:[FlxText textWithWidth:flixelButton.width
                                                  text:NSLocalizedString(@"flixel.org", @"flixel.org")
                                                  font:nil
@@ -222,16 +304,16 @@ static FlxEmitter * emitter = nil;
                                                                                               size:8.0]  ];
         
         [self add:flixelButton];
-        FlxButton * dannyButton = [[[FlxButton alloc] initWithX:dannyX
+        dannyButton = [[[FlxButton alloc] initWithX:dannyX
                                                               y:dannyY
                                                        callback:[FlashFunction functionWithTarget:self
                                                                                            action:@selector(onDanny)]] autorelease];
-        [dannyButton loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
+        [dannyButton loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed]  param3:[FlxSprite spriteWithGraphic:ImgButtonSelected]];
         [dannyButton loadTextWithParam1:[FlxText textWithWidth:flixelButton.width
                                                            text:NSLocalizedString(@"Music: DannyB", @"Music: DannyB")
                                                            font:nil
                                                            size:8.0] param2:[FlxText textWithWidth:flixelButton.width
-                                                                                              text:NSLocalizedString(@"MUSIC: DANNYB", @"MUSIC: DANNYB")
+                                                                                              text:NSLocalizedString(@"MUSIC: DannyB", @"MUSIC: DannyB")
                                                                                               font:nil
                                                                                               size:8.0]  ];
         [self add:dannyButton];       
@@ -240,7 +322,7 @@ static FlxEmitter * emitter = nil;
                                               y:helpY
                                                        callback:[FlashFunction functionWithTarget:self
                                                                                            action:@selector(onHelp)]] autorelease];
-        [helpBtn loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
+        [helpBtn loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] param3:[FlxSprite spriteWithGraphic:ImgButtonSelected] ];
         [helpBtn loadTextWithParam1:[FlxText textWithWidth:flixelButton.width
                                                           text:NSLocalizedString(@"help/about", @"help/about")
                                                           font:nil
@@ -267,7 +349,7 @@ static FlxEmitter * emitter = nil;
                                               y:playY
                                        callback:[FlashFunction functionWithTarget:self
                                                                            action:@selector(onPlay)]] autorelease];
-        [playBtn loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed]];
+        [playBtn loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] param3:[FlxSprite spriteWithGraphic:ImgButtonSelected]];
         
         [playBtn loadTextWithParam1:[FlxText textWithWidth:playBtn.width
                                             text:NSLocalizedString(@"Play", @"Play")
@@ -278,6 +360,10 @@ static FlxEmitter * emitter = nil;
                                                                                        size:8]];
         [self add:playBtn];
         
+        //only show selected button for gamepad players
+        
+        if (FlxG.gamePad!=0)
+            playBtn._selected=YES;
         
         
         

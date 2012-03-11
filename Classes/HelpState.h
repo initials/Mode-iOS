@@ -39,6 +39,7 @@
 	FlxButton * back;
     FlxText * aboutText;
     FlxText * zoomText;
+    FlxText * gamePadText;
 
 }
 

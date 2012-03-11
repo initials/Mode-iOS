@@ -38,7 +38,9 @@
     FlxEmitter * gibs;
     FlxButton * playButton;
     FlxButton * helpBtn;
-
+    FlxButton * flixelButton;
+    FlxButton * dannyButton;
+    
     FlxText * title1;
     FlxText * title2;
     BOOL fading;

@@ -136,7 +136,7 @@ static FlxEmitter * emitter = nil;
     
     
     _timer += FlxG.elapsed;
-    if((_timer > 2) && ((_timer > 10) || FlxG.touches.touchesEnded ))
+    if((_timer > 2) && ((_timer > 10) || (FlxG.touches.touchesEnded || FlxG.touches.iCadeBBegan) ) )
     {
         _fading = true;
         [FlxG play:SndMenu];

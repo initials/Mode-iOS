@@ -22,6 +22,10 @@
 
 #include <unistd.h>
 
+#import "iCadeReaderView.h"
+
+#import "iCadeState.h"
+
 //essentially locks the framerate to 30fps minimum
 //static float MAX_ELAPSED = 0.0333;
 //20fps minimum
@@ -70,6 +74,24 @@ static CFTimeInterval gameStart;
 //@synthesize swipeRightRecognizer;
 @synthesize swipeUpRecognizer;
 @synthesize swipeDownRecognizer; 
+
+@synthesize  iCadeJoystickNone;
+
+@synthesize  iCadeJoystickUp;
+@synthesize  iCadeJoystickRight;
+@synthesize  iCadeJoystickDown;
+@synthesize  iCadeJoystickLeft;
+
+@synthesize  iCadeButtonA;
+@synthesize  iCadeButtonB;
+@synthesize  iCadeButtonC;
+@synthesize  iCadeButtonD;
+
+@synthesize  iCadeButtonE;
+@synthesize  iCadeButtonF;
+@synthesize  iCadeButtonG;
+@synthesize  iCadeButtonH;
+
 
 
 - (BOOL) paused
@@ -156,8 +178,6 @@ static CFTimeInterval gameStart;
 }
 
 
-
-
 - (id) initWithOrientation:(FlxGameOrientation)GameOrientation
                      state:(NSString *)InitialState
                       zoom:(float)Zoom
@@ -197,23 +217,23 @@ static CFTimeInterval gameStart;
                 autorotateAngle = 180;
                 autorotateAngleGoal = 180;
                 
-//                switch (o) {
-//                    case UIDeviceOrientationLandscapeRight:
-//                        currentOrientation = UIDeviceOrientationLandscapeRight;
-//                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-//                        autorotateAngle = 180;
-//                        autorotateAngleGoal = 180;
-//                        break;
-//                    case UIDeviceOrientationLandscapeLeft:
-//                    case UIDeviceOrientationPortraitUpsideDown:
-//                    case UIDeviceOrientationPortrait:
-//                    default:
-//                        currentOrientation = UIDeviceOrientationLandscapeLeft;
-//                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-//                        autorotateAngle = 0;
-//                        autorotateAngleGoal = 0;
-//                        break;
-//                }
+                //                switch (o) {
+                //                    case UIDeviceOrientationLandscapeRight:
+                //                        currentOrientation = UIDeviceOrientationLandscapeRight;
+                //                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+                //                        autorotateAngle = 180;
+                //                        autorotateAngleGoal = 180;
+                //                        break;
+                //                    case UIDeviceOrientationLandscapeLeft:
+                //                    case UIDeviceOrientationPortraitUpsideDown:
+                //                    case UIDeviceOrientationPortrait:
+                //                    default:
+                //                        currentOrientation = UIDeviceOrientationLandscapeLeft;
+                //                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+                //                        autorotateAngle = 0;
+                //                        autorotateAngleGoal = 0;
+                //                        break;
+                //                }
                 break;
             }
             case FlxGameOrientationPortrait:
@@ -297,6 +317,37 @@ static CFTimeInterval gameStart;
         backingWidth = glView.backingWidth;
         backingHeight = glView.backingHeight;
         
+        
+        // add iCade control
+        
+        control = [[iCadeReaderView alloc] initWithFrame:CGRectZero];
+        [glView addSubview:control];
+        control.active = YES;
+        control.delegate = self;
+        [control release];
+        
+        
+        //set all buttons to OFF
+        
+        iCadeJoystickUp = NO;
+        iCadeJoystickRight = NO;
+        iCadeJoystickDown = NO;
+        iCadeJoystickLeft = NO;
+        
+        iCadeButtonA = NO;
+        iCadeButtonB = NO;
+        iCadeButtonC = NO;
+        iCadeButtonD = NO;
+        
+        iCadeButtonE = NO;
+        iCadeButtonF = NO;
+        iCadeButtonG = NO;
+        iCadeButtonH = NO;
+        
+        
+        
+        
+        
         [window makeKeyAndVisible];
         
         [window addSubview:glView];
@@ -363,8 +414,194 @@ static CFTimeInterval gameStart;
     return self;
 }
 
+
+
+- (void)buttonDown:(iCadeState)button {
+    
+    //debug - see what button is being pressed
+    
+    //NSLog(@"down - button %u", button);
+    
+    //joystick none
+    if (button==0) {
+        iCadeJoystickNone=YES;
+    }
+    
+    //joystick up
+    
+    else if (button==1) {
+        iCadeJoystickUp=YES;
+    }   
+    
+    //joystick right
+    
+    else if (button==2) {
+        iCadeJoystickRight=YES;
+    }
+    
+    //joystick down
+    
+    else if (button==4) {
+        iCadeJoystickDown=YES;
+    }    
+    
+    //joystick Left
+    
+    else if (button==8) {
+        iCadeJoystickLeft=YES;
+    }
+    
+    //joystick button A
+    
+    else if (button==16) {
+        iCadeButtonA=YES;
+    }   
+    
+    //joystick button B
+    
+    else if (button==32) {
+        iCadeButtonB=YES;
+    }    
+    
+    //joystick button C
+    
+    else if (button==64) {
+        iCadeButtonC=YES;
+    }   
+    
+    //joystick button D
+    
+    else if (button==128) {
+        iCadeButtonD=YES;
+    }    
+    
+    //joystick button E
+    
+    else if (button==256) {
+        iCadeButtonE=YES;
+    }   
+    
+    //joystick button F
+    
+    else if (button==512) {
+        iCadeButtonF=YES;
+    }    
+    
+    //joystick button G
+    
+    else if (button==1024) {
+        iCadeButtonG=YES;
+    }   
+    
+    //joystick button H
+    
+    else if (button==2048) {
+        iCadeButtonH=YES;
+    }     
+    
+    
+    
+    //[self setState:YES forButton:button];
+}
+
+- (void)buttonUp:(iCadeState)button {
+    
+    //NSLog(@"up - button %u", button);
+    
+    
+    if (button==0) {
+        iCadeJoystickNone=NO;
+        
+    }
+    
+    //joy stick up
+    
+    else if (button==1) {
+        iCadeJoystickUp=NO;
+    } 
+    
+    //joystick Right
+    
+    else if (button==2) {
+        iCadeJoystickRight=NO;
+    }
+    
+    //joystick down
+    
+    else if (button==4) {
+        iCadeJoystickDown=NO;
+    }    
+    
+    //joystick Left
+    
+    else if (button==8) {
+        iCadeJoystickLeft=NO;
+    }     
+    
+    //joystick button A
+    
+    else if (button==16) {
+        iCadeButtonA=NO;
+    }   
+    
+    //joystick button B
+    
+    else if (button==32) {
+        iCadeButtonB=NO;
+    } 
+    
+    //joystick button C
+    
+    else if (button==64) {
+        iCadeButtonC=NO;
+    }   
+    
+    //joystick button D
+    
+    else if (button==128) {
+        iCadeButtonD=NO;
+    }    
+    
+    //joystick button E
+    
+    else if (button==256) {
+        iCadeButtonE=NO;
+    }   
+    
+    //joystick button F
+    
+    else if (button==512) {
+        iCadeButtonF=NO;
+    }    
+    
+    //joystick button G
+    
+    else if (button==1024) {
+        iCadeButtonG=NO;
+    }   
+    
+    //joystick button H
+    
+    else if (button==2048) {
+        iCadeButtonH=NO;
+    } 
+    
+}
+
+
+
+
+
 - (void) start
 {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSInteger numOfPlays = [prefs integerForKey:@"NUMBER_OF_PLAYS"];
+    numOfPlays += 1;
+    [prefs setInteger:numOfPlays forKey:@"NUMBER_OF_PLAYS"];
+    [prefs synchronize];
+    
+    //NSLog(@"num of plays %d ", numOfPlays);
+    
     
     if (textureFrameBuffer == 0 && textureBufferZoom)
         glGenFramebuffersOES(1, &textureFrameBuffer);
@@ -617,48 +854,48 @@ static CFTimeInterval gameStart;
 
 - (void) deviceOrientationDidChange:(NSNotification *)note
 {
-//    orientation = [[UIDevice currentDevice] orientation];
-//    if (autorotate) {
-//        if (gameOrientation == FlxGameOrientationPortrait) {
-//            if (currentOrientation != orientation) {
-//                if (orientation == UIDeviceOrientationPortrait ||
-//                    orientation == UIDeviceOrientationPortraitUpsideDown) {
-//                    currentOrientation = orientation;
-//                    //set up status bar
-//                    [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-//                    if (currentOrientation == UIDeviceOrientationPortrait)
-//                        autorotateAngleGoal = 0;
-//                    else
-//                        autorotateAngleGoal = 180;
-//                    if (gameStarted == NO)
-//                        autorotateAngle = autorotateAngleGoal;
-//                }
-//            }
-//        } else { //FlxGameOrientationLandscape
-//            switch (orientation) {
-//                case UIDeviceOrientationUnknown:
-//                case UIDeviceOrientationPortrait:
-//                case UIDeviceOrientationPortraitUpsideDown:
-//                case UIDeviceOrientationFaceUp:
-//                case UIDeviceOrientationFaceDown:
-//                    if (currentOrientation == UIDeviceOrientationLandscapeRight)
-//                        orientation = UIDeviceOrientationLandscapeRight;
-//                    else
-//                        orientation = UIDeviceOrientationLandscapeLeft;
-//            }
-//            if (currentOrientation != orientation) {
-//                currentOrientation = orientation;
-//                //set up status bar
-//                [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-//                if (currentOrientation == UIDeviceOrientationLandscapeRight)
-//                    autorotateAngleGoal = 180;
-//                else
-//                    autorotateAngleGoal = 0;
-//                if (gameStarted == NO)
-//                    autorotateAngle = autorotateAngleGoal;
-//            }
-//        }
-//    }
+    //    orientation = [[UIDevice currentDevice] orientation];
+    //    if (autorotate) {
+    //        if (gameOrientation == FlxGameOrientationPortrait) {
+    //            if (currentOrientation != orientation) {
+    //                if (orientation == UIDeviceOrientationPortrait ||
+    //                    orientation == UIDeviceOrientationPortraitUpsideDown) {
+    //                    currentOrientation = orientation;
+    //                    //set up status bar
+    //                    [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+    //                    if (currentOrientation == UIDeviceOrientationPortrait)
+    //                        autorotateAngleGoal = 0;
+    //                    else
+    //                        autorotateAngleGoal = 180;
+    //                    if (gameStarted == NO)
+    //                        autorotateAngle = autorotateAngleGoal;
+    //                }
+    //            }
+    //        } else { //FlxGameOrientationLandscape
+    //            switch (orientation) {
+    //                case UIDeviceOrientationUnknown:
+    //                case UIDeviceOrientationPortrait:
+    //                case UIDeviceOrientationPortraitUpsideDown:
+    //                case UIDeviceOrientationFaceUp:
+    //                case UIDeviceOrientationFaceDown:
+    //                    if (currentOrientation == UIDeviceOrientationLandscapeRight)
+    //                        orientation = UIDeviceOrientationLandscapeRight;
+    //                    else
+    //                        orientation = UIDeviceOrientationLandscapeLeft;
+    //            }
+    //            if (currentOrientation != orientation) {
+    //                currentOrientation = orientation;
+    //                //set up status bar
+    //                [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+    //                if (currentOrientation == UIDeviceOrientationLandscapeRight)
+    //                    autorotateAngleGoal = 180;
+    //                else
+    //                    autorotateAngleGoal = 0;
+    //                if (gameStarted == NO)
+    //                    autorotateAngle = autorotateAngleGoal;
+    //            }
+    //        }
+    //    }
 }
 
 - (void) showSoundTray;
@@ -981,6 +1218,32 @@ static CFTimeInterval gameStart;
         
         glEnable(GL_BLEND);
     }  
+    
+    
+    //seeing if I can make things scale    
+    //    if (FlxG.touches.touchesBegan) {
+    //        glPushMatrix();
+    //        
+    //        glTranslatef(FlxG.width/2, FlxG.height/2, 0);
+    //
+    //        glScalef(2, 2, 1);
+    //        
+    //        glTranslatef(-FlxG.width/2, -FlxG.height/2, 0);
+    //        
+    //        glPushMatrix();
+    //    }
+    //    
+    //    if (FlxG.touches.touchesEnded) {
+    //        glPushMatrix();
+    //        
+    //        glTranslatef(FlxG.width/2, FlxG.height/2, 0);
+    //        
+    //        glScalef(0.5, 0.5, 1);
+    //        
+    //        glTranslatef(-FlxG.width/2, -FlxG.height/2, 0);
+    //        
+    //        glPushMatrix();
+    //    }
     
     //this call is redundant, since we only have one render buffer
     //glBindRenderbufferOES(GL_RENDERBUFFER_OES, renderBuffer);

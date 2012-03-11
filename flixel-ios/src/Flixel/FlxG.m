@@ -146,6 +146,7 @@ static BOOL musicPaused;
 static FlxTouches * touches;
 static float soundEffectsMasterVolume;
 static float musicMasterVolume;
+static int gamePad;
 
 
 
@@ -438,6 +439,11 @@ ALvoid alcMacOSXMixerOutputRateProc(const ALfloat value) {
 + (void) setMusic:(FlxSound *)newMusic; { [music autorelease]; music = [newMusic retain]; }
 + (FlxSound *) music; { return music; }
 + (void) setQuake:(FlxQuake *)newQuake; { [quake autorelease]; quake = [newQuake retain]; }
+
++ (void) setGamePad:(int)newGamePad; { gamePad = newGamePad; }
++ (int) gamePad; { return gamePad; }
+
+
 + (FlxQuake *) quake; { return quake; }
 
 + (void) setLevel:(int)newLevel; { level = newLevel; }
@@ -1100,7 +1106,7 @@ ALvoid alcMacOSXMixerOutputRateProc(const ALfloat value) {
   if (device == NULL)
     return;
   //alcMacOSXMixerOutputRateProc(44100);
-  alcMacOSXMixerOutputRateProc(22050);
+  //alcMacOSXMixerOutputRateProc(22050);
   context = alcCreateContext(device, 0);
   result = alGetError();
   if (result != AL_NO_ERROR)
