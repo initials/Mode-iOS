@@ -32,6 +32,8 @@
 // I do not claim to own any copyright over this game. All ownership
 // stays with the original author.
 
+#import "ButtonAdjustState.h"
+
 #import "MenuState.h"
 
 #import "HelpState.h"
@@ -151,6 +153,25 @@ static NSString * ImgButtonPressed = @"buttonPressed.png";
     
     [self add:back];
     
+    
+    adjustButtonsBtn = [[[FlxButton alloc] initWithX:FlxG.width-20-back.width
+                                       y:FlxG.height-20
+                                callback:[FlashFunction functionWithTarget:self
+                                                                    action:@selector(onButtonAdjust)]] autorelease];
+    [adjustButtonsBtn loadGraphicWithParam1:[FlxSprite spriteWithGraphic:ImgButton] param2:[FlxSprite spriteWithGraphic:ImgButtonPressed] ];
+    [adjustButtonsBtn loadTextWithParam1:[FlxText textWithWidth:back.width
+                                               text:NSLocalizedString(@"buttons", @"buttons")
+                                               font:nil
+                                               size:8.0] param2:[FlxText textWithWidth:back.width
+                                                                                  text:NSLocalizedString(@"VCP", @"VCP")
+                                                                                  font:nil
+                                                                                  size:8.0]  ];
+    
+    [self add:adjustButtonsBtn];
+    
+    
+    
+    
 //    FlxButton * zoom = [[[FlxButton alloc] initWithX:FlxG.width/1.5
 //                                       y:FlxG.height-20
 //                                callback:[FlashFunction functionWithTarget:self
@@ -265,6 +286,13 @@ static NSString * ImgButtonPressed = @"buttonPressed.png";
 {
     [FlxG play:SndButtonPress];
 	FlxG.state = [[[MenuState alloc] init] autorelease];
+    return;
+}
+
+- (void) onButtonAdjust
+{
+    [FlxG play:SndButtonPress];
+	FlxG.state = [[[ButtonAdjustState alloc] init] autorelease];
     return;
 }
 

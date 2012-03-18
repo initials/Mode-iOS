@@ -33,16 +33,19 @@
 // stays with the original author.
 
 
-@interface HelpState : FlxState
+@interface ButtonAdjustState : FlxState
+
 {
-	
-	FlxButton * back;
-    FlxButton * adjustButtonsBtn;
+    FlxButton * cancelBtn;
+    FlxButton * okBtn;
+    FlxButton * resetBtn;
 
-    FlxText * aboutText;
-    FlxText * zoomText;
-    FlxText * gamePadText;
-
+    //virtual control pad
+    FlxSprite * buttonLeft;
+    FlxSprite * buttonRight;
+    FlxSprite * button1;
+    FlxSprite * button2;
+    
 }
 
 @end

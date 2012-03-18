@@ -113,6 +113,14 @@ static int level;
 static int levelWidth;
 static int levelHeight;
 
+static CGPoint leftArrowPosition;
+static CGPoint rightArrowPosition;
+
+static CGPoint button1Position;
+static CGPoint button2Position;
+
+
+
 static NSMutableArray * scores;
 static int score;
 //static NSMutableArray * saves;
@@ -454,6 +462,24 @@ ALvoid alcMacOSXMixerOutputRateProc(const ALfloat value) {
 + (void) setLevelHeight:(int)newLevelHeight; { levelHeight = newLevelHeight; }
 + (int) levelHeight; { return levelHeight; }
 
+
++ (void) setLeftArrowPosition:(CGPoint)newLeftArrowPosition; { leftArrowPosition = newLeftArrowPosition; }
++ (CGPoint) leftArrowPosition; { return leftArrowPosition; }
+
++ (void) setRightArrowPosition:(CGPoint)newRightArrowPosition; { rightArrowPosition = newRightArrowPosition; }
++ (CGPoint) rightArrowPosition; { return rightArrowPosition; }
+
++ (void) setButton1Position:(CGPoint)newButton1Position; { button1Position = newButton1Position; }
++ (CGPoint) button1Position; { return button1Position; }
+
++ (void) setButton2Position:(CGPoint)newButton2Position; { button2Position = newButton2Position; }
++ (CGPoint) button2Position; { return button2Position; }
+
+
+
+
+
+
 // + (void) setState:(FlxState *)newState; { [state autorelease]; state = [newState retain]; }
 // + (FlxState *) state; { return state; }
 + (void) setElapsed:(float)newElapsed; { elapsed = newElapsed; }
@@ -487,8 +513,20 @@ ALvoid alcMacOSXMixerOutputRateProc(const ALfloat value) {
 
 + (void) initAudio
 {
-  [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:1.0], @"MusicVolume",
-									[NSNumber numberWithFloat:1.0], @"SoundEffectsVolume",
+  [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [NSNumber numberWithFloat:1.0], @"MusicVolume",
+                                                           [NSNumber numberWithFloat:1.0], @"SoundEffectsVolume",
+                                                           
+                                                           [NSNumber numberWithFloat:0], @"LEFT_ARROW_POSITION_X",
+                                                           [NSNumber numberWithFloat:240], @"LEFT_ARROW_POSITION_Y",
+                                                           [NSNumber numberWithFloat:80], @"RIGHT_ARROW_POSITION_X",
+                                                           [NSNumber numberWithFloat:240], @"RIGHT_ARROW_POSITION_Y",  
+                                                           
+                                                           [NSNumber numberWithFloat:340], @"BUTTON_1_POSITION_X",
+                                                           [NSNumber numberWithFloat:240], @"BUTTON_1_POSITION_Y",
+                                                           [NSNumber numberWithFloat:420], @"BUTTON_2_POSITION_X",
+                                                           [NSNumber numberWithFloat:240], @"BUTTON_2_POSITION_Y",                                                             
+                                                           
 									nil]];
   soundEffectsMasterVolume = [[[NSUserDefaults standardUserDefaults] objectForKey:@"SoundEffectsVolume"] floatValue];
   musicMasterVolume = [[[NSUserDefaults standardUserDefaults] objectForKey:@"MusicVolume"] floatValue];

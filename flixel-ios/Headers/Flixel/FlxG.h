@@ -57,6 +57,19 @@
 + (void) setLevelHeight:(int) levelHeight;
 + (int) levelHeight;
 
++ (void) setLeftArrowPosition:(CGPoint) leftArrowPosition;
++ (CGPoint) leftArrowPosition;
+
++ (void) setRightArrowPosition:(CGPoint) rightArrowPosition;
++ (CGPoint) rightArrowPosition;
+
++ (void) setButton1Position:(CGPoint) button1Position;
++ (CGPoint) button1Position;
+
++ (void) setButton2Position:(CGPoint) button2Position;
++ (CGPoint) button2Position;
+
+
 + (void) setState:(FlxState *)state;
 + (FlxState *) state;
 + (void) setElapsed:(float)elapsed;

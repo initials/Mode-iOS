@@ -88,7 +88,7 @@ typedef enum {
     BOOL swipedLeft;
     BOOL swipedRight;
 	UISwipeGestureRecognizer *swipeLeftRecognizer;
-	//UISwipeGestureRecognizer *swipeRightRecognizer;
+	UISwipeGestureRecognizer *swipeRightRecognizer;
 	UISwipeGestureRecognizer *swipeUpRecognizer;
 	UISwipeGestureRecognizer *swipeDownRecognizer;
     
@@ -125,7 +125,7 @@ typedef enum {
 @property(nonatomic,readonly)   BOOL swipedLeft;
 @property(nonatomic,readonly)   BOOL swipedRight;
 @property (nonatomic, retain) UISwipeGestureRecognizer *swipeLeftRecognizer;
-//@property (nonatomic, retain) UISwipeGestureRecognizer *swipeRightRecognizer;
+@property (nonatomic, retain) UISwipeGestureRecognizer *swipeRightRecognizer;
 @property (nonatomic, retain) UISwipeGestureRecognizer *swipeUpRecognizer;
 @property (nonatomic, retain) UISwipeGestureRecognizer *swipeDownRecognizer;
 
@@ -168,6 +168,8 @@ typedef enum {
 //- (void)setState:(BOOL)state forButton:(iCadeState)button;
 - (void)buttonDown:(iCadeState)button ;
 - (void)buttonUp:(iCadeState)button ;
+
+-(void) enableSwipeRecognizer:(BOOL)enabled;
 
 
 @end

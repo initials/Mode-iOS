@@ -99,6 +99,7 @@
 		D2041C2A13F632AC00E90EC7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D2041C2913F632AC00E90EC7 /* Default.png */; };
 		D2041C2E13F6330A00E90EC7 /* icon retina.png in Resources */ = {isa = PBXBuildFile; fileRef = D2041C2C13F6330A00E90EC7 /* icon retina.png */; };
 		D2041C3113F6332F00E90EC7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2041C3013F6332F00E90EC7 /* Default@2x.png */; };
+		D20E632015159DE1004AB0DF /* ButtonAdjustState.m in Sources */ = {isa = PBXBuildFile; fileRef = D20E631F15159DE1004AB0DF /* ButtonAdjustState.m */; };
 		D265CDCD150C66100016BF7C /* buttonupGreenSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D265CDCC150C66100016BF7C /* buttonupGreenSelected.png */; };
 		D27AF76E13E518A300C6DE74 /* buttonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D27AF76D13E518A300C6DE74 /* buttonPressed.png */; };
 		D286022313E7F4D800874DE8 /* PlayState.m in Sources */ = {isa = PBXBuildFile; fileRef = D286022213E7F4D800874DE8 /* PlayState.m */; };
@@ -218,6 +219,8 @@
 		D2041C2913F632AC00E90EC7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D2041C2C13F6330A00E90EC7 /* icon retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon retina.png"; sourceTree = "<group>"; };
 		D2041C3013F6332F00E90EC7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D20E631E15159DE1004AB0DF /* ButtonAdjustState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonAdjustState.h; sourceTree = "<group>"; };
+		D20E631F15159DE1004AB0DF /* ButtonAdjustState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonAdjustState.m; sourceTree = "<group>"; };
 		D265CDCC150C66100016BF7C /* buttonupGreenSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonupGreenSelected.png; path = data/buttonupGreenSelected.png; sourceTree = "<group>"; };
 		D27AF76D13E518A300C6DE74 /* buttonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonPressed.png; path = data/buttonPressed.png; sourceTree = "<group>"; };
 		D286022113E7F4D800874DE8 /* PlayState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayState.h; path = Classes/PlayState.h; sourceTree = "<group>"; };
@@ -495,6 +498,8 @@
 				D20077AA13B337340036F296 /* MenuState.m */,
 				D20077B513B337340036F296 /* VictoryState.h */,
 				D20077B613B337340036F296 /* VictoryState.m */,
+				D20E631E15159DE1004AB0DF /* ButtonAdjustState.h */,
+				D20E631F15159DE1004AB0DF /* ButtonAdjustState.m */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -654,6 +659,7 @@
 				D286022313E7F4D800874DE8 /* PlayState.m in Sources */,
 				D286022613E7F4E000874DE8 /* Mode.m in Sources */,
 				D2A6DCB9150C307C00F7296F /* iCadeReaderView.m in Sources */,
+				D20E632015159DE1004AB0DF /* ButtonAdjustState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,7 +686,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "";
+				VALID_ARCHS = "armv7 armv6";
 			};
 			name = "App Store";
 		};
@@ -741,20 +747,20 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
 				COPY_PHASE_STRIP = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Canabalt_Prefix.pch;
+				GCC_PREFIX_HEADER = Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/flixel-ios/Headers\"";
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
+				PROVISIONING_PROFILE = "C5231FAE-1CDE-4495-9C38-49FCBD71132F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C5231FAE-1CDE-4495-9C38-49FCBD71132F";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -781,8 +787,8 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "";
-				"VALID_ARCHS[sdk=*]" = "$(ARCHS_STANDARD_32_BIT)";
+				VALID_ARCHS = "armv7 armv6";
+				"VALID_ARCHS[sdk=*]" = "armv7 armv6";
 			};
 			name = Debug;
 		};
@@ -792,8 +798,8 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
@@ -804,11 +810,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
+				PROVISIONING_PROFILE = "C5231FAE-1CDE-4495-9C38-49FCBD71132F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C5231FAE-1CDE-4495-9C38-49FCBD71132F";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "";
+				VALID_ARCHS = "armv7 armv6";
 			};
 			name = Release;
 		};
@@ -834,7 +840,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "";
+				VALID_ARCHS = "armv7 armv6";
 			};
 			name = "Release copy";
 		};

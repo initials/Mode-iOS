@@ -40,6 +40,7 @@
     FlxButton * helpBtn;
     FlxButton * flixelButton;
     FlxButton * dannyButton;
+    FlxButton * adjustControlsButton;
     
     FlxText * title1;
     FlxText * title2;

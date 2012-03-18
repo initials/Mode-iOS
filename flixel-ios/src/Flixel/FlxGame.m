@@ -71,7 +71,7 @@ static CFTimeInterval gameStart;
 @synthesize swipedRight;
 
 @synthesize swipeLeftRecognizer;
-//@synthesize swipeRightRecognizer;
+@synthesize swipeRightRecognizer;
 @synthesize swipeUpRecognizer;
 @synthesize swipeDownRecognizer; 
 
@@ -144,6 +144,24 @@ static CFTimeInterval gameStart;
     return [self initWithOrientation:GameOrientation state:InitialState zoom:Zoom useTextureBufferZoom:TextureBufferZoom modelZoom:1.0];
 } 
 
+-(void) enableSwipeRecognizer:(BOOL)enabled;
+{
+    if (enabled) {
+        swipeDownRecognizer.enabled=YES;
+        swipeUpRecognizer.enabled=YES;
+        swipeLeftRecognizer.enabled=YES;
+        swipeRightRecognizer.enabled=YES;
+
+    }
+    else {
+        swipeDownRecognizer.enabled=NO;
+        swipeUpRecognizer.enabled=NO;
+        swipeLeftRecognizer.enabled=NO;
+        swipeRightRecognizer.enabled=NO;
+
+    }
+}
+
 
 /*
  In response to a swipe gesture, show the image view appropriately then move the image view in the direction of the swipe as it fades out.
@@ -196,7 +214,7 @@ static CFTimeInterval gameStart;
         if (FlxG.iPad)
             self.frameInterval = 1;
         else
-            self.frameInterval = 2;
+            self.frameInterval = 1;
         
         gameStart = CFAbsoluteTimeGetCurrent();
         
@@ -208,32 +226,26 @@ static CFTimeInterval gameStart;
         //register for device orientation notifications
         [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
         UIDeviceOrientation o = [UIDevice currentDevice].orientation;
-        
         switch (gameOrientation) {
             case FlxGameOrientationLandscape:
             {
-                currentOrientation = UIDeviceOrientationLandscapeRight;
-                [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-                autorotateAngle = 180;
-                autorotateAngleGoal = 180;
-                
-                //                switch (o) {
-                //                    case UIDeviceOrientationLandscapeRight:
-                //                        currentOrientation = UIDeviceOrientationLandscapeRight;
-                //                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-                //                        autorotateAngle = 180;
-                //                        autorotateAngleGoal = 180;
-                //                        break;
-                //                    case UIDeviceOrientationLandscapeLeft:
-                //                    case UIDeviceOrientationPortraitUpsideDown:
-                //                    case UIDeviceOrientationPortrait:
-                //                    default:
-                //                        currentOrientation = UIDeviceOrientationLandscapeLeft;
-                //                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-                //                        autorotateAngle = 0;
-                //                        autorotateAngleGoal = 0;
-                //                        break;
-                //                }
+                switch (o) {
+                    case UIDeviceOrientationLandscapeRight:
+                        currentOrientation = UIDeviceOrientationLandscapeRight;
+                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+                        autorotateAngle = 180;
+                        autorotateAngleGoal = 180;
+                        break;
+                    case UIDeviceOrientationLandscapeLeft:
+                    case UIDeviceOrientationPortraitUpsideDown:
+                    case UIDeviceOrientationPortrait:
+                    default:
+                        currentOrientation = UIDeviceOrientationLandscapeLeft;
+                        [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+                        autorotateAngle = 0;
+                        autorotateAngleGoal = 0;
+                        break;
+                }
                 break;
             }
             case FlxGameOrientationPortrait:
@@ -283,11 +295,12 @@ static CFTimeInterval gameStart;
         [recognizer release];
         
         
-        //      recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-        //      self.swipeRightRecognizer = (UISwipeGestureRecognizer *)recognizer;
-        //      swipeRightRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
-        //      self.swipeRightRecognizer = (UISwipeGestureRecognizer *)recognizer;
-        //      [recognizer release];  
+        recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+        self.swipeRightRecognizer = (UISwipeGestureRecognizer *)recognizer;
+        swipeRightRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+        self.swipeRightRecognizer = (UISwipeGestureRecognizer *)recognizer;
+        [recognizer release];  
+        
         
         recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
         self.swipeUpRecognizer = (UISwipeGestureRecognizer *)recognizer;
@@ -304,7 +317,6 @@ static CFTimeInterval gameStart;
         [window addGestureRecognizer:recognizer];
         self.swipeDownRecognizer = (UISwipeGestureRecognizer *)recognizer;
         [recognizer release]; 
-        
         
         
         
@@ -854,50 +866,49 @@ static CFTimeInterval gameStart;
 
 - (void) deviceOrientationDidChange:(NSNotification *)note
 {
-    //    orientation = [[UIDevice currentDevice] orientation];
-    //    if (autorotate) {
-    //        if (gameOrientation == FlxGameOrientationPortrait) {
-    //            if (currentOrientation != orientation) {
-    //                if (orientation == UIDeviceOrientationPortrait ||
-    //                    orientation == UIDeviceOrientationPortraitUpsideDown) {
-    //                    currentOrientation = orientation;
-    //                    //set up status bar
-    //                    [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-    //                    if (currentOrientation == UIDeviceOrientationPortrait)
-    //                        autorotateAngleGoal = 0;
-    //                    else
-    //                        autorotateAngleGoal = 180;
-    //                    if (gameStarted == NO)
-    //                        autorotateAngle = autorotateAngleGoal;
-    //                }
-    //            }
-    //        } else { //FlxGameOrientationLandscape
-    //            switch (orientation) {
-    //                case UIDeviceOrientationUnknown:
-    //                case UIDeviceOrientationPortrait:
-    //                case UIDeviceOrientationPortraitUpsideDown:
-    //                case UIDeviceOrientationFaceUp:
-    //                case UIDeviceOrientationFaceDown:
-    //                    if (currentOrientation == UIDeviceOrientationLandscapeRight)
-    //                        orientation = UIDeviceOrientationLandscapeRight;
-    //                    else
-    //                        orientation = UIDeviceOrientationLandscapeLeft;
-    //            }
-    //            if (currentOrientation != orientation) {
-    //                currentOrientation = orientation;
-    //                //set up status bar
-    //                [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
-    //                if (currentOrientation == UIDeviceOrientationLandscapeRight)
-    //                    autorotateAngleGoal = 180;
-    //                else
-    //                    autorotateAngleGoal = 0;
-    //                if (gameStarted == NO)
-    //                    autorotateAngle = autorotateAngleGoal;
-    //            }
-    //        }
-    //    }
+    orientation = [[UIDevice currentDevice] orientation];
+    if (autorotate) {
+        if (gameOrientation == FlxGameOrientationPortrait) {
+            if (currentOrientation != orientation) {
+                if (orientation == UIDeviceOrientationPortrait ||
+                    orientation == UIDeviceOrientationPortraitUpsideDown) {
+                    currentOrientation = orientation;
+                    //set up status bar
+                    [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+                    if (currentOrientation == UIDeviceOrientationPortrait)
+                        autorotateAngleGoal = 0;
+                    else
+                        autorotateAngleGoal = 180;
+                    if (gameStarted == NO)
+                        autorotateAngle = autorotateAngleGoal;
+                }
+            }
+        } else { //FlxGameOrientationLandscape
+            switch (orientation) {
+                case UIDeviceOrientationUnknown:
+                case UIDeviceOrientationPortrait:
+                case UIDeviceOrientationPortraitUpsideDown:
+                case UIDeviceOrientationFaceUp:
+                case UIDeviceOrientationFaceDown:
+                    if (currentOrientation == UIDeviceOrientationLandscapeRight)
+                        orientation = UIDeviceOrientationLandscapeRight;
+                    else
+                        orientation = UIDeviceOrientationLandscapeLeft;
+            }
+            if (currentOrientation != orientation) {
+                currentOrientation = orientation;
+                //set up status bar
+                [[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+                if (currentOrientation == UIDeviceOrientationLandscapeRight)
+                    autorotateAngleGoal = 180;
+                else
+                    autorotateAngleGoal = 0;
+                if (gameStarted == NO)
+                    autorotateAngle = autorotateAngleGoal;
+            }
+        }
+    }
 }
-
 - (void) showSoundTray;
 {
 }
