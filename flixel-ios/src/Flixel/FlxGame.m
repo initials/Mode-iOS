@@ -128,12 +128,216 @@ static CFTimeInterval gameStart;
     return [self initWithOrientation:GameOrientation state:InitialState zoom:2.0];
 }
 
+//- (id) initWithOrientation:(FlxGameOrientation)GameOrientation
+//                     state:(NSString *)InitialState
+//                      zoom:(float)Zoom;
+//{
+//    return [self initWithOrientation:GameOrientation state:InitialState zoom:Zoom useTextureBufferZoom:NO];
+//}
+
+
+
 - (id) initWithOrientation:(FlxGameOrientation)GameOrientation
-                     state:(NSString *)InitialState
-                      zoom:(float)Zoom;
+					 state:(NSString *)InitialState
+					  zoom:(float)Zoom;
 {
-    return [self initWithOrientation:GameOrientation state:InitialState zoom:Zoom useTextureBufferZoom:NO];
+	if ((self = [super init])) {
+		_zoom = Zoom;
+		
+		iPad = FlxG.iPad;
+		
+		//set a reasonable default
+		if (FlxG.iPad)
+			self.frameInterval = 1;
+		else
+			self.frameInterval = 2;
+		
+		gameStart = CFAbsoluteTimeGetCurrent();
+		
+		autorotate = YES;
+		gameOrientation = GameOrientation;
+		
+		recursing = NO;
+		
+		//register for device orientation notifications
+		[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+		UIDeviceOrientation o = [UIDevice currentDevice].orientation;
+		switch (gameOrientation) {
+			case FlxGameOrientationLandscape:
+			{
+				switch (o) {
+					case UIDeviceOrientationLandscapeRight:
+						currentOrientation = UIDeviceOrientationLandscapeRight;
+						[[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+						autorotateAngle = 180;
+						autorotateAngleGoal = 180;
+						break;
+					case UIDeviceOrientationLandscapeLeft:
+					case UIDeviceOrientationPortraitUpsideDown:
+					case UIDeviceOrientationPortrait:
+					default:
+						currentOrientation = UIDeviceOrientationLandscapeLeft;
+						[[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+						autorotateAngle = 0;
+						autorotateAngleGoal = 0;
+						break;
+				}
+				break;
+			}
+			case FlxGameOrientationPortrait:
+			{
+				switch (o) {
+					case UIDeviceOrientationPortraitUpsideDown:
+						currentOrientation = UIDeviceOrientationPortraitUpsideDown;
+						[[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+						autorotateAngle = 180;
+						autorotateAngleGoal = 180;
+						break;
+					case UIDeviceOrientationPortrait:
+					case UIDeviceOrientationLandscapeLeft:
+					case UIDeviceOrientationLandscapeRight:
+					default:
+						currentOrientation = UIDeviceOrientationPortrait;
+						[[UIApplication sharedApplication] setStatusBarOrientation:currentOrientation];
+						autorotateAngle = 0;
+						autorotateAngleGoal = 0;
+						break;
+				}
+			}
+		}
+		
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(deviceOrientationDidChange:)
+													 name:UIDeviceOrientationDidChangeNotification
+												   object:nil];
+		
+		//do this before calling FlxG
+		//create a window, and add glView to it
+		window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+		//window.transform = CGAffineTransformMakeRotation(3*M_PI/2);
+        
+        
+        
+        UIGestureRecognizer *recognizer;
+        
+        recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+        [window addGestureRecognizer:recognizer];
+        [recognizer release];
+        
+        recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+        self.swipeLeftRecognizer = (UISwipeGestureRecognizer *)recognizer;
+        swipeLeftRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+        [window addGestureRecognizer:recognizer];
+        self.swipeLeftRecognizer = (UISwipeGestureRecognizer *)recognizer;
+        [recognizer release];
+        
+        
+        recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+        self.swipeRightRecognizer = (UISwipeGestureRecognizer *)recognizer;
+        swipeRightRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+        self.swipeRightRecognizer = (UISwipeGestureRecognizer *)recognizer;
+        [recognizer release];  
+        
+        
+        recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+        self.swipeUpRecognizer = (UISwipeGestureRecognizer *)recognizer;
+        swipeUpRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
+        [window addGestureRecognizer:recognizer];
+        
+        self.swipeUpRecognizer = (UISwipeGestureRecognizer *)recognizer;
+        [recognizer release];
+        
+        
+        recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+        self.swipeDownRecognizer = (UISwipeGestureRecognizer *)recognizer;
+        swipeDownRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
+        [window addGestureRecognizer:recognizer];
+        self.swipeDownRecognizer = (UISwipeGestureRecognizer *)recognizer;
+        [recognizer release]; 
+        
+        
+        
+        
+		
+		FlxGLView * glView = [[FlxGLView alloc] initWithFrame:window.bounds];
+		//FlxGLView * glView = [[FlxGLView alloc] initWithFrame:CGRectMake(0,0,window.bounds.size.width/2,window.bounds.size.height/2)];
+		//glView.transform = CGAffineTransformMakeScale(2.0,2.0);
+		context = [glView.context retain];
+		renderBuffer = glView.renderBuffer;
+		frameBuffer = glView.frameBuffer;
+		backingWidth = glView.backingWidth;
+		backingHeight = glView.backingHeight;
+        
+        // add iCade control
+        
+        control = [[iCadeReaderView alloc] initWithFrame:CGRectZero];
+        [glView addSubview:control];
+        control.active = YES;
+        control.delegate = self;
+        [control release];
+        
+        
+        //set all buttons to OFF
+        
+        iCadeJoystickUp = NO;
+        iCadeJoystickRight = NO;
+        iCadeJoystickDown = NO;
+        iCadeJoystickLeft = NO;
+        
+        iCadeButtonA = NO;
+        iCadeButtonB = NO;
+        iCadeButtonC = NO;
+        iCadeButtonD = NO;
+        
+        iCadeButtonE = NO;
+        iCadeButtonF = NO;
+        iCadeButtonG = NO;
+        iCadeButtonH = NO;
+		
+		[window makeKeyAndVisible];
+		
+		[window addSubview:glView];
+		glView.center = CGPointMake(window.bounds.size.width/2,
+									window.bounds.size.height/2);
+		[glView release];
+		
+		//which way are we oriented?
+		if (FlxG.retinaDisplay) {
+			if (gameOrientation == FlxGameOrientationPortrait)
+				[FlxG setGameData:self
+							width:(int)(glView.bounds.size.width/_zoom*2)
+						   height:(int)(glView.bounds.size.height/_zoom*2)
+							 zoom:Zoom];
+			else
+				[FlxG setGameData:self
+							width:(int)(glView.bounds.size.height/_zoom*2)
+						   height:(int)(glView.bounds.size.width/_zoom*2)
+							 zoom:Zoom];
+		} else {
+			if (gameOrientation == FlxGameOrientationPortrait)
+				[FlxG setGameData:self
+							width:(int)(glView.bounds.size.width/_zoom)
+						   height:(int)(glView.bounds.size.height/_zoom)
+							 zoom:Zoom];
+			else
+				[FlxG setGameData:self
+							width:(int)(glView.bounds.size.height/_zoom)
+						   height:(int)(glView.bounds.size.width/_zoom)
+							 zoom:Zoom];
+		}
+		
+		_iState = [InitialState copy];
+		
+		[EAGLContext setCurrentContext:context];
+		
+	}
+	return self;
 }
+
+
+
+
+
 
 
 - (id) initWithOrientation:(FlxGameOrientation)GameOrientation
@@ -144,6 +348,7 @@ static CFTimeInterval gameStart;
     return [self initWithOrientation:GameOrientation state:InitialState zoom:Zoom useTextureBufferZoom:TextureBufferZoom modelZoom:1.0];
 } 
 
+
 -(void) enableSwipeRecognizer:(BOOL)enabled;
 {
     if (enabled) {
@@ -151,16 +356,18 @@ static CFTimeInterval gameStart;
         swipeUpRecognizer.enabled=YES;
         swipeLeftRecognizer.enabled=YES;
         swipeRightRecognizer.enabled=YES;
-
+        
     }
     else {
         swipeDownRecognizer.enabled=NO;
         swipeUpRecognizer.enabled=NO;
         swipeLeftRecognizer.enabled=NO;
         swipeRightRecognizer.enabled=NO;
-
+        
     }
 }
+
+
 
 
 /*
@@ -175,25 +382,88 @@ static CFTimeInterval gameStart;
     swipedRight = NO;
     swipedLeft = NO;
     
-    
-    
-    
-    if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
-        swipedUp = YES;
-    } 
-    if (recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
-        swipedDown = YES;
-    } 
-    if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
-        swipedLeft = YES;
-    } 
-    if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
-        swipedRight = YES;
+    UIDeviceOrientation o = self.currentOrientation;
+    switch (o) {
+        case UIDeviceOrientationLandscapeLeft:
+        {
+            if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
+                swipedLeft = YES;
+            } 
+            if (recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
+                swipedRight = YES;
+            } 
+            if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+                swipedDown = YES;
+            } 
+            if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+                swipedUp = YES;
+            }
+            break;
+        }
+        case UIDeviceOrientationLandscapeRight:
+        {
+            if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
+                swipedRight = YES;
+            } 
+            if (recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
+                swipedLeft = YES;
+                
+            } 
+            if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+                swipedUp = YES;
+                
+            } 
+            if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+                swipedDown = YES;
+                
+            }
+            break;
+        }
     }
     
-    //NSLog(@".. had a swipe !! DIR : %d     %d %d %d %d", recognizer.direction, swipedUp , swipedDown , swipedRight , swipedLeft );
+    
+    //    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    //    
+    //    if (orientation == UIDeviceOrientationLandscapeLeft) {
+    //        if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
+    //            swipedLeft = YES;
+    //        } 
+    //        if (recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
+    //            swipedRight = YES;
+    //        } 
+    //        if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+    //            swipedDown = YES;
+    //        } 
+    //        if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+    //            swipedUp = YES;
+    //        }
+    //        
+    //    }
+    //    else if (orientation == UIDeviceOrientationLandscapeRight) {
+    //        if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
+    //            swipedRight = YES;
+    //        } 
+    //        if (recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
+    //            swipedLeft = YES;
+    //            
+    //        } 
+    //        if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+    //            swipedUp = YES;
+    //            
+    //        } 
+    //        if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+    //            swipedDown = YES;
+    //            
+    //        }
+    //    }
+    
+    
+    
+    
+    //    NSLog(@".. had a swipe !! DIR : %d     %d %d %d %d", recognizer.direction, swipedUp , swipedDown , swipedRight , swipedLeft );
     
 }
+
 
 
 - (id) initWithOrientation:(FlxGameOrientation)GameOrientation
@@ -214,7 +484,7 @@ static CFTimeInterval gameStart;
         if (FlxG.iPad)
             self.frameInterval = 1;
         else
-            self.frameInterval = 1;
+            self.frameInterval = 2;
         
         gameStart = CFAbsoluteTimeGetCurrent();
         
@@ -317,6 +587,7 @@ static CFTimeInterval gameStart;
         [window addGestureRecognizer:recognizer];
         self.swipeDownRecognizer = (UISwipeGestureRecognizer *)recognizer;
         [recognizer release]; 
+        
         
         
         
@@ -909,6 +1180,8 @@ static CFTimeInterval gameStart;
         }
     }
 }
+
+
 - (void) showSoundTray;
 {
 }

@@ -25,6 +25,7 @@
 @synthesize screenTouchPoint, lastScreenTouchPoint;
 @synthesize screenTouchBeganPoint;
 @synthesize touches, numberOfTouches, multiTouchPhase;
+//@synthesize swipeLeftRecognizer;
 @synthesize swipedDown, swipedUp, swipedLeft, swipedRight;
 @synthesize vcpButton1, vcpButton2, vcpLeftArrow, vcpRightArrow, newTouch;
 
@@ -40,10 +41,34 @@
 @synthesize iCadeStartBegan, iCadeLeftBumperBegan, iCadeSelectBegan, iCadeRightBumperBegan;
 @synthesize iCadeYBegan, iCadeBBegan, iCadeABegan, iCadeXBegan;
 
+
+
+
+//@synthesize vcpLeftArrowTouchesBegan;
+//@synthesize vcpLeftArrowTouchesEnded;
+//@synthesize vcpLeftArrowNextTouchesBegan;
+//@synthesize vcpLeftArrowNextTouchesEnded;
+//
+//@synthesize vcpRightArrowTouchesBegan;
+//@synthesize vcpRightArrowTouchesEnded;
+//@synthesize vcpRightArrowNextTouchesBegan;
+//@synthesize vcpRightArrowNextTouchesEnded;    
+//
+//@synthesize vcpButton1TouchesBegan;
+//@synthesize vcpButton1TouchesEnded;
+//@synthesize vcpButton1NextTouchesBegan;
+//@synthesize vcpButton1NextTouchesEnded;
+//
+//@synthesize vcpButton2TouchesBegan;
+//@synthesize vcpButton2TouchesEnded;
+//@synthesize vcpButton2NextTouchesBegan;
+//@synthesize vcpButton2NextTouchesEnded;
+
 int previousNumberOfTouches;
 
 
 - (void)dealloc {
+    //[swipeLeftRecognizer release];
     [super dealloc];
 }
 
@@ -113,8 +138,6 @@ int previousNumberOfTouches;
         newTouch = NO;
     }
     
-    
-    
     if ( humanControlled && (numberOfTouches == 1 || numberOfTouches == 2 ) ) {
         //if (numberOfTouches >=1 ) {
         for(UITouch *singleTouch in touches) {
@@ -122,67 +145,62 @@ int previousNumberOfTouches;
             //NSLog(@"%@", singleTouch);
             
             CGPoint p = [singleTouch locationInView:(singleTouch.view)];
+            CGPoint p2 = [self getInternalScreenTouchPoint:p];
             
-            UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+            //            UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+            //            if (orientation == UIDeviceOrientationLandscapeLeft) {
+            //                
+            //                CGFloat x = p.x;
+            //                p.x = p.y;
+            //                p.y = (singleTouch.view.bounds.size.width-x);
+            //
+            //            }
+            //            else if (orientation == UIDeviceOrientationLandscapeRight) {
+            //                
+            //                CGFloat x = p.x;
+            //                p.x = (singleTouch.view.bounds.size.height-p.y);
+            //                p.y = x;  
+            //                
+            //            }
+            
+            //NSLog(@"No.Of.t=%d, ori %f %f, int %f %f, realint %f %f", numberOfTouches, p.x, p.y, p2.x, p2.y, self.internalScreenTouchPoint.x, self.internalScreenTouchPoint.y);
+            //NSLog(@"%f %f", singleTouch.view.bounds.size.width, singleTouch.view.bounds.size.height);
+            
+            //NSLog(@"%f %f %f %f", p.x,p.y, p2.x,p2.y);
             
             
-            if (orientation == UIDeviceOrientationLandscapeLeft) {
-                //NSLog(@"LEFT %@ at p %@", singleTouch, NSStringFromCGPoint(p));
-                //NSLog(@"L screen touch point %f %f ", screenTouchPoint.x, screenTouchPoint.y);
-
+            if (p2.x > FlxG.leftArrowPosition.x && 
+                p2.x < FlxG.leftArrowPosition.x+80 &&
+                p2.y > FlxG.leftArrowPosition.y && 
+                p2.y < FlxG.leftArrowPosition.y+80) {
+                
+                vcpLeftArrow = YES;
+            } 
+            else if (p2.x > FlxG.rightArrowPosition.x && 
+                     p2.x < FlxG.rightArrowPosition.x+80 &&
+                     p2.y > FlxG.rightArrowPosition.y && 
+                     p2.y < FlxG.rightArrowPosition.y+80) {
+                
+                vcpRightArrow = YES;
+            } 
+            else if (p2.x > FlxG.button1Position.x && 
+                     p2.x < FlxG.button1Position.x+80 &&
+                     p2.y > FlxG.button1Position.y && 
+                     p2.y < FlxG.button1Position.y+80) { //&& player.onFloor
+                vcpButton1 = YES;
+            } 
+            
+            else if (p2.x > FlxG.button2Position.x && 
+                     p2.x < FlxG.button2Position.x+80 &&
+                     p2.y > FlxG.button2Position.y && 
+                     p2.y < FlxG.button2Position.y+80 ) { 
+                vcpButton2=YES;                    
             }
-            else if (orientation == UIDeviceOrientationLandscapeRight) {
-                //NSLog(@"RIGHT %@ at p %@", singleTouch, NSStringFromCGPoint(p));
-                //NSLog(@"R screen touch point %f %f ", screenTouchPoint.x, screenTouchPoint.y);
-
-            }
             
             
-            
-            if (FlxG.iPad) {
-                if (p.y > 850 && p.x > 600) {
-                    vcpLeftArrow = YES;
-                } 
-                
-                else if (p.y > 650 && p.y < 849 && p.x > 600) {
-                    vcpRightArrow = YES;
-                } 
-                
-                else if (p.y < 200 && p.y > 1   && p.x > 600) { //&& player.onFloor
-                    vcpButton2 = YES;
-                } 
-                
-                else if (p.y > 201 && p.y < 350  && p.x > 600 ) { 
-                    vcpButton1=YES;                    
-                }
-                
-                
-            }
-            
-            else {
-                
-                //NSLog(@"%@", NSStringFromCGPoint(p));
-                if (p.y > 370 && p.x > 220) {
-                    vcpLeftArrow = YES;
-                } 
-                
-                else if (p.y > 260 && p.y < 369 && p.x > 220) {
-                    vcpRightArrow = YES;
-
-                } 
-                
-                else if (p.y < 80 && p.y > 1   && p.x > 220) { //&& player.onFloor
-                    vcpButton2 = YES;
-                
-                } 
-                
-                else if (p.y > 81 && p.y < 160  && p.x > 220 ) { 
-                    vcpButton1=YES;                    
-                    
-                }
-            }
         }
     }
+    
     
     previousNumberOfTouches = numberOfTouches;
     FlxGame * game = [FlxG game];
@@ -696,6 +714,9 @@ int previousNumberOfTouches;
     
     if (newData) {
         
+        
+        
+        
         if (game.swipedRight && humanControlled ) {
             swipedRight=YES;
         }
@@ -709,11 +730,40 @@ int previousNumberOfTouches;
             swipedUp=YES;
         }
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
         touchesBegan = nextTouchesBegan;
         touchesEnded = nextTouchesEnded;
         
+        //      vcpLeftArrowTouchesBegan = vcpLeftArrowNextTouchesBegan;
+        //      vcpRightArrowTouchesBegan=vcpRightArrowNextTouchesBegan;
+        //      vcpButton1TouchesBegan = vcpButton1NextTouchesBegan;
+        //      vcpButton2TouchesBegan = vcpButton2NextTouchesBegan;
+        //      
+        //      vcpLeftArrowTouchesEnded = vcpLeftArrowNextTouchesEnded;
+        //      vcpRightArrowTouchesEnded=vcpRightArrowNextTouchesEnded;
+        //      vcpButton1TouchesEnded = vcpButton1NextTouchesEnded;
+        //      vcpButton2TouchesEnded = vcpButton2NextTouchesEnded;  
+        
         nextTouchesBegan = NO;
         nextTouchesEnded = NO;
+        
+        //      vcpLeftArrowNextTouchesBegan = NO;
+        //      vcpRightArrowNextTouchesBegan = NO;
+        //      vcpButton1NextTouchesBegan = NO;
+        //      vcpButton2NextTouchesBegan = NO;
+        //      
+        //      vcpLeftArrowNextTouchesEnded = NO;
+        //      vcpRightArrowNextTouchesEnded = NO;
+        //      vcpButton1NextTouchesEnded = NO;
+        //      vcpButton2NextTouchesEnded = NO;  
         
         
         touching = [touches count] > 0;
@@ -748,6 +798,70 @@ int previousNumberOfTouches;
     p.y -= FlxG.scroll.y;
     return p;
 }
+
+- (CGPoint) getInternalScreenTouchPoint:(CGPoint)forPoint
+{
+    CGPoint p = forPoint;
+    FlxGame * game = [FlxG game];
+    float z = game.zoom;
+    if (FlxG.retinaDisplay || FlxG.iPad)
+        z = z/2;
+    if (FlxG.iPad ) {
+        //NSLog(@"tb zoomed /2 ");
+        p.x /= 2;
+        p.y /= 2;
+        
+    }
+    if (FlxG.retinaDisplay && FlxG.iPad)
+        z = z/2;    
+    
+    
+    //    if (FlxG.iPad) {
+    //        if (FlxG.game.textureBufferZoom) {
+    //            //NSLog(@"tb zoomed /2 ");
+    //            p.x /= 2;
+    //            p.y /= 2;
+    //        }
+    //    }
+    
+    
+    UIDeviceOrientation o = game.currentOrientation;
+    
+    switch (o) {
+        case UIDeviceOrientationLandscapeLeft:
+        {
+            //NSLog(@"left flxg.height=%d, wid=%d, tbz=%d retina=%d gamezoom=%f px %f py %f", FlxG.height, FlxG.width, FlxG.game.textureBufferZoom, FlxG.retinaDisplay, game.zoom, p.x, p.y);
+            CGFloat x = p.x;
+            p.x = p.y/z;
+            p.y = (FlxG.height-x)/z;
+            //NSLog(@"left after trans %f py %f",p.x, p.y);
+            break;
+        }
+        case UIDeviceOrientationLandscapeRight:
+        {
+            //NSLog(@"right flxg.height=%d, wid=%d, tbz=%d retina=%d gamezoom=%f px %f py %f", FlxG.height, FlxG.width, FlxG.game.textureBufferZoom, FlxG.retinaDisplay, game.zoom, p.x, p.y);            
+            CGFloat x = p.x;
+            p.x = (FlxG.width-p.y)/z;
+            p.y = x/z;
+            //NSLog(@"right after trans %f py %f",p.x, p.y);
+            
+            break;
+        }
+    }
+    if (!FlxG.iPad) {
+        if (FlxG.game.textureBufferZoom) {
+            //NSLog(@"tb zoomed /2 ");
+            p.x /= 2;
+            p.y /= 2;
+        }
+    }
+    
+    
+    return p;
+}
+
+
+
 
 - (CGPoint) internalScreenTouchPoint
 {

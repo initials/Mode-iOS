@@ -73,6 +73,13 @@ static FlxEmitter * emitter = nil;
 
 - (void) create
 {
+    
+    //enable swipes
+    
+    FlxGame * game = [FlxG game];
+    [game enableSwipeRecognizer:YES];
+    
+    
     //store the game pad preference
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -147,6 +154,23 @@ static FlxEmitter * emitter = nil;
     fading = false;
     timer = 0;
     
+    
+    
+    NSInteger LAX = [prefs integerForKey:@"LEFT_ARROW_POSITION_X"];
+    NSInteger LAY = [prefs integerForKey:@"LEFT_ARROW_POSITION_Y"];
+    NSInteger RAX = [prefs integerForKey:@"RIGHT_ARROW_POSITION_X"];
+    NSInteger RAY = [prefs integerForKey:@"RIGHT_ARROW_POSITION_Y"];
+    
+    NSInteger B1X = [prefs integerForKey:@"BUTTON_1_POSITION_X"];
+    NSInteger B1Y = [prefs integerForKey:@"BUTTON_1_POSITION_Y"];
+    NSInteger B2X = [prefs integerForKey:@"BUTTON_2_POSITION_X"];
+    NSInteger B2Y = [prefs integerForKey:@"BUTTON_2_POSITION_Y"];
+    
+    FlxG.leftArrowPosition = CGPointMake(LAX, LAY);
+    FlxG.rightArrowPosition = CGPointMake(RAX, RAY);
+    FlxG.button1Position = CGPointMake(B1X, B1Y);
+    FlxG.button2Position = CGPointMake(B2X, B2Y);
+
     
 }
 

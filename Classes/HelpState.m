@@ -67,6 +67,12 @@ static NSString * ImgButtonPressed = @"buttonPressed.png";
 - (void) create
 {
     
+    //enable swipes
+    
+    FlxGame * game = [FlxG game];
+    [game enableSwipeRecognizer:YES];
+    
+    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSInteger zoomSize = [prefs integerForKey:@"ZOOM"];
     NSInteger currentZoom = [prefs integerForKey:@"ZOOM_FOR_CURRENT_GAME"];

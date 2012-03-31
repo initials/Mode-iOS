@@ -46,6 +46,18 @@
     FlxSprite * button1;
     FlxSprite * button2;
     
+    FlxSprite * buttonLeftOutline;
+    FlxSprite * buttonRightOutline;
+    FlxSprite * button1Outline;
+    FlxSprite * button2Outline;
+    
+    FlxText * buttonLeftText;
+    FlxText * buttonRightText;
+    FlxText * button1Text;
+    FlxText * button2Text;
+    
+    
+
 }
 
 @end

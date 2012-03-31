@@ -68,7 +68,8 @@ static NSString * ImgSpawnerGibs = @"spawner_gibs.png";
 
 
 static NSString * ImgButtonArrow = @"buttonArrow.png";
-static NSString * ImgButton = @"buttonButton.png";
+static NSString * ImgButtonA = @"buttonA.png";
+static NSString * ImgButtonB = @"buttonB.png";
 
 static float buttonAlphaStart = 0.1;
 
@@ -312,21 +313,30 @@ BOOL scoreChanged;
     _gunjam.visible = NO;
     
     
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSInteger LAX = [prefs integerForKey:@"LEFT_ARROW_POSITION_X"];
+    NSInteger LAY = [prefs integerForKey:@"LEFT_ARROW_POSITION_Y"];
+    NSInteger RAX = [prefs integerForKey:@"RIGHT_ARROW_POSITION_X"];
+    NSInteger RAY = [prefs integerForKey:@"RIGHT_ARROW_POSITION_Y"];
     
+    NSInteger B1X = [prefs integerForKey:@"BUTTON_1_POSITION_X"];
+    NSInteger B1Y = [prefs integerForKey:@"BUTTON_1_POSITION_Y"];
+    NSInteger B2X = [prefs integerForKey:@"BUTTON_2_POSITION_X"];
+    NSInteger B2Y = [prefs integerForKey:@"BUTTON_2_POSITION_Y"];
     
     //add buttons for the virtual control pad
     
     buttonLeft  = [FlxSprite spriteWithX:80 y:80 graphic:ImgButtonArrow];
-    buttonLeft.x = 0;
-    buttonLeft.y = FlxG.height-80;
+    buttonLeft.x = LAX;
+    buttonLeft.y = LAY;
     buttonLeft.alpha=BUTTON_START_ALPHA;
     //buttonLeft.fixed = YES;
     buttonLeft.scrollFactor = CGPointMake(0, 0);
 	[self add:buttonLeft];
     
     buttonRight  = [FlxSprite spriteWithX:80 y:80 graphic:ImgButtonArrow];
-    buttonRight.x = 80;
-    buttonRight.y = FlxG.height-80;
+    buttonRight.x = RAX;
+    buttonRight.y = RAY;
     buttonRight.alpha=BUTTON_START_ALPHA;
     buttonRight.angle = 180;
     //buttonRight.fixed=YES;
@@ -334,17 +344,17 @@ BOOL scoreChanged;
 	[self add:buttonRight];
     
     
-    buttonA  = [FlxSprite spriteWithX:40 y:40 graphic:ImgButton];
-    buttonA.x = 420;
-    buttonA.y = FlxG.height-60;
+    buttonA  = [FlxSprite spriteWithX:80 y:80 graphic:ImgButtonB];
+    buttonA.x = B2X;
+    buttonA.y = B2Y;
     buttonA.alpha=BUTTON_START_ALPHA;
     //buttonA.fixed=YES;
     buttonA.scrollFactor = CGPointMake(0, 0);
 	[self add:buttonA];
     
-    buttonB  = [FlxSprite spriteWithX:40 y:40 graphic:ImgButton];
-    buttonB.x = 340;
-    buttonB.y = FlxG.height-60;
+    buttonB  = [FlxSprite spriteWithX:80 y:80 graphic:ImgButtonA];
+    buttonB.x = B1X;
+    buttonB.y = B1Y;
     buttonB.alpha=BUTTON_START_ALPHA;
     //buttonB.fixed=YES;
     buttonB.scrollFactor = CGPointMake(0, 0);
@@ -571,7 +581,7 @@ BOOL scoreChanged;
     }
     
     //shoot up
-    if ((FlxG.touches.swipedLeft && !player.flickering ) || (FlxG.touches.iCadeUp && FlxG.touches.iCadeABegan  && !player.flickering)) {
+    if ((FlxG.touches.swipedUp && !player.flickering ) || (FlxG.touches.iCadeUp && FlxG.touches.iCadeABegan  && !player.flickering)) {
         //up
         //[self fireWeapon];
         [FlxG play:SndShoot];
@@ -595,11 +605,10 @@ BOOL scoreChanged;
     //swiped down
     
     //else if (p.y > 40 && p.y < 80 && p.x < 320 && p.x > 276 && (newTouch || player.rapidFire) ) {
-    else if ((FlxG.touches.swipedRight && !player.flickering)  || (FlxG.touches.iCadeDown && FlxG.touches.iCadeABegan  && !player.flickering) ){                   
+    else if ((FlxG.touches.swipedDown && !player.flickering)  || (FlxG.touches.iCadeDown && FlxG.touches.iCadeABegan  && !player.flickering) ){                   
         player.velocity = CGPointMake(player.velocity.x, player.velocity.y - 80);
         //was -36 in Flash game. changed it due to swipes being slower to execute.
         
-        //down
         [FlxG play:SndShoot];
 
         Bullet * bull = [_bullets.members objectAtIndex:bulletIndex];
@@ -616,7 +625,8 @@ BOOL scoreChanged;
             bulletIndex = 0;	
         }
     }
-    else if (FlxG.touches.swipedDown && !player.flickering) { 
+    
+    else if (FlxG.touches.swipedLeft && !player.flickering) { 
         //button D regular shoot
         [FlxG play:SndShoot];
 
@@ -636,9 +646,12 @@ BOOL scoreChanged;
     }
     
     //swiped to the right
-    //swipe direction swipedUp refers to when the iPhone is held the portrait way.
     
-    else if (FlxG.touches.swipedUp && !player.flickering) {   
+    else if (FlxG.touches.swipedRight && !player.flickering) {   
+        
+        [FlxG play:SndShoot];
+
+        
         Bullet * bull = [_bullets.members objectAtIndex:bulletIndex];
         bull.x = player.x;
         bull.y = player.y;

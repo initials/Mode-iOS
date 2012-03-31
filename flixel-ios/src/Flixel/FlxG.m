@@ -522,12 +522,26 @@ ALvoid alcMacOSXMixerOutputRateProc(const ALfloat value) {
                                                            [NSNumber numberWithFloat:80], @"RIGHT_ARROW_POSITION_X",
                                                            [NSNumber numberWithFloat:240], @"RIGHT_ARROW_POSITION_Y",  
                                                            
-                                                           [NSNumber numberWithFloat:340], @"BUTTON_1_POSITION_X",
+                                                           [NSNumber numberWithFloat:320], @"BUTTON_1_POSITION_X",
                                                            [NSNumber numberWithFloat:240], @"BUTTON_1_POSITION_Y",
-                                                           [NSNumber numberWithFloat:420], @"BUTTON_2_POSITION_X",
+                                                           [NSNumber numberWithFloat:400], @"BUTTON_2_POSITION_X",
                                                            [NSNumber numberWithFloat:240], @"BUTTON_2_POSITION_Y",                                                             
                                                            
 									nil]];
+    
+    if (self.iPad) {
+        [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                 [NSNumber numberWithFloat:0], @"LEFT_ARROW_POSITION_X",
+                                                                 [NSNumber numberWithFloat:304], @"LEFT_ARROW_POSITION_Y",
+                                                                 [NSNumber numberWithFloat:80], @"RIGHT_ARROW_POSITION_X",
+                                                                 [NSNumber numberWithFloat:304], @"RIGHT_ARROW_POSITION_Y",  
+                                                                 [NSNumber numberWithFloat:352], @"BUTTON_1_POSITION_X",
+                                                                 [NSNumber numberWithFloat:304], @"BUTTON_1_POSITION_Y",
+                                                                 [NSNumber numberWithFloat:432], @"BUTTON_2_POSITION_X",
+                                                                 [NSNumber numberWithFloat:304], @"BUTTON_2_POSITION_Y",                                                              
+                                                                 nil]];
+    }
+
   soundEffectsMasterVolume = [[[NSUserDefaults standardUserDefaults] objectForKey:@"SoundEffectsVolume"] floatValue];
   musicMasterVolume = [[[NSUserDefaults standardUserDefaults] objectForKey:@"MusicVolume"] floatValue];
   [sounds autorelease];
