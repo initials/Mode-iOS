@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -545,10 +545,15 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 8FBMT49CFP;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Mode" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -689,7 +694,6 @@
 		0775198911C2FBE400B3FF3D /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
@@ -727,8 +731,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
+				PROVISIONING_PROFILE = "E0986431-C78D-455F-B2E8-E02ECA6C9FB5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E0986431-C78D-455F-B2E8-E02ECA6C9FB5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -754,8 +758,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
+				PROVISIONING_PROFILE = "E0986431-C78D-455F-B2E8-E02ECA6C9FB5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E0986431-C78D-455F-B2E8-E02ECA6C9FB5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -767,8 +771,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shane A Brouwer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
 				COPY_PHASE_STRIP = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -779,8 +783,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "C5231FAE-1CDE-4495-9C38-49FCBD71132F";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C5231FAE-1CDE-4495-9C38-49FCBD71132F";
+				PROVISIONING_PROFILE = "E0986431-C78D-455F-B2E8-E02ECA6C9FB5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E0986431-C78D-455F-B2E8-E02ECA6C9FB5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -790,7 +794,6 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
@@ -802,6 +805,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
@@ -815,7 +819,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shane A Brouwer";
@@ -841,7 +844,6 @@
 		D219B36A13C721030046819B /* Release copy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Shane Brouwer (ASZS53L79E)";
@@ -882,8 +884,8 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = mode;
-				PROVISIONING_PROFILE = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "705BE5EA-E57F-4FC1-AD19-2F6D70F33AA2";
+				PROVISIONING_PROFILE = "E0986431-C78D-455F-B2E8-E02ECA6C9FB5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E0986431-C78D-455F-B2E8-E02ECA6C9FB5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

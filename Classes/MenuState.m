@@ -127,28 +127,28 @@ static FlxEmitter * emitter = nil;
     
     title1 = [FlxText textWithWidth:64
                                text:@"mo"
-                               font:nil
+                               font:@"Flixel"
                                size:32.0];
     title1.color = 0x3a5c39;
     title1.alignment = @"center";
     title1.x = FlxG.width + 16;
     title1.y = FlxG.height/3-40;
     title1.velocity = CGPointMake(-FlxG.width, 0);
-    title1.antialiasing = YES;
+    //title1.antialiasing = YES;
     
     [self add:title1];
     //the letters "de"
     
     title2 = [FlxText textWithWidth:title1.width
                                text:@"de"
-                               font:nil
+                               font:@"Flixel"
                                size:32.0];
     title2.color = title1.color;
     title2.alignment = @"center";
     title2.x = -60;
     title2.y = title1.y;
     title2.velocity = CGPointMake(FlxG.width, 0);
-    title2.antialiasing = YES;
+    //title2.antialiasing = YES;
     [self add:title2];
     
     fading = false;

@@ -17,12 +17,14 @@
 
 @interface SemiSecretFont : NSObject
 {
-  CGFontRef font;
-  CGFloat size;
+    CGFontRef font;
+    CGFloat size;
 }
 - (id) initWithSize:(CGFloat)size;
+- (id) initWithSize2:(CGFloat)size;
+
 + (SemiSecretFont *) fontWithName:(NSString *)name
-			     size:(CGFloat) size;
+                             size:(CGFloat) size;
 - (id) fontWithSize:(CGFloat)size;
 - (CGSize) sizeToRenderString:(NSString *)string;
 // - (CGFloat) size;

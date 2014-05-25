@@ -20,112 +20,134 @@
 
 - (NSString *) description
 {
-  return [NSString stringWithFormat:@"<SemiSecretFont: name:%@, size:%.1f>", NSStringFromClass([self class]), size];
+    return [NSString stringWithFormat:@"<SemiSecretFont: name:%@, size:%.1f>", NSStringFromClass([self class]), size];
 }
 
 + (SemiSecretFont *)fontWithName:(NSString *)name
-			    size:(CGFloat) size;
+                            size:(CGFloat) size;
 {
-  //dynamically search for a class with this name
-  Class klass = NSClassFromString([NSString stringWithFormat:@"%@Font", name]);
-  //NSLog(@"looking for font: %@", name);
-  //  NSLog(@"klass: %@", klass);
-  SemiSecretFont * font = nil;
-  if (klass)
-    font = [[[klass alloc] initWithSize:size] autorelease];
-  return font;
+    //dynamically search for a class with this name
+    
+    Class klass = NSClassFromString([NSString stringWithFormat:@"%@Font", name]);
+    
+    ////MWLogDebug(@"looking for font: %@", name);
+    //  //MWLogDebug(@"klass: %@", klass);
+    
+    SemiSecretFont * font = nil;
+    if (klass)
+    {
+        CGSize sz = CGSizeMake(size, size);
+        
+        ////MWLogDebug(@" SemiSecretFont: with size %f CGSize %f", size, sz.width);
+        
+        font = [[[klass alloc] initWithSize2:size] autorelease];
+    }
+    return font;
 }
 
 - (id) fontWithSize:(CGFloat)s
 {
-  Class klass = [self class];
-  SemiSecretFont * f = nil;
-  f = [[[klass alloc] initWithSize:s] autorelease];
-  return f;
+    ////MWLogDebug(@" SemiSecretFont: fontWithSize %f", s);
+    
+    Class klass = [self class];
+    SemiSecretFont * f = nil;
+    CGSize sz = CGSizeMake(size, size);
+    f = [[[klass alloc] initWithSize2:s] autorelease];
+    return f;
 }
 
 //this is not meant to be instantiated directly!
 - (id) initWithSize:(CGFloat)fontsize
 {
-  if ((self = [super init])) {
-    size = fontsize;
-    font = nil;
-  }
-  return self;
+    if ((self = [super init])) {
+        size = fontsize;
+        font = nil;
+    }
+    return self;
+}
+
+//this is not meant to be instantiated directly!
+- (id) initWithSize2:(CGFloat)fontsize
+{
+    if ((self = [super init])) {
+        size = fontsize;
+        font = nil;
+    }
+    return self;
 }
 
 - (void) setGlyphs:(CGGlyph *)glyphs forCharacters:(unichar *)chars size:(NSUInteger)length
 {
-  for (unsigned i=0; i<length; ++i)
-    glyphs[i] = chars[i]-29;
+    for (unsigned i=0; i<length; ++i)
+        glyphs[i] = chars[i]-29;
 }
 
 - (CGSize) sizeToRenderString:(NSString *)string;
 {
-  unsigned glyphLength = [string length];
-  CGGlyph * glyphs = malloc(sizeof(CGGlyph)*glyphLength);
-  unichar * chars = malloc(sizeof(unichar)*glyphLength);
-  [string getCharacters:chars];
-
-  //need to plugin in a more generic solution to get glyphs
-  [self setGlyphs:glyphs forCharacters:chars size:glyphLength];
-
-  free(chars);
-
-  int * advances = malloc(sizeof(int)*glyphLength);
-  CGRect * bboxes = malloc(sizeof(CGRect)*glyphLength);
-
-  CGFontGetGlyphAdvances(font, glyphs, glyphLength, advances);
-  int total = 0;
-  for (unsigned i=0; i<glyphLength; ++i)
-    total += advances[i];
-  
-  CGFontGetGlyphBBoxes(font, glyphs, glyphLength, bboxes);
-  
-  CGFloat width = total*size/CGFontGetUnitsPerEm(font);
-  CGFloat height = CGFontGetCapHeight(font)*size/CGFontGetUnitsPerEm(font);
-  
-  free(advances);
-  free(bboxes);
-  
-  return CGSizeMake(width, height);
-
+    unsigned glyphLength = [string length];
+    CGGlyph * glyphs = malloc(sizeof(CGGlyph)*glyphLength);
+    unichar * chars = malloc(sizeof(unichar)*glyphLength);
+    [string getCharacters:chars];
+    
+    //need to plugin in a more generic solution to get glyphs
+    [self setGlyphs:glyphs forCharacters:chars size:glyphLength];
+    
+    free(chars);
+    
+    int * advances = malloc(sizeof(int)*glyphLength);
+    CGRect * bboxes = malloc(sizeof(CGRect)*glyphLength);
+    
+    CGFontGetGlyphAdvances(font, glyphs, glyphLength, advances);
+    int total = 0;
+    for (unsigned i=0; i<glyphLength; ++i)
+        total += advances[i];
+    
+    CGFontGetGlyphBBoxes(font, glyphs, glyphLength, bboxes);
+    
+    CGFloat width = total*size/CGFontGetUnitsPerEm(font);
+    CGFloat height = CGFontGetCapHeight(font)*size/CGFontGetUnitsPerEm(font);
+    
+    free(advances);
+    free(bboxes);
+    
+    return CGSizeMake(width, height);
+    
 }
 
 - (CGFloat) size
 {
-  return size;
+    return size;
 }
 - (CGFontRef) font
 {
-  return font;
+    return font;
 }
 
 - (void) renderText:(NSString *)text centeredAtPoint:(CGPoint) point inContext:(CGContextRef)context
 {
-  unsigned len;
-  CGGlyph * glyphs;
-  unichar * chars;
-  len = [text length];
-  glyphs = malloc(sizeof(CGGlyph)*len);
-  chars = malloc(sizeof(unichar)*len);
-  [text getCharacters:chars];
-  free(chars);
-  
-  [self setGlyphs:glyphs forCharacters:chars size:len];
-
-  CGSize textsize = [self sizeToRenderString:text];
-
-  CGFloat x = point.x-textsize.width/2;
-  CGFloat y = point.y+textsize.height/2;
-
-  CGContextSetFont(context, font);
-  CGContextSetFontSize(context, size);
-
-  CGContextSetTextDrawingMode(context, kCGTextFillStroke);
-  CGContextShowGlyphsAtPoint(context, x, y, glyphs, len);
-
-  free(glyphs);
+    unsigned len;
+    CGGlyph * glyphs;
+    unichar * chars;
+    len = [text length];
+    glyphs = malloc(sizeof(CGGlyph)*len);
+    chars = malloc(sizeof(unichar)*len);
+    [text getCharacters:chars];
+    free(chars);
+    
+    [self setGlyphs:glyphs forCharacters:chars size:len];
+    
+    CGSize textsize = [self sizeToRenderString:text];
+    
+    CGFloat x = point.x-textsize.width/2;
+    CGFloat y = point.y+textsize.height/2;
+    
+    CGContextSetFont(context, font);
+    CGContextSetFontSize(context, size);
+    
+    CGContextSetTextDrawingMode(context, kCGTextFillStroke);
+    CGContextShowGlyphsAtPoint(context, x, y, glyphs, len);
+    
+    free(glyphs);
 }
 
 
